@@ -1,0 +1,35 @@
+# Runtime local_gpu
+# From repository root:
+#   docker compose -f 99_system/01_runtime/local_gpu/docker-compose.yml up --build
+
+services:
+  fetal-runtime-local-gpu:
+    build:
+      context: ../../..
+      dockerfile: 99_system/01_runtime/local_gpu/Dockerfile
+    image: fetal-vein-segmentation:local-gpu
+    container_name: fetal-vein-local-gpu
+    restart: unless-stopped
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    environment:
+      PROJECT_ROOT: /workspace
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-fetal-dev}
+      JUPYTER_PORT: "8888"
+      BOOTSTRAP_PROFILE: local_gpu
+      BOOTSTRAP_STRICT: "1"
+      BOOTSTRAP_ARGS: ${BOOTSTRAP_ARGS:-}
+    volumes:
+      - ../../..:/workspace
+      - jupyter-home-local-gpu:/root/.local
+    working_dir: /workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  jupyter-home-local-gpu:

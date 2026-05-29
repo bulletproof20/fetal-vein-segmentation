@@ -1,0 +1,28 @@
+# Runtime local_cpu
+# From repository root:
+#   docker compose -f 99_system/01_runtime/local_cpu/docker-compose.yml up --build
+
+services:
+  fetal-runtime-local-cpu:
+    build:
+      context: ../../..
+      dockerfile: 99_system/01_runtime/local_cpu/Dockerfile
+    image: fetal-vein-segmentation:local-cpu
+    container_name: fetal-vein-local-cpu
+    restart: unless-stopped
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    environment:
+      PROJECT_ROOT: /workspace
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-fetal-dev}
+      JUPYTER_PORT: "8888"
+      BOOTSTRAP_PROFILE: local_cpu
+      BOOTSTRAP_STRICT: "0"
+      BOOTSTRAP_ARGS: ${BOOTSTRAP_ARGS:-}
+    volumes:
+      - ../../..:/workspace
+      - jupyter-home-local-cpu:/root/.local
+    working_dir: /workspace
+
+volumes:
+  jupyter-home-local-cpu:

@@ -25,7 +25,7 @@ Ver [experiment_standards.md](../governance/experiment_standards.md).
 
 Copiar e preencher:
 
-```yaml
+```yaml 
 experiment_id: exp_20260529_001
 created_at: "2026-05-29T14:30:00Z"
 provider: local_gpu

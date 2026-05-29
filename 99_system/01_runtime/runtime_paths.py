@@ -74,11 +74,15 @@ def resolve_paths(config_path: Path, project_root: Path | None = None) -> Resolv
         output_path = output_path.resolve()
 
     images_dir = Path(cfg.get("images_dir", dataset_path / "images"))
-    masks_dir = Path(cfg.get("masks_dir", dataset_path / "masks"))
+    masks_dir = Path(cfg.get("masks_dir", dataset_path / "labels"))
     if not images_dir.is_absolute():
         images_dir = (root / images_dir).resolve()
     if not masks_dir.is_absolute():
         masks_dir = (root / masks_dir).resolve()
+    if not masks_dir.is_dir():
+        fallback = (dataset_path / "masks").resolve()
+        if fallback.is_dir():
+            masks_dir = fallback
 
     return ResolvedRuntimePaths(
         provider=provider,

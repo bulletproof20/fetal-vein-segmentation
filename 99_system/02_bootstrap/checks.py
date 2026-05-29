@@ -122,7 +122,7 @@ def check_dataset(cfg: ProjectConfig, report: CheckReport) -> None:
     if n_images == 0 and n_masks == 0:
         report.add(
             Level.WARN,
-            "Dataset vazio — coloque ficheiros em 02_dataset/images e 02_dataset/masks",
+            "Dataset vazio — coloque ficheiros em 02_dataset/images e 02_dataset/labels",
             "dataset",
         )
         return
@@ -130,7 +130,7 @@ def check_dataset(cfg: ProjectConfig, report: CheckReport) -> None:
     if n_images == 0:
         report.add(Level.WARN, "Nenhuma imagem encontrada em images/", "dataset")
     elif n_masks == 0:
-        report.add(Level.WARN, "Nenhuma máscara encontrada em masks/", "dataset")
+        report.add(Level.WARN, "Nenhuma máscara encontrada em labels/ (ou masks/)", "dataset")
     else:
         report.add(
             Level.OK,

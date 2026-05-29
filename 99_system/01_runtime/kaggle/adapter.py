@@ -43,7 +43,12 @@ def prepare_environment(project_root: Path | None = None) -> ResolvedRuntimePath
         if input_dirs:
             paths.dataset_path = input_dirs[0].resolve()
             paths.images_dir = paths.dataset_path / "images"
-            paths.masks_dir = paths.dataset_path / "masks"
+            labels_dir = paths.dataset_path / "labels"
+            masks_dir = paths.dataset_path / "masks"
+            if labels_dir.is_dir():
+                paths.masks_dir = labels_dir
+            else:
+                paths.masks_dir = masks_dir
 
     paths.output_path.mkdir(parents=True, exist_ok=True)
     apply_runtime_env(paths)

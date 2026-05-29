@@ -139,7 +139,12 @@ def load_config() -> ProjectConfig:
         root=root,
         data_dir=data_dir,
         images_dir=Path(os.environ.get("IMAGES_DIR", data_dir / "images")).resolve(),
-        masks_dir=Path(os.environ.get("MASKS_DIR", data_dir / "masks")).resolve(),
+        masks_dir=Path(
+            os.environ.get(
+                "MASKS_DIR",
+                data_dir / "labels" if (data_dir / "labels").is_dir() else data_dir / "masks",
+            )
+        ).resolve(),
         preprocessing_output=Path(
             os.environ.get("PREPROCESSING_OUTPUT", root / "03_preprocessing" / "outputs")
         ).resolve(),

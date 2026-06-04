@@ -657,7 +657,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -1163,15 +1163,15 @@
 
 
 <h1 id="documentation-standards">Documentation standards<a class="headerlink" href="#documentation-standards" title="Permanent link">&para;</a></h1>
-<p><strong>Version:</strong> 5.0<br />
+<p><strong>Version:</strong> 6.0<br />
 <strong>Status:</strong> normative<br />
-<strong>Scope:</strong> all project-authored documentation outside <code>01_academic/</code> and <code>02_dataset/</code></p>
+<strong>Scope:</strong> all project-authored documentation outside <code>01_academic/</code> and immutable dataset files</p>
 <hr />
 <h2 id="1-language">1. Language<a class="headerlink" href="#1-language" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>English only</strong> (academic, technical, professional tone).</li>
 <li>No Portuguese in markdown, tables, or MkDocs pages under project control.</li>
-<li><strong>Exception:</strong> content inside <code>01_academic/</code> and <code>02_dataset/</code> (immutable).</li>
+<li><strong>Exception:</strong> content inside <code>01_academic/</code> (immutable).</li>
 </ul>
 <hr />
 <h2 id="2-documentation-hierarchy-single-source-of-truth">2. Documentation hierarchy (single source of truth)<a class="headerlink" href="#2-documentation-hierarchy-single-source-of-truth" title="Permanent link">&para;</a></h2>
@@ -1196,9 +1196,14 @@
 <td><code>portal/academic.md</code>, <code>portal/deliverables.md</code></td>
 </tr>
 <tr>
-<td>Implementation index, notebook and README pointers</td>
-<td><code>03_pipeline/entrypoint.ipynb</code>, <code>03_pipeline/README.md</code>, <code>02_dataset/README.md</code></td>
+<td>Execution order and stage outputs</td>
+<td><code>03_pipeline/README.md</code>, three pipeline notebooks</td>
 <td><code>portal/implementation.md</code></td>
+</tr>
+<tr>
+<td>Dataset folder contract</td>
+<td><code>02_dataset/README.md</code></td>
+<td><code>portal/implementation.md</code> (#dataset-overview)</td>
 </tr>
 <tr>
 <td>Lecturer ↔ pipeline traceability</td>
@@ -1216,34 +1221,24 @@
 <td>Project → Standards &amp; Governance</td>
 </tr>
 <tr>
-<td>Notebook structure (Category A/B/C)</td>
+<td>Notebook structure (self-contained stages)</td>
 <td><code>scientific_notebook_standards.md</code>, <code>notebook_standards.md</code></td>
 <td>—</td>
 </tr>
 <tr>
 <td>Preprocessing methodology</td>
-<td><code>03_pipeline/01_preprocessing/</code> notebooks</td>
+<td><code>03_pipeline/01_preprocessing.ipynb</code></td>
 <td>—</td>
 </tr>
 <tr>
-<td>Filtering implementation</td>
-<td><code>03_pipeline/01_preprocessing/00_common/02_filtering.ipynb</code></td>
+<td>Segmentation</td>
+<td><code>03_pipeline/02_segmentation.ipynb</code></td>
 <td>—</td>
 </tr>
 <tr>
-<td>Segmentation implementation</td>
-<td><code>03_pipeline/02_segmentation/fetal_vein_segmentation.ipynb</code></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Post-processing and metrics</td>
-<td><code>03_pipeline/03_postprocessing/postprocessing_common.ipynb</code></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Evaluation implementation</td>
-<td><code>03_pipeline/04_evaluation/evaluation.ipynb</code></td>
-<td>—</td>
+<td>Evaluation &amp; post-processing</td>
+<td><code>03_pipeline/03_evaluation.ipynb</code></td>
+<td><code>04_pipeline_results/</code></td>
 </tr>
 <tr>
 <td>Written report deliverable</td>
@@ -1260,7 +1255,7 @@
 <li>Governance and naming policy</li>
 <li>Execution index and design rationale (without algorithm steps)</li>
 <li>MkDocs portal structure and publishing instructions</li>
-<li>Pointers to notebooks and immutable READMEs</li>
+<li>Pointers to notebooks and READMEs</li>
 </ul>
 <p>Markdown <strong>must not:</strong></p>
 <ul>
@@ -1269,7 +1264,7 @@
 <li>Replace notebook markdown as the methodology textbook</li>
 </ul>
 <p>When implementation detail is required, use:</p>
-<div class="highlight"><pre><span></span><code>See <span class="sb">`03_pipeline/02_segmentation/fetal_vein_segmentation.ipynb`</span> (Segmentation section).
+<div class="highlight"><pre><span></span><code>See <span class="sb">`03_pipeline/02_segmentation.ipynb`</span> (Segmentation section).
 </code></pre></div>
 <hr />
 <h2 id="4-notebook-responsibility">4. Notebook responsibility<a class="headerlink" href="#4-notebook-responsibility" title="Permanent link">&para;</a></h2>
@@ -1286,7 +1281,6 @@
 <li>Duplicate root <code>README.md</code> setup instructions at length</li>
 <li>Contain governance policy text (link to <code>06_documentation/01_governance/</code>)</li>
 </ul>
-<p><strong>Exception:</strong> <code>entrypoint.ipynb</code> may summarise workflow for first-time runners (orchestration only).</p>
 <hr />
 <h2 id="5-mkdocs-06_documentation">5. MkDocs (<code>06_documentation/</code>)<a class="headerlink" href="#5-mkdocs-06_documentation" title="Permanent link">&para;</a></h2>
 <table>
@@ -1334,7 +1328,7 @@
 </code></pre></div>
 <hr />
 <h2 id="7-notebook-authoring-structure">7. Notebook authoring structure<a class="headerlink" href="#7-notebook-authoring-structure" title="Permanent link">&para;</a></h2>
-<p>Normative notebook layout is defined in <a href="../scientific_notebook_standards/">scientific_notebook_standards.md</a> and <a href="../notebook_standards/">notebook_standards.md</a>. There are no separate published template pages.</p>
+<p>Normative notebook layout is defined in <a href="../scientific_notebook_standards/">scientific_notebook_standards.md</a> and <a href="../notebook_standards/">notebook_standards.md</a>.</p>
 <hr />
 <h2 id="8-forbidden-documentation-content">8. Forbidden documentation content<a class="headerlink" href="#8-forbidden-documentation-content" title="Permanent link">&para;</a></h2>
 <p>Do not document as <strong>active workflow</strong>:</p>
@@ -1343,6 +1337,8 @@
 <li>Local Jupyter server as requirement</li>
 <li>Bootstrap or <code>99_system</code> runtime adapters (historical mention only in design history)</li>
 <li>Kaggle as official runtime</li>
+<li><code>%run</code> chains between pipeline notebooks</li>
+<li>Separate library notebooks under <code>03_pipeline/</code></li>
 </ul>
 <hr />
 <h2 id="9-related-documents">9. Related documents<a class="headerlink" href="#9-related-documents" title="Permanent link">&para;</a></h2>

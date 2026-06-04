@@ -748,7 +748,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -1053,12 +1053,12 @@
 
 
 <h1 id="system-architecture">System architecture<a class="headerlink" href="#system-architecture" title="Permanent link">&para;</a></h1>
-<p><strong>Version:</strong> 4.0<br />
+<p><strong>Version:</strong> 5.0<br />
 <strong>Scope:</strong> relationships and principles (not execution detail)</p>
 <hr />
 <h2 id="why-this-structure-exists">Why this structure exists<a class="headerlink" href="#why-this-structure-exists" title="Permanent link">&para;</a></h2>
 <p>The repository adopts a <strong>notebook-centric architecture</strong> on <strong>Google Colab</strong> so that each stage of the assignment remains <strong>transparent, reviewable, and aligned with course reference material</strong>. Semantic segmentation of the fetal umbilical vein is implemented as a staged experiment: optional preprocessing variants, shared segmentation methodology, and comparative evaluation.</p>
-<p>Execution steps, notebook paths, and configuration tables are <strong>not</strong> documented here. See the <a href="../../portal/implementation/">Implementation</a> index and the entry point notebook linked there.</p>
+<p>Execution steps, notebook paths, and configuration tables are <strong>not</strong> documented here. See the <a href="../../portal/implementation/">Implementation</a> index and <a href="../../portal/implementation/#start-here">03_pipeline/README.md</a>.</p>
 <hr />
 <h2 id="component-relationships">Component relationships<a class="headerlink" href="#component-relationships" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>flowchart TB
@@ -1069,11 +1069,10 @@
         MOD[Save_Models]
     end
 
-    subgraph pipe [03_pipeline — processing]
-        PRE[preprocessing]
-        SEG[segmentation]
-        POST[postprocessing library]
-        EVAL[evaluation]
+    subgraph pipe [03_pipeline — three notebooks]
+        PRE[01_preprocessing]
+        SEG[02_segmentation]
+        EVAL[03_evaluation]
     end
 
     OUT[04_pipeline_results]
@@ -1085,7 +1084,6 @@
     SEG --&gt; RES
     SEG --&gt; MOD
     RES --&gt; EVAL
-    POST --&gt; EVAL
     EVAL --&gt; OUT
     OUT --&gt; REP
 </code></pre></div>
@@ -1103,7 +1101,7 @@
 </tr>
 <tr>
 <td><code>03_pipeline/</code></td>
-<td>Isolated stages; libraries vs execution notebooks</td>
+<td>Three self-contained Colab stage notebooks (no cross-notebook <code>%run</code>)</td>
 </tr>
 <tr>
 <td><code>04_pipeline_results/</code></td>
@@ -1123,7 +1121,7 @@
 </tr>
 </tbody>
 </table>
-<p>Notebook taxonomy (Categories A–D) is defined in <a href="../../01_governance/scientific_notebook_standards/">scientific_notebook_standards.md</a>.</p>
+<p>Notebook structure is defined in <a href="../../01_governance/scientific_notebook_standards/">scientific_notebook_standards.md</a>.</p>
 <hr />
 <h2 id="design-principles">Design principles<a class="headerlink" href="#design-principles" title="Permanent link">&para;</a></h2>
 <table>
@@ -1151,8 +1149,8 @@
 <td><code>images/</code> and <code>labels/</code> remain the ground-truth source</td>
 </tr>
 <tr>
-<td>Separation of orchestration and science</td>
-<td><code>entrypoint.ipynb</code> guides runs; algorithms stay in stage notebooks</td>
+<td>Self-contained stages</td>
+<td>Each pipeline notebook runs independently on Colab; workflow order is documented in <code>03_pipeline/README.md</code></td>
 </tr>
 </tbody>
 </table>

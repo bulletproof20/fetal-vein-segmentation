@@ -756,7 +756,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -1118,18 +1118,14 @@
 <p>The evaluation notebook writes the comparison table after segmentation masks exist under <code>02_dataset/results_*</code>.</p>
 <hr />
 <h2 id="how-results-are-produced">How results are produced<a class="headerlink" href="#how-results-are-produced" title="Permanent link">&para;</a></h2>
-<p>Metrics (Dice, accuracy, precision, recall) and the comparison across Original + PP1–PP5 — with and without morphological post-processing — are computed in:</p>
-<ul>
-<li>[evaluation.ipynb][nb-evaluation] (orchestration)</li>
-<li>[postprocessing_common.ipynb][nb-postprocess] (<code>calculate_metrics</code>, <code>pos_process</code>)</li>
-</ul>
+<p>Metrics (Dice, accuracy, precision, recall) and the comparison across Original + PP1–PP5 — with and without morphological post-processing — are computed in [03_evaluation.ipynb][nb-evaluation] (<code>calculate_metrics</code>, <code>pos_process</code>).</p>
 <p>No formulas or metric definitions are duplicated on this site.</p>
 <hr />
 <h2 id="reproducibility-summary">Reproducibility (summary)<a class="headerlink" href="#reproducibility-summary" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Clone the [repository][repo].</li>
 <li>Open [README.md][readme] for Colab setup (<code>requirements.txt</code>).</li>
-<li>Follow [entrypoint.ipynb][entrypoint] for the official execution order.</li>
+<li>Follow [03_pipeline/README.md][pipeline-readme] for the official execution order.</li>
 <li>Use [02_dataset/README.md][dataset-readme] for data layout.</li>
 </ol>
 <hr />

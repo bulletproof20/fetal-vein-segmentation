@@ -737,7 +737,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -1031,9 +1031,9 @@
 
 
 <h1 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h1>
-<p><strong>Version:</strong> 4.0<br />
+<p><strong>Version:</strong> 5.0<br />
 <strong>Scope:</strong> artefact movement and integrity (not algorithms)</p>
-<p>Folder names, pairing steps, and per-stage I/O are defined in the <a href="../../portal/implementation/#dataset-overview">dataset README</a> and <a href="../../portal/implementation/#start-here-execution-index">entry point notebook</a>. This page states <strong>what moves where</strong> and <strong>which invariants the architecture enforces</strong>.</p>
+<p>Folder names, pairing steps, and per-stage I/O are defined in the <a href="../../portal/implementation/#dataset-overview">dataset README</a> and <a href="../../portal/implementation/#start-here">pipeline README</a>. This page states <strong>what moves where</strong> and <strong>which invariants the architecture enforces</strong>.</p>
 <hr />
 <h2 id="artefact-flow">Artefact flow<a class="headerlink" href="#artefact-flow" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>02_dataset/images, labels
@@ -1046,7 +1046,7 @@
         ↓
 05_report/
 </code></pre></div>
-<p>Preprocessing produces alternative training inputs; segmentation writes models and masks; evaluation aggregates metrics for comparison. Post-processing at metric time is applied inside the evaluation stage (see postprocessing library notebook).</p>
+<p>Preprocessing produces alternative training inputs; segmentation writes models and masks; evaluation aggregates metrics for comparison. Morphological post-processing at metric time runs inside <code>03_evaluation.ipynb</code> (<code>pos_process</code>).</p>
 <hr />
 <h2 id="integrity-rules">Integrity rules<a class="headerlink" href="#integrity-rules" title="Permanent link">&para;</a></h2>
 <table>
@@ -1075,7 +1075,7 @@
 </tr>
 </tbody>
 </table>
-<p>Violations of pairing or path layout are detected in the postprocessing library; resolution logic is implementation detail in <code>03_pipeline/03_postprocessing/postprocessing_common.ipynb</code>.</p>
+<p>Violations of pairing or path layout are detected in <code>03_pipeline/03_evaluation.ipynb</code> (and during training in <code>02_segmentation.ipynb</code>).</p>
 <hr />
 <h2 id="related-documents">Related documents<a class="headerlink" href="#related-documents" title="Permanent link">&para;</a></h2>
 <ul>

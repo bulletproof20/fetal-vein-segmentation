@@ -657,7 +657,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -760,52 +760,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-notebook-types" class="md-nav__link">
+  <a href="#3-pipeline-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Notebook types
+        3. Pipeline notebooks
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Notebook types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#library-notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Library notebooks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution-notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Execution notebooks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entry-point-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entry point notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1119,52 +1080,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-notebook-types" class="md-nav__link">
+  <a href="#3-pipeline-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Notebook types
+        3. Pipeline notebooks
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Notebook types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#library-notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Library notebooks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution-notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Execution notebooks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entry-point-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entry point notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1263,7 +1185,7 @@
 
 
 <h1 id="coding-standards">Coding standards<a class="headerlink" href="#coding-standards" title="Permanent link">&para;</a></h1>
-<p><strong>Version:</strong> 5.0<br />
+<p><strong>Version:</strong> 6.0<br />
 <strong>Status:</strong> normative<br />
 <strong>Scope:</strong> <code>03_pipeline/</code>, root configuration, and any future project Python outside protected directories</p>
 <p>Authoritative companions: <a href="../naming_conventions/">naming_conventions.md</a>, <a href="../comment_standards/">comment_standards.md</a>, <a href="../notebook_standards/">notebook_standards.md</a>.</p>
@@ -1292,7 +1214,7 @@
 </tr>
 <tr>
 <td>Docstrings</td>
-<td>All library functions</td>
+<td>All public helper functions</td>
 </tr>
 <tr>
 <td>Notebook markdown</td>
@@ -1312,7 +1234,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Exceptions:</strong> <code>01_academic/</code>, <code>02_dataset/</code> remain untouched (may contain Portuguese or lecturer naming).</p>
+<p><strong>Exceptions:</strong> <code>01_academic/</code> remains untouched (may contain Portuguese or lecturer naming). <code>02_dataset/</code> data files are immutable; its README is project documentation and follows this policy.</p>
 <hr />
 <h2 id="2-python-style">2. Python style<a class="headerlink" href="#2-python-style" title="Permanent link">&para;</a></h2>
 <table>
@@ -1341,7 +1263,7 @@
 </tr>
 <tr>
 <td>Types</td>
-<td>Type hints on new or refactored library functions (<code>Path</code>, <code>np.ndarray</code>, etc.)</td>
+<td>Type hints on new or refactored public functions (<code>Path</code>, <code>np.ndarray</code>, etc.)</td>
 </tr>
 <tr>
 <td>Framework APIs</td>
@@ -1350,31 +1272,47 @@
 </tbody>
 </table>
 <hr />
-<h2 id="3-notebook-types">3. Notebook types<a class="headerlink" href="#3-notebook-types" title="Permanent link">&para;</a></h2>
-<h3 id="library-notebooks">Library notebooks<a class="headerlink" href="#library-notebooks" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Locations:</strong> <code>03_pipeline/01_preprocessing/00_common/</code>, <code>03_pipeline/03_postprocessing/postprocessing_common.ipynb</code></li>
-<li><strong>Import:</strong> <code>%run</code> from execution notebooks only</li>
-<li><strong>Must not:</strong> act as experiment entry points; write experiment artefacts when imported passively</li>
-<li><strong>Header:</strong> <code>**Type:** library notebook (import via %run; not an experiment entry point).</code></li>
-</ul>
-<h3 id="execution-notebooks">Execution notebooks<a class="headerlink" href="#execution-notebooks" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Locations:</strong> preprocessing <code>0N_preprocessing_pipeline.ipynb</code>, <code>fetal_vein_segmentation.ipynb</code>, <code>evaluation.ipynb</code></li>
-<li><strong>Must:</strong> declare <code>**Type:** execution notebook</code> in the first markdown cell</li>
-<li><strong>Must:</strong> follow <a href="../notebook_standards/">notebook_standards.md</a> section order where applicable</li>
-<li><strong>Orchestration:</strong> <code>entrypoint.ipynb</code> is markdown-only guidance (no scientific implementation)</li>
-</ul>
-<h3 id="entry-point-notebook">Entry point notebook<a class="headerlink" href="#entry-point-notebook" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>03_pipeline/entrypoint.ipynb</code> — workflow and pointers only; no algorithm implementation</li>
-</ul>
+<h2 id="3-pipeline-notebooks">3. Pipeline notebooks<a class="headerlink" href="#3-pipeline-notebooks" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Files</td>
+<td><code>01_preprocessing.ipynb</code>, <code>02_segmentation.ipynb</code>, <code>03_evaluation.ipynb</code> only</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Each file is a <strong>self-contained</strong> execution notebook</td>
+</tr>
+<tr>
+<td><code>%run</code></td>
+<td>Must not load other pipeline notebooks</td>
+</tr>
+<tr>
+<td>Header</td>
+<td><code>**Type:** execution notebook (self-contained; …)</code> per <a href="../notebook_standards/">notebook_standards.md</a></td>
+</tr>
+<tr>
+<td>Shared logic</td>
+<td>Define helpers in the same notebook (grouped sections), not in separate library <code>.ipynb</code> files</td>
+</tr>
+<tr>
+<td>Workflow text</td>
+<td>Execution order in <code>03_pipeline/README.md</code>, not in code</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="4-comment-and-documentation-style">4. Comment and documentation style<a class="headerlink" href="#4-comment-and-documentation-style" title="Permanent link">&para;</a></h2>
 <p>See <a href="../comment_standards/">comment_standards.md</a>.</p>
 <ul>
 <li>Comments explain <strong>intent</strong> and <strong>why</strong>, not redundant labels.</li>
-<li>Docstrings: purpose, arguments, returns, raises (library functions).</li>
+<li>Docstrings: purpose, arguments, returns, raises (public helpers).</li>
 <li>No Portuguese in comments or docstrings (policy §1).</li>
 </ul>
 <hr />
@@ -1389,7 +1327,7 @@
 <tbody>
 <tr>
 <td>Configuration</td>
-<td>Top-of-notebook cell labelled <code>EXPERIMENT CONFIGURATION</code> or stage equivalent</td>
+<td>Top-of-stage cell labelled <code>EXPERIMENT CONFIGURATION</code> or equivalent</td>
 </tr>
 <tr>
 <td>Section headers</td>
@@ -1405,7 +1343,7 @@
 </tr>
 <tr>
 <td>Duplication</td>
-<td>Shared logic in library notebooks, not copy-pasted across execution notebooks</td>
+<td>Avoid copy-pasting large blocks across the three notebooks; shared behaviour stays in one stage file</td>
 </tr>
 </tbody>
 </table>
@@ -1465,7 +1403,7 @@
 </tr>
 <tr>
 <td>Aggregated metrics</td>
-<td><code>04_pipeline_results/</code> (evaluation notebook)</td>
+<td><code>04_pipeline_results/</code> (<code>03_evaluation.ipynb</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -1473,28 +1411,22 @@
 <h2 id="8-imagelabel-pairing">8. Image–label pairing<a class="headerlink" href="#8-imagelabel-pairing" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Pair by <strong>original identifier</strong> (<code>P080_IMG1</code>), never by sorted list index alone.</li>
-<li>Use <code>resolve_label_path()</code> from <code>postprocessing_common.ipynb</code>.</li>
+<li>Use <code>resolve_label_path()</code> from <code>03_evaluation.ipynb</code> (and pairing helpers in <code>02_segmentation.ipynb</code> for training).</li>
 <li>Strip <code>_PP_PL_N</code> suffix before resolving labels.</li>
 </ul>
 <hr />
 <h2 id="9-scientific-constraints-non-negotiable-without-academic-approval">9. Scientific constraints (non-negotiable without academic approval)<a class="headerlink" href="#9-scientific-constraints-non-negotiable-without-academic-approval" title="Permanent link">&para;</a></h2>
 <p>Do not alter:</p>
 <ul>
-<li>Preprocessing filter mathematics (convolution, morphology in preprocessing stage)</li>
-<li>UNet architecture and MONAI transform pipeline core</li>
-<li>Dice loss, training loop structure, checkpoint selection logic</li>
-<li><code>pos_process()</code> morphology (opening + largest connected component)</li>
-<li><code>calculate_metrics()</code> definitions (Dice, accuracy, precision, recall)</li>
-<li>Train/validation/test split sizes where tied to lecturer reference</li>
+<li>Core UNet/MONAI training logic inherited from the lecturer reference</li>
+<li>Lecturer function names preserved by <a href="../lecturer_identifier_policy/">lecturer_identifier_policy.md</a></li>
+<li>Experiment comparison structure (Original + PP1–PP5; metrics with and without <code>pos_process</code>)</li>
 </ul>
-<p>Refactoring may rename identifiers and improve prose <strong>only</strong> if behaviour remains identical.</p>
 <hr />
 <h2 id="10-related-documents">10. Related documents<a class="headerlink" href="#10-related-documents" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../naming_conventions/">naming_conventions.md</a></li>
-<li><a href="../documentation_standards/">documentation_standards.md</a></li>
-<li><a href="../notebook_standards/">notebook_standards.md</a></li>
-<li><a href="../../portal/implementation/">../portal/implementation.md</a></li>
+<li><a href="../scientific_notebook_standards/">scientific_notebook_standards.md</a></li>
+<li><a href="../project_governance/">project_governance.md</a></li>
 </ul>
 
 

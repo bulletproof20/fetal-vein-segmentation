@@ -748,7 +748,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Notebook Taxonomy
+    Notebook Structure
   
 
     
@@ -1058,7 +1058,7 @@
 <h2 id="traceability-chain">Traceability chain<a class="headerlink" href="#traceability-chain" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>Lecturer reference (01_academic/04_reference_materials/03_code_exemple/)
         ↓  adaptation (paths, experiments, pairing)
-03_pipeline/  library + execution notebooks
+03_pipeline/  three self-contained stage notebooks
         ↓  training &amp; inference
 02_dataset/  images_pp_* , Save_Models/ , results_*
         ↓  metrics &amp; comparison
@@ -1081,25 +1081,25 @@
 <tr>
 <td>Segmentation core</td>
 <td>[FetalVeinSegmentationUS.ipynb][ref-fetal]</td>
-<td>[fetal_vein_segmentation.ipynb][nb-segmentation]</td>
+<td>[02_segmentation.ipynb][nb-segmentation]</td>
 <td><code>02_dataset/Save_Models/</code>, <code>results_*</code></td>
 </tr>
 <tr>
 <td>Post-processing &amp; metrics</td>
 <td>[Pos_Metrics.ipynb][ref-metrics]</td>
-<td>[postprocessing_common.ipynb][nb-postprocess]</td>
-<td>Used in [evaluation.ipynb][nb-evaluation]</td>
+<td>[03_evaluation.ipynb][nb-evaluation]</td>
+<td><code>pos_process</code>, <code>calculate_metrics</code></td>
 </tr>
 <tr>
 <td>Preprocessing concepts</td>
 <td>Course slides &amp; worksheets (see <a href="../academic/">Academic</a>)</td>
-<td>[01–05_preprocessing_pipeline.ipynb][nb-pp1]</td>
+<td>[01_preprocessing.ipynb][nb-preprocessing] (PP1–PP5)</td>
 <td><code>02_dataset/images_pp_1</code> … <code>images_pp_5</code></td>
 </tr>
 <tr>
 <td>Assignment scope</td>
 <td>[Assigment_TP.pdf][assignment]</td>
-<td>[entrypoint.ipynb][entrypoint] workflow</td>
+<td>[03_pipeline/README.md][pipeline-readme] workflow</td>
 <td>All stages</td>
 </tr>
 <tr>
@@ -1111,7 +1111,7 @@
 <tr>
 <td>Comparative evaluation</td>
 <td>Lecturer metric naming (<code>pos_process</code>, <code>calculate_metrics</code>)</td>
-<td>[evaluation.ipynb][nb-evaluation]</td>
+<td>[03_evaluation.ipynb][nb-evaluation]</td>
 <td>[04_pipeline_results/][results-dir]</td>
 </tr>
 </tbody>
@@ -1121,8 +1121,8 @@
 <h2 id="what-reviewers-should-open">What reviewers should open<a class="headerlink" href="#what-reviewers-should-open" title="Permanent link">&para;</a></h2>
 <ol>
 <li>[Assignment][assignment] — requirements  </li>
-<li>[FetalVeinSegmentationUS.ipynb][ref-fetal] vs [fetal_vein_segmentation.ipynb][nb-segmentation] — segmentation alignment  </li>
-<li>[entrypoint.ipynb][entrypoint] — execution order  </li>
+<li>[FetalVeinSegmentationUS.ipynb][ref-fetal] vs [02_segmentation.ipynb][nb-segmentation] — segmentation alignment  </li>
+<li>[03_pipeline/README.md][pipeline-readme] — execution order  </li>
 <li><a href="../deliverables/">Deliverables</a> — report template and results  </li>
 </ol>
 <hr />

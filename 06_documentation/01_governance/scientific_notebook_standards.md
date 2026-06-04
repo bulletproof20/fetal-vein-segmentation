@@ -195,4 +195,4 @@ No Category D notebooks are required in the delivered pipeline. Do not convert C
 - [notebook_standards.md](notebook_standards.md)
 - [documentation_standards.md](documentation_standards.md)
 - [lecturer_identifier_policy.md](lecturer_identifier_policy.md)
-- [../02_architecture/execution_workflow.md](../02_architecture/execution_workflow.md)
+- [../portal/implementation.md](../portal/implementation.md)

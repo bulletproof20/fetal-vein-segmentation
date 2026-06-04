@@ -57,12 +57,8 @@ markdown_extensions:
 
 exclude_docs: |
   04_migration/*
-  03_templates/*
   includes/*
   **/experiment_standards.md
-  02_architecture/runtime_architecture.md
-  02_architecture/technology_stack.md
-  02_architecture/execution_workflow.md
   MKDOCS_PUBLISHING.md
 
 nav:

@@ -73,5 +73,5 @@ Do not rename functions, variables, or notebook sections until Phase 3 is approv
 ## Related architecture pages
 
 - [System architecture](../02_architecture/system_architecture.md)
-- [Execution workflow](../02_architecture/execution_workflow.md)
-- [Design history](../external/design_history.md)
+- [Implementation index](../portal/implementation.md)
+- [Design decisions](../02_architecture/design_evolution.md)

@@ -90,7 +90,7 @@ DATASET_FOLDER = "images_pp_1"
 
 ## 9. Template
 
-See [../03_templates/notebook_template.md](../03_templates/notebook_template.md).
+See [scientific_notebook_standards.md](scientific_notebook_standards.md).
 
 ---
 
@@ -98,4 +98,4 @@ See [../03_templates/notebook_template.md](../03_templates/notebook_template.md)
 
 - [coding_standards.md](coding_standards.md)
 - [documentation_standards.md](documentation_standards.md)
-- [../02_architecture/execution_workflow.md](../02_architecture/execution_workflow.md)
+- [../portal/implementation.md](../portal/implementation.md)

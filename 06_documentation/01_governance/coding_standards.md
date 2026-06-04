@@ -135,4 +135,4 @@ Refactoring may rename identifiers and improve prose **only** if behaviour remai
 - [naming_conventions.md](naming_conventions.md)
 - [documentation_standards.md](documentation_standards.md)
 - [notebook_standards.md](notebook_standards.md)
-- [../02_architecture/execution_workflow.md](../02_architecture/execution_workflow.md)
+- [../portal/implementation.md](../portal/implementation.md)

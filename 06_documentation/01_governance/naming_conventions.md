@@ -14,7 +14,7 @@
 | Element | Convention | Example |
 |---------|------------|---------|
 | Directories | `snake_case` | `02_dataset`, `images_pp_1` |
-| Notebook files | `snake_case` | `fetal_vein_segmentation.ipynb` |
+| Notebook files | `snake_case` | `02_segmentation.ipynb` |
 | Python modules | `snake_case` | N/A (notebook-based project) |
 | Functions | `snake_case`, English, verb-led | `apply_gaussian_filter()` |
 | Variables | `snake_case`, English, descriptive | `input_image` |

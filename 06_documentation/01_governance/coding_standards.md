@@ -1,6 +1,6 @@
 # Coding standards
 
-**Version:** 5.0  
+**Version:** 6.0  
 **Status:** normative  
 **Scope:** `03_pipeline/`, root configuration, and any future project Python outside protected directories
 
@@ -17,13 +17,13 @@ Authoritative companions: [naming_conventions.md](naming_conventions.md), [comme
 | Code | Function bodies, assignments |
 | Identifiers | Functions, variables, parameters (see naming doc) |
 | Comments | Inline and block comments |
-| Docstrings | All library functions |
+| Docstrings | All public helper functions |
 | Notebook markdown | Headers, explanations, assumptions |
 | Print / log output | User-facing messages |
 | Exceptions | `raise` and error strings |
 | Project markdown | `06_documentation/`, `99_system/`, root `README.md` |
 
-**Exceptions:** `01_academic/`, `02_dataset/` remain untouched (may contain Portuguese or lecturer naming).
+**Exceptions:** `01_academic/` remains untouched (may contain Portuguese or lecturer naming). `02_dataset/` data files are immutable; its README is project documentation and follows this policy.
 
 ---
 
@@ -35,30 +35,21 @@ Authoritative companions: [naming_conventions.md](naming_conventions.md), [comme
 | Indentation | 4 spaces |
 | Line length | Prefer ≤ 100 characters; break long MONAI chains readably |
 | Imports | Standard library → third party → project; no unused imports |
-| Types | Type hints on new or refactored library functions (`Path`, `np.ndarray`, etc.) |
+| Types | Type hints on new or refactored public functions (`Path`, `np.ndarray`, etc.) |
 | Framework APIs | Do not rename MONAI, PyTorch, NumPy, Pandas, Matplotlib symbols |
 
 ---
 
-## 3. Notebook types
+## 3. Pipeline notebooks
 
-### Library notebooks
-
-- **Locations:** `03_pipeline/01_preprocessing/00_common/`, `03_pipeline/03_postprocessing/postprocessing_common.ipynb`
-- **Import:** `%run` from execution notebooks only
-- **Must not:** act as experiment entry points; write experiment artefacts when imported passively
-- **Header:** `**Type:** library notebook (import via %run; not an experiment entry point).`
-
-### Execution notebooks
-
-- **Locations:** preprocessing `0N_preprocessing_pipeline.ipynb`, `fetal_vein_segmentation.ipynb`, `evaluation.ipynb`
-- **Must:** declare `**Type:** execution notebook` in the first markdown cell
-- **Must:** follow [notebook_standards.md](notebook_standards.md) section order where applicable
-- **Orchestration:** `entrypoint.ipynb` is markdown-only guidance (no scientific implementation)
-
-### Entry point notebook
-
-- `03_pipeline/entrypoint.ipynb` — workflow and pointers only; no algorithm implementation
+| Rule | Detail |
+|------|--------|
+| Files | `01_preprocessing.ipynb`, `02_segmentation.ipynb`, `03_evaluation.ipynb` only |
+| Model | Each file is a **self-contained** execution notebook |
+| `%run` | Must not load other pipeline notebooks |
+| Header | `**Type:** execution notebook (self-contained; …)` per [notebook_standards.md](notebook_standards.md) |
+| Shared logic | Define helpers in the same notebook (grouped sections), not in separate library `.ipynb` files |
+| Workflow text | Execution order in `03_pipeline/README.md`, not in code |
 
 ---
 
@@ -67,7 +58,7 @@ Authoritative companions: [naming_conventions.md](naming_conventions.md), [comme
 See [comment_standards.md](comment_standards.md).
 
 - Comments explain **intent** and **why**, not redundant labels.
-- Docstrings: purpose, arguments, returns, raises (library functions).
+- Docstrings: purpose, arguments, returns, raises (public helpers).
 - No Portuguese in comments or docstrings (policy §1).
 
 ---
@@ -76,11 +67,11 @@ See [comment_standards.md](comment_standards.md).
 
 | Requirement | Detail |
 |-------------|--------|
-| Configuration | Top-of-notebook cell labelled `EXPERIMENT CONFIGURATION` or stage equivalent |
+| Configuration | Top-of-stage cell labelled `EXPERIMENT CONFIGURATION` or equivalent |
 | Section headers | Markdown `##` hierarchy; match [notebook_standards.md](notebook_standards.md) |
 | Magic numbers | Named constants in configuration or module-level `UPPER_CASE` |
 | Dead code | Remove commented-out experiment blocks unless marked `ARCHIVE` with reason |
-| Duplication | Shared logic in library notebooks, not copy-pasted across execution notebooks |
+| Duplication | Avoid copy-pasting large blocks across the three notebooks; shared behaviour stays in one stage file |
 
 ---
 
@@ -103,14 +94,14 @@ See [comment_standards.md](comment_standards.md).
 | Preprocessing output | `02_dataset/images_pp_{1..5}/` only |
 | Predictions | `02_dataset/results_*` only |
 | Models | `02_dataset/Save_Models/*.pth` only |
-| Aggregated metrics | `04_pipeline_results/` (evaluation notebook) |
+| Aggregated metrics | `04_pipeline_results/` (`03_evaluation.ipynb`) |
 
 ---
 
 ## 8. Image–label pairing
 
 - Pair by **original identifier** (`P080_IMG1`), never by sorted list index alone.
-- Use `resolve_label_path()` from `postprocessing_common.ipynb`.
+- Use `resolve_label_path()` from `03_evaluation.ipynb` (and pairing helpers in `02_segmentation.ipynb` for training).
 - Strip `_PP_PL_N` suffix before resolving labels.
 
 ---
@@ -119,20 +110,13 @@ See [comment_standards.md](comment_standards.md).
 
 Do not alter:
 
-- Preprocessing filter mathematics (convolution, morphology in preprocessing stage)
-- UNet architecture and MONAI transform pipeline core
-- Dice loss, training loop structure, checkpoint selection logic
-- `pos_process()` morphology (opening + largest connected component)
-- `calculate_metrics()` definitions (Dice, accuracy, precision, recall)
-- Train/validation/test split sizes where tied to lecturer reference
-
-Refactoring may rename identifiers and improve prose **only** if behaviour remains identical.
+- Core UNet/MONAI training logic inherited from the lecturer reference
+- Lecturer function names preserved by [lecturer_identifier_policy.md](lecturer_identifier_policy.md)
+- Experiment comparison structure (Original + PP1–PP5; metrics with and without `pos_process`)
 
 ---
 
 ## 10. Related documents
 
-- [naming_conventions.md](naming_conventions.md)
-- [documentation_standards.md](documentation_standards.md)
-- [notebook_standards.md](notebook_standards.md)
-- [../portal/implementation.md](../portal/implementation.md)
+- [scientific_notebook_standards.md](scientific_notebook_standards.md)
+- [project_governance.md](project_governance.md)

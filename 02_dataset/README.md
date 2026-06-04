@@ -2,7 +2,7 @@
 
 This directory stores **all image data, ground-truth labels, trained models, and segmentation outputs** used by the scientific pipeline. Original data must not be overwritten by preprocessing or training notebooks.
 
-Paths are resolved relative to the repository root (see `encontrar_raiz_projeto()` in pipeline library notebooks).
+Paths are resolved relative to the repository root (see `find_project_root()` in `03_pipeline/*.ipynb`).
 
 ---
 
@@ -10,16 +10,16 @@ Paths are resolved relative to the repository root (see `encontrar_raiz_projeto(
 
 | Directory | Purpose | Produced by | Consumed by |
 |-----------|---------|-------------|-------------|
-| `images/` | Original ultrasound images (read-only input) | External dataset / course distribution | Preprocessing pipelines 01–05; segmentation when `DATASET_FOLDER = "images"` |
-| `labels/` | Ground-truth segmentation masks (read-only) | External dataset / course distribution | Segmentation (`construir_data_dicts`); evaluation (`resolver_caminho_label`) |
-| `images_pp_1/` | Preprocessed images — Average filter (`_PP_PL_1`) | `01_preprocessing_pipeline.ipynb` | `fetal_vein_segmentation.ipynb` (`DATASET_FOLDER = "images_pp_1"`) |
-| `images_pp_2/` | Preprocessed images — Median filter (`_PP_PL_2`) | `02_preprocessing_pipeline.ipynb` | Segmentation (`images_pp_2`) |
-| `images_pp_3/` | Preprocessed images — Gaussian filter (`_PP_PL_3`) | `03_preprocessing_pipeline.ipynb` | Segmentation (`images_pp_3`) |
-| `images_pp_4/` | Preprocessed images — Sobel filter (`_PP_PL_4`) | `04_preprocessing_pipeline.ipynb` | Segmentation (`images_pp_4`) |
-| `images_pp_5/` | Preprocessed images — Laplacian filter (`_PP_PL_5`) | `05_preprocessing_pipeline.ipynb` | Segmentation (`images_pp_5`) |
-| `results_original/` | Predicted masks — original images experiment | `fetal_vein_segmentation.ipynb` (`RESULTS_FOLDER = "results_original"`) | `evaluation.ipynb` |
-| `results_pp_1/` … `results_pp_5/` | Predicted masks per preprocessing experiment | `fetal_vein_segmentation.ipynb` (one run per `images_pp_X`) | `evaluation.ipynb` |
-| `Save_Models/` | Best checkpoint per experiment (`.pth`) | `fetal_vein_segmentation.ipynb` | Same notebook (inference / resume) |
+| `images/` | Original ultrasound images (read-only input) | External dataset / course distribution | `01_preprocessing.ipynb`; segmentation when `DATASET_FOLDER = "images"` |
+| `labels/` | Ground-truth segmentation masks (read-only) | External dataset / course distribution | `02_segmentation.ipynb`; `03_evaluation.ipynb` |
+| `images_pp_1/` | Preprocessed images — Average filter (`_PP_PL_1`) | `01_preprocessing.ipynb` (PP1) | `02_segmentation.ipynb` (`DATASET_FOLDER = "images_pp_1"`) |
+| `images_pp_2/` | Preprocessed images — Median filter (`_PP_PL_2`) | `01_preprocessing.ipynb` (PP2) | `02_segmentation.ipynb` (`images_pp_2`) |
+| `images_pp_3/` | Preprocessed images — Gaussian filter (`_PP_PL_3`) | `01_preprocessing.ipynb` (PP3) | `02_segmentation.ipynb` (`images_pp_3`) |
+| `images_pp_4/` | Preprocessed images — Sobel filter (`_PP_PL_4`) | `01_preprocessing.ipynb` (PP4) | `02_segmentation.ipynb` (`images_pp_4`) |
+| `images_pp_5/` | Preprocessed images — Laplacian filter (`_PP_PL_5`) | `01_preprocessing.ipynb` (PP5) | `02_segmentation.ipynb` (`images_pp_5`) |
+| `results_original/` | Predicted masks — original images experiment | `02_segmentation.ipynb` (`RESULTS_FOLDER = "results_original"`) | `03_evaluation.ipynb` |
+| `results_pp_1/` … `results_pp_5/` | Predicted masks per preprocessing experiment | `02_segmentation.ipynb` (one run per `images_pp_X`) | `03_evaluation.ipynb` |
+| `Save_Models/` | Best checkpoint per experiment (`.pth`) | `02_segmentation.ipynb` | Same notebook (inference / resume) |
 
 Aggregated metrics tables are written under `04_pipeline_results/` at the repository root (not inside `02_dataset/`).
 
@@ -38,7 +38,7 @@ Pairing is performed by **original identifier**, not by list position:
 
 Example: `P080_IMG1_PP_PL_1.png` → `P080_IMG1.png`.
 
-Implementation: `03_pipeline/03_postprocessing/postprocessing_common.ipynb`.
+Implementation: `resolve_label_path()` in `03_pipeline/03_evaluation.ipynb` (and pairing helpers in `02_segmentation.ipynb` for training).
 
 ---
 
@@ -62,4 +62,4 @@ Implementation: `03_pipeline/03_postprocessing/postprocessing_common.ipynb`.
 
 ## Populating preprocessed folders
 
-Run each preprocessing execution notebook once. Outputs are written directly to `02_dataset/images_pp_{1..5}/`. No separate copy step is required after the pipeline alignment described in the project documentation.
+Run all cells in `03_pipeline/01_preprocessing.ipynb` once. Outputs are written directly to `02_dataset/images_pp_{1..5}/`.

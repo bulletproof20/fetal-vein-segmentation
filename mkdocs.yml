@@ -72,7 +72,7 @@ nav:
       - Design Decisions: 02_architecture/design_evolution.md
       - Traceability: portal/traceability.md
       - Standards & Governance: 01_governance/project_governance.md
-      - Scientific Notebook Taxonomy: 01_governance/scientific_notebook_standards.md
+      - Notebook Structure: 01_governance/scientific_notebook_standards.md
       - Coding Standards: 01_governance/coding_standards.md
       - Naming Conventions: 01_governance/naming_conventions.md
       - Semantic Naming Policy: 01_governance/semantic_naming_policy.md

@@ -11,7 +11,7 @@ Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocess
 | | |
 |---|---|
 | **[Assignment specification](portal/academic.md#assignment)** | What the project had to deliver |
-| **[Run the project](portal/implementation.md#start-here-execution-index)** | Official guide: `entrypoint.ipynb` |
+| **[Run the project](portal/implementation.md#start-here)** | `03_pipeline/README.md` and the three stage notebooks |
 | **[Academic materials](portal/academic.md)** | Literature, licence, lecturer references |
 | **[Deliverables](portal/deliverables.md)** | Report template and evaluation outputs |
 | **[Reference implementation](portal/academic.md#lecturer-reference-implementation)** | Lecturer UNet/metrics notebooks |
@@ -26,7 +26,7 @@ Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocess
 |------|------|
 | `01_academic/` | Assignment, literature, dataset licence, course references |
 | `02_dataset/` | Images, labels, preprocessed data, models, masks |
-| `03_pipeline/` | Notebooks — implementation and execution |
+| `03_pipeline/` | Three self-contained Colab notebooks + pipeline README |
 | `04_pipeline_results/` | Aggregated evaluation tables |
 | `05_report/` | Written report template |
 | `06_documentation/` | This website (index + architecture + standards) |
@@ -39,7 +39,7 @@ Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocess
 |--------------|-------------------|
 | Academic artefact index | PDF, DOCX, notebook **content** |
 | Pipeline & notebook links | Algorithms and parameters |
-| Architectural **why** | Step-by-step **how** ([entrypoint](portal/implementation.md)) |
+| Architectural **why** | Step-by-step **how** ([Implementation](portal/implementation.md)) |
 | Standards index | Governance policy text |
 
 This site is a **concierge desk**, not a second copy of the repository.

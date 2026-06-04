@@ -65,9 +65,9 @@ Large notebooks may use section banners:
 
 ---
 
-## 6. Docstrings (library functions)
+## 6. Docstrings (reusable functions)
 
-Required on public functions in library notebooks:
+Required on public helper functions defined in pipeline notebooks:
 
 ```python
 def resolve_label_path(prediction_file_name: str, labels_dir: Path = LABELS_DIR) -> Path:

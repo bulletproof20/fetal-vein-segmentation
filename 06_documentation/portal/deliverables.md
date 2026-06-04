@@ -29,10 +29,7 @@ The evaluation notebook writes the comparison table after segmentation masks exi
 
 ## How results are produced
 
-Metrics (Dice, accuracy, precision, recall) and the comparison across Original + PP1–PP5 — with and without morphological post-processing — are computed in:
-
-- [evaluation.ipynb][nb-evaluation] (orchestration)
-- [postprocessing_common.ipynb][nb-postprocess] (`calculate_metrics`, `pos_process`)
+Metrics (Dice, accuracy, precision, recall) and the comparison across Original + PP1–PP5 — with and without morphological post-processing — are computed in [03_evaluation.ipynb][nb-evaluation] (`calculate_metrics`, `pos_process`).
 
 No formulas or metric definitions are duplicated on this site.
 
@@ -42,7 +39,7 @@ No formulas or metric definitions are duplicated on this site.
 
 1. Clone the [repository][repo].
 2. Open [README.md][readme] for Colab setup (`requirements.txt`).
-3. Follow [entrypoint.ipynb][entrypoint] for the official execution order.
+3. Follow [03_pipeline/README.md][pipeline-readme] for the official execution order.
 4. Use [02_dataset/README.md][dataset-readme] for data layout.
 
 ---

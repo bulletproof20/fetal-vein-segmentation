@@ -13,14 +13,20 @@ GitHub Repository
         ↓
      02_dataset
         ↓
-     03_pipeline
+     03_pipeline  (01_preprocessing → 02_segmentation → 03_evaluation)
         ↓
  04_pipeline_results
         ↓
       05_report
 ```
 
-**Start here:** [`03_pipeline/entrypoint.ipynb`](03_pipeline/entrypoint.ipynb) — execution order and configuration (markdown guide).
+**Start here:** [`03_pipeline/README.md`](03_pipeline/README.md) — execution order and stage outputs.
+
+Run the three scientific notebooks in order (each is self-contained; no `%run` between notebooks):
+
+1. [`03_pipeline/01_preprocessing.ipynb`](03_pipeline/01_preprocessing.ipynb)
+2. [`03_pipeline/02_segmentation.ipynb`](03_pipeline/02_segmentation.ipynb)
+3. [`03_pipeline/03_evaluation.ipynb`](03_pipeline/03_evaluation.ipynb)
 
 ---
 
@@ -30,7 +36,7 @@ GitHub Repository
 |------|----------------|
 | [`01_academic/`](01_academic/) | Lecturer reference materials (read-only; not modified by the project pipeline) |
 | [`02_dataset/`](02_dataset/) | Images, labels, preprocessed data, model checkpoints, prediction masks |
-| [`03_pipeline/`](03_pipeline/) | Scientific implementation (notebooks only) |
+| [`03_pipeline/`](03_pipeline/) | Scientific implementation (three Colab notebooks + pipeline README) |
 | [`04_pipeline_results/`](04_pipeline_results/) | Aggregated evaluation tables (e.g. comparison CSV) |
 | [`05_report/`](05_report/) | Report template for the written deliverable |
 | [`06_documentation/`](06_documentation/) | Architecture and governance (published via MkDocs) |
@@ -40,9 +46,9 @@ GitHub Repository
 
 | Question | Location |
 |----------|----------|
-| How do I run the project? | `03_pipeline/entrypoint.ipynb` |
+| How do I run the project? | `03_pipeline/README.md` and the three notebooks above |
 | How is data organised? | `02_dataset/README.md` |
-| What does each pipeline stage do? | `03_pipeline/README.md` + notebooks under `03_pipeline/` |
+| What does each pipeline stage do? | `03_pipeline/README.md` + markdown sections inside each notebook |
 | Architecture, data flow, governance | MkDocs site from `06_documentation/` (see below) |
 | Lecturer segmentation reference | `01_academic/04_reference_materials/03_code_exemple/FetalVeinSegmentationUS.ipynb` |
 
@@ -55,7 +61,7 @@ GitHub Repository
 !pip install -r requirements.txt
 ```
 
-Run execution notebooks in the order described in `03_pipeline/entrypoint.ipynb`. Use the repository root as the working directory (folder containing `02_dataset/` and `03_pipeline/`).
+Run each stage notebook top to bottom. Use the repository root as the working directory (folder containing `02_dataset/` and `03_pipeline/`). Do not use `%run` to load other pipeline notebooks.
 
 ---
 

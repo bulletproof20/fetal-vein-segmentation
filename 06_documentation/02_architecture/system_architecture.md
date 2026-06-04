@@ -1,6 +1,6 @@
 # System architecture
 
-**Version:** 4.0  
+**Version:** 5.0  
 **Scope:** relationships and principles (not execution detail)
 
 ---
@@ -9,7 +9,7 @@
 
 The repository adopts a **notebook-centric architecture** on **Google Colab** so that each stage of the assignment remains **transparent, reviewable, and aligned with course reference material**. Semantic segmentation of the fetal umbilical vein is implemented as a staged experiment: optional preprocessing variants, shared segmentation methodology, and comparative evaluation.
 
-Execution steps, notebook paths, and configuration tables are **not** documented here. See the [Implementation](../portal/implementation.md) index and the entry point notebook linked there.
+Execution steps, notebook paths, and configuration tables are **not** documented here. See the [Implementation](../portal/implementation.md) index and [03_pipeline/README.md](../portal/implementation.md#start-here).
 
 ---
 
@@ -24,11 +24,10 @@ flowchart TB
         MOD[Save_Models]
     end
 
-    subgraph pipe [03_pipeline — processing]
-        PRE[preprocessing]
-        SEG[segmentation]
-        POST[postprocessing library]
-        EVAL[evaluation]
+    subgraph pipe [03_pipeline — three notebooks]
+        PRE[01_preprocessing]
+        SEG[02_segmentation]
+        EVAL[03_evaluation]
     end
 
     OUT[04_pipeline_results]
@@ -40,7 +39,6 @@ flowchart TB
     SEG --> RES
     SEG --> MOD
     RES --> EVAL
-    POST --> EVAL
     EVAL --> OUT
     OUT --> REP
 ```
@@ -48,13 +46,13 @@ flowchart TB
 | Layer | Role (WHY) |
 |-------|------------|
 | `02_dataset/` | Single contract for all scientific inputs and outputs |
-| `03_pipeline/` | Isolated stages; libraries vs execution notebooks |
+| `03_pipeline/` | Three self-contained Colab stage notebooks (no cross-notebook `%run`) |
 | `04_pipeline_results/` | Aggregated comparison outside mutable dataset tree |
 | `05_report/` | Written deliverable separate from code |
 | `01_academic/` | Read-only lecturer reference; pipeline adapts paths only |
 | `06_documentation/` | Normative rules and architectural rationale (this site) |
 
-Notebook taxonomy (Categories A–D) is defined in [scientific_notebook_standards.md](../01_governance/scientific_notebook_standards.md).
+Notebook structure is defined in [scientific_notebook_standards.md](../01_governance/scientific_notebook_standards.md).
 
 ---
 
@@ -66,7 +64,7 @@ Notebook taxonomy (Categories A–D) is defined in [scientific_notebook_standard
 | Explicit artefact layout | Reviewers can locate data, models, and masks without implicit paths |
 | Identifier-based pairing | Image–label matching by patient id, not list order |
 | Non-destructive originals | `images/` and `labels/` remain the ground-truth source |
-| Separation of orchestration and science | `entrypoint.ipynb` guides runs; algorithms stay in stage notebooks |
+| Self-contained stages | Each pipeline notebook runs independently on Colab; workflow order is documented in `03_pipeline/README.md` |
 
 ---
 

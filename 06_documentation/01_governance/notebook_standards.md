@@ -1,10 +1,10 @@
 # Notebook standards
 
-**Version:** 6.0  
+**Version:** 7.0  
 **Status:** normative  
-**Scope:** all notebooks under `03_pipeline/` (and project templates)
+**Scope:** all notebooks under `03_pipeline/`
 
-**Authoritative taxonomy:** [scientific_notebook_standards.md](scientific_notebook_standards.md) (Categories A–D). This document covers language, tone, and shared formatting.
+**Authoritative structure:** [scientific_notebook_standards.md](scientific_notebook_standards.md). This document covers language, tone, and shared formatting.
 
 ---
 
@@ -19,29 +19,39 @@
 
 ---
 
-## 2. Required header (all notebooks)
+## 2. Required header (pipeline notebooks)
 
 First markdown cell must include:
 
 1. Title (`# …`)
-2. `**Type:**` — `library notebook` or `execution notebook` (or entry-point guidance for `entrypoint.ipynb`)
+2. `**Type:**` — `execution notebook (self-contained; no %run of other pipeline notebooks).`
 3. Short purpose (2–4 sentences)
-4. For execution notebooks: inputs, outputs, and runtime (`Google Colab`)
+4. Inputs, outputs, and runtime (`Google Colab`)
 
 ---
 
-## 3. Notebook categories and structure
+## 3. Section layout
 
-See [scientific_notebook_standards.md](scientific_notebook_standards.md) for normative section lists:
+See [scientific_notebook_standards.md](scientific_notebook_standards.md):
 
-| Category | Structure summary |
-|----------|-------------------|
-| **A — Library** | Purpose → Dependencies → Function definitions → Usage notes |
-| **B — Execution** | Purpose → Imports → Configuration → Processing → Validation → Outputs → Conclusions |
-| **C — Orchestration** | Repository context → Execution order → Configuration matrix → Expected outputs |
-| **D — Research** | Reserved (Hypothesis → Methodology → Experiment → Results → Discussion) |
+| Block | Summary |
+|-------|---------|
+| Purpose | Goal, inputs, outputs |
+| Dependencies | One consolidated import cell |
+| Configuration | Labelled experiment constants |
+| Stage sections | Processing logic (preserved internal headings) |
+| Validation / Outputs / Conclusions | As applicable per stage |
 
-Phase 3 aligns headings; scientific behaviour unchanged.
+---
+
+## 4. Self-contained execution
+
+| Rule | Detail |
+|------|--------|
+| Cross-notebook `%run` | **Forbidden** between `01_`, `02_`, `03_` pipeline notebooks |
+| Dependencies | All imports for a stage in that notebook’s **Dependencies** cell |
+| Execution order | Documented in `03_pipeline/README.md`, not in a fourth notebook |
+| Side effects | Running a notebook must not require another pipeline notebook to have been `%run` |
 
 ---
 
@@ -56,22 +66,12 @@ EXPERIMENT_ID = 1
 DATASET_FOLDER = "images_pp_1"
 ```
 
-- All tunable parameters in one place at the top of execution notebooks.
+- All tunable parameters in one place at the top of the execution section for that stage.
 - Use `UPPER_SNAKE_CASE` for configuration constants.
 
 ---
 
-## 6. `%run` discipline
-
-| Rule | Detail |
-|------|--------|
-| Order | Load library notebooks before calling their functions |
-| Paths | Relative to calling notebook (e.g. `%run ../00_common/00_generic.ipynb`) |
-| Side effects | Library load should not train models or overwrite results |
-
----
-
-## 7. Visualisation
+## 6. Visualisation
 
 - Use clear figure titles and axis labels (English).
 - Prefer helper `display_images_side_by_side()` for comparisons.
@@ -79,23 +79,19 @@ DATASET_FOLDER = "images_pp_1"
 
 ---
 
-## 8. What notebooks must not contain
+## 7. What notebooks must not contain
 
 - Long architecture essays (link to MkDocs)
 - Portuguese prose
 - Docker / local server setup as primary instructions
 - Copy-pasted governance text
+- `%run` paths to other pipeline notebooks
 
 ---
 
-## 9. Template
+## 8. Related documents
 
-See [scientific_notebook_standards.md](scientific_notebook_standards.md).
-
----
-
-## 10. Related documents
-
+- [scientific_notebook_standards.md](scientific_notebook_standards.md)
 - [coding_standards.md](coding_standards.md)
 - [documentation_standards.md](documentation_standards.md)
 - [../portal/implementation.md](../portal/implementation.md)

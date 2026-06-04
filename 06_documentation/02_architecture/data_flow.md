@@ -1,9 +1,9 @@
 # Data flow
 
-**Version:** 4.0  
+**Version:** 5.0  
 **Scope:** artefact movement and integrity (not algorithms)
 
-Folder names, pairing steps, and per-stage I/O are defined in the [dataset README](../portal/implementation.md#dataset-overview) and [entry point notebook](../portal/implementation.md#start-here-execution-index). This page states **what moves where** and **which invariants the architecture enforces**.
+Folder names, pairing steps, and per-stage I/O are defined in the [dataset README](../portal/implementation.md#dataset-overview) and [pipeline README](../portal/implementation.md#start-here). This page states **what moves where** and **which invariants the architecture enforces**.
 
 ---
 
@@ -21,7 +21,7 @@ Folder names, pairing steps, and per-stage I/O are defined in the [dataset READM
 05_report/
 ```
 
-Preprocessing produces alternative training inputs; segmentation writes models and masks; evaluation aggregates metrics for comparison. Post-processing at metric time is applied inside the evaluation stage (see postprocessing library notebook).
+Preprocessing produces alternative training inputs; segmentation writes models and masks; evaluation aggregates metrics for comparison. Morphological post-processing at metric time runs inside `03_evaluation.ipynb` (`pos_process`).
 
 ---
 
@@ -34,7 +34,7 @@ Preprocessing produces alternative training inputs; segmentation writes models a
 | Preprocessed images only under `images_pp_*` | Keep baseline and PP variants explicit |
 | Aggregated tables under `04_pipeline_results/` | Separate published metrics from raw dataset tree |
 
-Violations of pairing or path layout are detected in the postprocessing library; resolution logic is implementation detail in `03_pipeline/03_postprocessing/postprocessing_common.ipynb`.
+Violations of pairing or path layout are detected in `03_pipeline/03_evaluation.ipynb` (and during training in `02_segmentation.ipynb`).
 
 ---
 

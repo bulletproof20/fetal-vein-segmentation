@@ -2,7 +2,7 @@
 # Install: pip install -r requirements.txt
 
 # --- Image and data science ---
-numpy>=1.26,<3
+numpy>=1.26
 scipy>=1.11
 pandas>=2.1
 matplotlib>=3.8
@@ -10,10 +10,10 @@ pillow>=10.0
 scikit-image>=0.22
 tqdm>=4.66
 
-# --- Notebooks (Colab-compatible) ---
+# --- Notebooks ---
 ipywidgets>=8.1
 
 # --- Deep learning ---
-torch>=2.4.1,<2.7
-torchvision>=0.19
-monai>=1.5.0,<1.6
+torch>=2.12
+torchvision>=0.22
+monai>=1.5.0

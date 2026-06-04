@@ -1,9 +1,0 @@
-provider: local_cpu
-
-dataset_path: ./02_dataset
-output_path: ./04_segmentation/outputs
-
-images_dir: ./02_dataset/images
-masks_dir: ./02_dataset/labels
-
-device: cpu

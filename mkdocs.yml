@@ -1,0 +1,76 @@
+# MkDocs configuration — published via: mkdocs gh-deploy
+# Documentation source: 06_documentation/ (repository structure unchanged)
+
+site_name: Fetal Vein Segmentation
+site_description: Documentation for the fetal vein segmentation academic project (IPCA).
+site_author: IPCA — Biomedical Imaging
+
+# Set after first deploy, e.g. https://<user>.github.io/fetal_vein_segmentation/
+# After first deploy, set to your GitHub Pages URL, e.g.:
+# site_url: https://<user>.github.io/fetal_vein_segmentation/
+
+repo_name: fetal_vein_segmentation
+# repo_url: https://github.com/<user>/fetal_vein_segmentation
+# edit_uri: edit/main/06_documentation/
+
+docs_dir: 06_documentation
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - System Architecture: 02_architecture/system_architecture.md
+      - Data Flow: 02_architecture/data_flow.md
+      - Design Evolution: 02_architecture/design_evolution.md
+  - Governance:
+      - Project Governance: 01_governance/project_governance.md
+      - Scientific Notebook Taxonomy: 01_governance/scientific_notebook_standards.md
+      - Coding Standards: 01_governance/coding_standards.md
+      - Naming Conventions: 01_governance/naming_conventions.md
+      - Semantic Naming Policy: 01_governance/semantic_naming_policy.md
+      - Lecturer Identifier Policy: 01_governance/lecturer_identifier_policy.md
+      - Documentation Standards: 01_governance/documentation_standards.md
+      - Notebook Standards: 01_governance/notebook_standards.md
+      - Comment Standards: 01_governance/comment_standards.md
+  - Publishing:
+      - MkDocs & GitHub Pages: MKDOCS_PUBLISHING.md
+
+extra:
+  generator: false

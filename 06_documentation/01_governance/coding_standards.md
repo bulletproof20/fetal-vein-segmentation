@@ -1,199 +1,138 @@
-# Padrões de Código Python
+# Coding standards
 
-**Versão:** 1.0  
-**Idioma do código:** inglês  
-**Docstrings:** Google Style (inglês)
+**Version:** 5.0  
+**Status:** normative  
+**Scope:** `03_pipeline/`, root configuration, and any future project Python outside protected directories
 
----
-
-## 1. Âmbito
-
-Aplica-se a todos os ficheiros `.py` em:
-
-- `00_common/` (incluindo `bootstrap/`)
-- `04_segmentation/`
-- `10_runtime/*/`
-- `99_system/tools/` (quando existir)
-
-**Não** aplica regras de estrutura de células a notebooks — ver [notebook_standards.md](notebook_standards.md).
+Authoritative companions: [naming_conventions.md](naming_conventions.md), [comment_standards.md](comment_standards.md), [notebook_standards.md](notebook_standards.md).
 
 ---
 
-## 2. Estilo e formatação
+## 1. Repository language policy
 
-| Aspeto | Regra |
-|--------|-------|
-| PEP 8 | Base obrigatória |
-| Comprimento de linha | 88–100 caracteres (preferir 88 se formatador automático) |
-| Imports | `stdlib` → terceiros → locais; uma linha em branco entre grupos |
-| `from __future__ import annotations` | Obrigatório em módulos novos |
-| Type hints | Obrigatórios em funções públicas |
-| f-strings | Preferidas para formatação |
+**English only** in all project-authored content outside `01_academic/` and `02_dataset/`.
 
----
+| Must be English | Examples |
+|-----------------|----------|
+| Code | Function bodies, assignments |
+| Identifiers | Functions, variables, parameters (see naming doc) |
+| Comments | Inline and block comments |
+| Docstrings | All library functions |
+| Notebook markdown | Headers, explanations, assumptions |
+| Print / log output | User-facing messages |
+| Exceptions | `raise` and error strings |
+| Project markdown | `06_documentation/`, `99_system/`, root `README.md` |
 
-## 3. Nomenclatura
-
-Ver [naming_conventions.md](naming_conventions.md).
-
-```python
-# Good
-def load_dataset(dataset_path: Path) -> dict[str, Any]:
-    ...
-
-class DatasetLoader:
-    ...
-
-DEFAULT_BATCH_SIZE = 2
-```
-
-```python
-# Avoid in new code
-def analisar_metadados(img):  # legacy notebook-only; do not copy to .py modules
-    ...
-```
+**Exceptions:** `01_academic/`, `02_dataset/` remain untouched (may contain Portuguese or lecturer naming).
 
 ---
 
-## 4. Docstrings (Google Style)
+## 2. Python style
 
-Todas as funções e classes **públicas** devem ter docstring em inglês.
-
-Ver template: [../templates/python_function_template.md](../templates/python_function_template.md).
-
-Regras:
-
-- Primeira linha: resumo imperativo («Load dataset from disk.»).
-- `Args`, `Returns`, `Raises` quando aplicável.
-- Sem repetir o nome da função no início.
-
----
-
-## 5. Comentários
-
-### 5.1 Comentários de secção
-
-Em módulos longos (>150 linhas ou >5 blocos lógicos):
-
-```python
-# ==================================================
-# Dataset Loading
-# ==================================================
-```
-
-### 5.2 Comentários inline
-
-Explicam **porquê**, não **o quê**:
-
-```python
-# Normalize to [0, 1] before MONAI loss
-array = array / 255.0
-```
-
-Evitar:
-
-```python
-# increment i
-i += 1
-```
+| Rule | Requirement |
+|------|-------------|
+| Style guide | [PEP 8](https://peps.python.org/pep-0008/) where applicable |
+| Indentation | 4 spaces |
+| Line length | Prefer ≤ 100 characters; break long MONAI chains readably |
+| Imports | Standard library → third party → project; no unused imports |
+| Types | Type hints on new or refactored library functions (`Path`, `np.ndarray`, etc.) |
+| Framework APIs | Do not rename MONAI, PyTorch, NumPy, Pandas, Matplotlib symbols |
 
 ---
 
-## 6. Estrutura de módulos
+## 3. Notebook types
 
-Ordem recomendada:
+### Library notebooks
 
-1. Docstring de módulo (opcional, uma linha)
-2. `from __future__ import annotations`
-3. Imports
-4. Constantes
-5. Classes
-6. Funções públicas
-7. Funções privadas (`_prefix`)
-8. `if __name__ == "__main__":`
+- **Locations:** `03_pipeline/01_preprocessing/00_common/`, `03_pipeline/03_postprocessing/postprocessing_common.ipynb`
+- **Import:** `%run` from execution notebooks only
+- **Must not:** act as experiment entry points; write experiment artefacts when imported passively
+- **Header:** `**Type:** library notebook (import via %run; not an experiment entry point).`
 
----
+### Execution notebooks
 
-## 7. Imports e layout (sem `src/fetal_vein`)
+- **Locations:** preprocessing `0N_preprocessing_pipeline.ipynb`, `fetal_vein_segmentation.ipynb`, `evaluation.ipynb`
+- **Must:** declare `**Type:** execution notebook` in the first markdown cell
+- **Must:** follow [notebook_standards.md](notebook_standards.md) section order where applicable
+- **Orchestration:** `entrypoint.ipynb` is markdown-only guidance (no scientific implementation)
 
-Decisão aprovada: **não** usar pacote instalável `src/fetal_vein`.
+### Entry point notebook
 
-### 7.1 Pipeline `04_segmentation`
-
-Imports locais entre módulos da mesma pasta:
-
-```python
-from dataset import resolve_dataset_paths
-from model import build_model
-```
-
-### 7.2 Runtimes
-
-Adapters podem adicionar `00_common` ao `sys.path` **apenas** no entrypoint/adapter, não na pipeline.
-
-### 7.3 Bootstrap
-
-Executado com `00_common/bootstrap` no `sys.path` (como script) ou após migração com caminho documentado.
+- `03_pipeline/entrypoint.ipynb` — workflow and pointers only; no algorithm implementation
 
 ---
 
-## 8. Configuração
+## 4. Comment and documentation style
 
-| Tipo | Formato | Local |
-|------|---------|-------|
-| Pipeline | YAML | `04_segmentation/config.yaml` |
-| Runtime | YAML | `10_runtime/<provider>/config.yaml` |
-| Constantes Python | `.py` opcional | `00_common/constants.py` (futuro) |
+See [comment_standards.md](comment_standards.md).
 
-Não hardcodar paths absolutos exceto deteção Kaggle (`/kaggle/input`).
+- Comments explain **intent** and **why**, not redundant labels.
+- Docstrings: purpose, arguments, returns, raises (library functions).
+- No Portuguese in comments or docstrings (policy §1).
 
 ---
 
-## 9. Variáveis de ambiente
+## 5. Readability requirements
 
-Prefixo do projeto: `FETAL_` para runtime/pipeline; `BOOTSTRAP_` para bootstrap.
-
-| Variável | Uso |
-|----------|-----|
-| `PROJECT_ROOT` | Raiz do repositório |
-| `FETAL_DATASET_PATH` | Dataset |
-| `FETAL_OUTPUT_PATH` | Outputs de treino |
-| `FETAL_DEVICE` | `cpu` ou `cuda` |
-| `FETAL_PROVIDER` | `local_cpu`, `local_gpu`, `kaggle` |
-| `BOOTSTRAP_PROFILE` | Perfil de validação |
+| Requirement | Detail |
+|-------------|--------|
+| Configuration | Top-of-notebook cell labelled `EXPERIMENT CONFIGURATION` or stage equivalent |
+| Section headers | Markdown `##` hierarchy; match [notebook_standards.md](notebook_standards.md) |
+| Magic numbers | Named constants in configuration or module-level `UPPER_CASE` |
+| Dead code | Remove commented-out experiment blocks unless marked `ARCHIVE` with reason |
+| Duplication | Shared logic in library notebooks, not copy-pasted across execution notebooks |
 
 ---
 
-## 10. Erros e logging
+## 6. Paths and runtime
 
-- Usar exceções específicas (`FileNotFoundError`, `RuntimeError` com mensagem clara).
-- `print()` aceitável em scripts CLI (`train.py`, bootstrap); preferir `logging` em módulos reutilizáveis futuros.
-- Mensagens de erro para utilizador: podem ser em português no bootstrap; inglês na pipeline técnica.
-
----
-
-## 11. Testes (futuro)
-
-Quando existirem, em `99_system/tests/`:
-
-- Nomes: `test_<module>_<behavior>.py`
-- Funções: `test_returns_empty_list_when_dataset_missing`
+| Rule | Detail |
+|------|--------|
+| Root resolution | `find_project_root()` — walk up until `02_dataset/` exists |
+| Paths | `pathlib.Path`; repository-relative segments |
+| Forbidden | Hard-coded `/content/drive/...`, local machine paths, Docker/bootstrap entry points as active workflow |
+| Official runtime | Google Colab after clone from GitHub |
 
 ---
 
-## 12. Proibições
+## 7. Data integrity
 
-| Proibido | Motivo |
-|----------|--------|
-| Lógica de treino em `10_runtime` | Separação pipeline/runtime |
-| Secrets em código | Usar env / Kaggle secrets |
-| `import *` | Legibilidade |
-| Código morto comentado em bloco | Usar git history |
+| Rule | Detail |
+|------|--------|
+| Read-only | `02_dataset/images/`, `02_dataset/labels/` |
+| Preprocessing output | `02_dataset/images_pp_{1..5}/` only |
+| Predictions | `02_dataset/results_*` only |
+| Models | `02_dataset/Save_Models/*.pth` only |
+| Aggregated metrics | `04_pipeline_results/` (evaluation notebook) |
 
 ---
 
-## 13. Revisão
+## 8. Image–label pairing
 
-| Versão | Data | Alteração |
-|--------|------|-----------|
-| 1.0 | 2026-05-29 | Criação — Fase 2 |
+- Pair by **original identifier** (`P080_IMG1`), never by sorted list index alone.
+- Use `resolve_label_path()` from `postprocessing_common.ipynb`.
+- Strip `_PP_PL_N` suffix before resolving labels.
+
+---
+
+## 9. Scientific constraints (non-negotiable without academic approval)
+
+Do not alter:
+
+- Preprocessing filter mathematics (convolution, morphology in preprocessing stage)
+- UNet architecture and MONAI transform pipeline core
+- Dice loss, training loop structure, checkpoint selection logic
+- `pos_process()` morphology (opening + largest connected component)
+- `calculate_metrics()` definitions (Dice, accuracy, precision, recall)
+- Train/validation/test split sizes where tied to lecturer reference
+
+Refactoring may rename identifiers and improve prose **only** if behaviour remains identical.
+
+---
+
+## 10. Related documents
+
+- [naming_conventions.md](naming_conventions.md)
+- [documentation_standards.md](documentation_standards.md)
+- [notebook_standards.md](notebook_standards.md)
+- [../02_architecture/execution_workflow.md](../02_architecture/execution_workflow.md)

@@ -1,132 +1,77 @@
-# Arquitetura de Sistema
+# System architecture
 
-**Versão:** 1.0  
-**Estado:** documentação normativa (paths legados até Fase 10)
+**Version:** 4.0  
+**Scope:** relationships and principles (not execution detail)
 
 ---
 
-## 1. Visão geral
+## Why this structure exists
 
-O projeto `fetal_vein_segmentation` é um sistema académico de **segmentação de imagens biomédicas** organizado em camadas numeradas (00–10) e uma zona de infraestrutura (`99_system`).
+The repository adopts a **notebook-centric architecture** on **Google Colab** so that each stage of the assignment remains **transparent, reviewable, and aligned with course reference material**. Semantic segmentation of the fetal umbilical vein is implemented as a staged experiment: optional preprocessing variants, shared segmentation methodology, and comparative evaluation.
+
+Execution steps, notebook paths, and configuration tables are **not** documented here. They live in [`03_pipeline/entrypoint.ipynb`](../../03_pipeline/entrypoint.ipynb).
+
+---
+
+## Component relationships
 
 ```mermaid
 flowchart TB
-    subgraph scientific [Zona científica 00-09]
-        C00[00_common]
-        D02[02_dataset]
-        P03[03_preprocessing]
-        P04[04_segmentation]
-        P05[05_postprocessing]
-        E06[06_evaluation]
-        R07[07_results]
-        R08[08_report]
+    subgraph data [02_dataset — artefacts]
+        IMG[images / labels]
+        PP[images_pp_*]
+        RES[results_*]
+        MOD[Save_Models]
     end
 
-    subgraph execution [Zona de execução]
-        RT[10_runtime]
+    subgraph pipe [03_pipeline — processing]
+        PRE[preprocessing]
+        SEG[segmentation]
+        POST[postprocessing library]
+        EVAL[evaluation]
     end
 
-    subgraph infra [Infraestrutura]
-        S99[99_system]
-    end
+    OUT[04_pipeline_results]
+    REP[05_report]
 
-    D02 --> P03 --> P04 --> P05 --> E06 --> R07 --> R08
-    C00 --> P03
-    C00 --> P04
-    RT -->|prepare env| P04
-    S99 --> C00
-    S99 --> RT
+    IMG --> PRE --> PP
+    PP --> SEG
+    IMG --> SEG
+    SEG --> RES
+    SEG --> MOD
+    RES --> EVAL
+    POST --> EVAL
+    EVAL --> OUT
+    OUT --> REP
 ```
 
----
+| Layer | Role (WHY) |
+|-------|------------|
+| `02_dataset/` | Single contract for all scientific inputs and outputs |
+| `03_pipeline/` | Isolated stages; libraries vs execution notebooks |
+| `04_pipeline_results/` | Aggregated comparison outside mutable dataset tree |
+| `05_report/` | Written deliverable separate from code |
+| `01_academic/` | Read-only lecturer reference; pipeline adapts paths only |
+| `06_documentation/` | Normative rules and architectural rationale (this site) |
 
-## 2. Princípio fundamental
-
-```text
-Mesmo código · Mesmo dataset · Mesmo output · Mesma estrutura
-Diferente ambiente de execução
-```
-
-A **pipeline científica** é única. Os **runtimes** apenas configuram o ambiente (paths, device, dependências, sincronização Kaggle).
-
----
-
-## 3. Componentes principais
-
-### 3.1 Biblioteca comum (`00_common`)
-
-| Elemento | Função |
-|----------|--------|
-| Notebooks `01`–`07` | Funções reutilizáveis (filtros, morfologia, visualização, provider) |
-| `runtime_paths.py` | Resolução de paths e variáveis `FETAL_*` |
-| `bootstrap/` | Validação de estrutura, dependências e runtime |
-
-### 3.2 Pipeline de segmentação (`04_segmentation`)
-
-| Ficheiro | Função |
-|----------|--------|
-| `train.py` | Entry point canónico de treino |
-| `dataset.py` | Pares imagem/máscara, carregamento |
-| `model.py` | Construção UNet (MONAI) |
-| `config.yaml` | Hiperparâmetros da experiência |
-| `outputs/` | Checkpoints, logs, métricas |
-
-### 3.3 Runtimes (`10_runtime`)
-
-| Provider | Ambiente |
-|----------|----------|
-| `local_cpu` | Docker CPU + Jupyter |
-| `local_gpu` | Docker CUDA + MONAI |
-| `kaggle` | Notebook cloud GPU |
-
-Ver [runtime_architecture.md](runtime_architecture.md).
-
-### 3.4 Infraestrutura (`99_system`)
-
-Governação, templates, MkDocs, auditoria, ferramentas de migração — **sem** lógica de treino.
+Notebook taxonomy (Categories A–D) is defined in [scientific_notebook_standards.md](../01_governance/scientific_notebook_standards.md).
 
 ---
 
-## 4. Boundaries (limites)
+## Design principles
 
-| De | Para | Contrato |
-|----|------|----------|
-| Runtime | Pipeline | Variáveis de ambiente `FETAL_*` |
-| Pipeline | Results | Ficheiros em `outputs/` + promoção para `07_results` |
-| Bootstrap | Todo o repo | Pastas obrigatórias e checks de dependências |
-| Notebooks | Pipeline | Chamada a `train.py`, sem duplicar loop de treino |
-
----
-
-## 5. O que não faz parte do sistema
-
-- Lógica de treino por runtime (`train_kaggle.py`, etc.).
-- Pacote `src/fetal_vein` (decisão: layout flat numerado).
-- Pasta `10-docker` legada (deprecada).
+| Principle | Rationale |
+|-----------|-----------|
+| Lecturer-aligned segmentation core | Preserves traceability to course UNet/MONAI reference |
+| Explicit artefact layout | Reviewers can locate data, models, and masks without implicit paths |
+| Identifier-based pairing | Image–label matching by patient id, not list order |
+| Non-destructive originals | `images/` and `labels/` remain the ground-truth source |
+| Separation of orchestration and science | `entrypoint.ipynb` guides runs; algorithms stay in stage notebooks |
 
 ---
 
-## 6. Evolução prevista
+## Related documents
 
-| Extensão | Local |
-|----------|-------|
-| RunPod / AWS / Azure | Novo subfolder em `10_runtime/<provider>/` |
-| Métricas avançadas | `04_metrics.ipynb` + `06_evaluation` |
-| API REST | Fora de âmbito atual; seria módulo separado |
-
----
-
-## 7. Documentos relacionados
-
-- [runtime_architecture.md](runtime_architecture.md)
-- [data_flow.md](data_flow.md)
-- [technology_stack.md](technology_stack.md)
-- [../governance/project_governance.md](../governance/project_governance.md)
-
----
-
-## 8. Revisão
-
-| Versão | Data | Alteração |
-|--------|------|-----------|
-| 1.0 | 2026-05-29 | Criação — Fase 2 |
+- [Data flow](data_flow.md) — artefact movement and integrity rules
+- [Design evolution](design_evolution.md) — why automation was not adopted
+- [Project governance](../01_governance/project_governance.md)

@@ -1,9 +1,0 @@
-provider: kaggle
-
-dataset_path: /kaggle/input/fetal-vein
-output_path: /kaggle/working/output
-
-images_dir: /kaggle/input/fetal-vein/images
-masks_dir: /kaggle/input/fetal-vein/labels
-
-device: cuda

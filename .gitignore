@@ -12,10 +12,4 @@ __pycache__/
 Thumbs.db
 
 # MkDocs build output
-99_system/04_documentation/05_mkdocs/site/
-99_system/05_documentation/05_mkdocs/site/
-
-# Legacy top-level dirs (removed after consolidation — OneDrive may leave empty stubs)
-10-runtime/
-10-docker/
-scripts/
+site/

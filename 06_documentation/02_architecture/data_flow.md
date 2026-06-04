@@ -3,7 +3,7 @@
 **Version:** 4.0  
 **Scope:** artefact movement and integrity (not algorithms)
 
-Folder names, pairing steps, and per-stage I/O are defined in [`02_dataset/README.md`](../../02_dataset/README.md) and [`03_pipeline/entrypoint.ipynb`](../../03_pipeline/entrypoint.ipynb). This page states **what moves where** and **which invariants the architecture enforces**.
+Folder names, pairing steps, and per-stage I/O are defined in the [dataset README](../portal/implementation.md#dataset-overview) and [entry point notebook](../portal/implementation.md#start-here-execution-index). This page states **what moves where** and **which invariants the architecture enforces**.
 
 ---
 
@@ -42,4 +42,4 @@ Violations of pairing or path layout are detected in the postprocessing library;
 
 - [System architecture](system_architecture.md)
 - [Design evolution](design_evolution.md)
-- [`02_dataset/README.md`](../../02_dataset/README.md)
+- [Dataset contract](../portal/implementation.md#dataset-overview)

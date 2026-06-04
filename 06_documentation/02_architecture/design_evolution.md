@@ -17,7 +17,7 @@ It was explored during early design work recorded under `99_system/` but is **no
 
 The delivered solution is a **notebook-based scientific pipeline** executed on **Google Colab**, with artefacts under `02_dataset/`, processing under `03_pipeline/`, aggregated metrics under `04_pipeline_results/`, and the written report under `05_report/`. Lecturer reference material remains read-only in `01_academic/`.
 
-Operational execution is documented in [`03_pipeline/entrypoint.ipynb`](../../03_pipeline/entrypoint.ipynb). Repository overview and setup are in the root [`README.md`](../../README.md).
+Operational execution is indexed under [Implementation](../portal/implementation.md). Repository overview and setup are linked from the [home page](../index.md).
 
 ---
 

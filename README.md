@@ -61,7 +61,7 @@ Run execution notebooks in the order described in `03_pipeline/entrypoint.ipynb`
 
 ## Documentation site (MkDocs)
 
-Architecture, design decisions, data flow, execution workflow, and naming conventions are documented under [`06_documentation/`](06_documentation/).
+The **academic project portal** (MkDocs) is built from [`06_documentation/`](06_documentation/) — reviewer index for assignment, pipeline, deliverables, and architecture.
 
 ```bash
 pip install -r requirements-mkdocs.txt

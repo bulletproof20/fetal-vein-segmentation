@@ -1,12 +1,11 @@
 # MkDocs configuration — published via: mkdocs gh-deploy
-# Documentation source: 06_documentation/ (repository structure unchanged)
+# Documentation source: 06_documentation/
 
 site_name: Fetal Vein Segmentation
-site_description: Documentation for the fetal vein segmentation academic project (IPCA).
+site_description: Academic project portal — fetal vein segmentation (IPCA).
 site_author: IPCA — Biomedical Imaging
 
 # Set after first deploy, e.g. https://<user>.github.io/fetal_vein_segmentation/
-# After first deploy, set to your GitHub Pages URL, e.g.:
 # site_url: https://<user>.github.io/fetal_vein_segmentation/
 
 repo_name: fetal_vein_segmentation
@@ -39,7 +38,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to dark mode
 
 plugins:
   - search
@@ -49,18 +48,34 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
+  - pymdownx.snippets:
+      base_path:
+        - .
   - tables
   - toc:
       permalink: true
 
+exclude_docs: |
+  04_migration/*
+  03_templates/*
+  includes/*
+  **/experiment_standards.md
+  02_architecture/runtime_architecture.md
+  02_architecture/technology_stack.md
+  02_architecture/execution_workflow.md
+  MKDOCS_PUBLISHING.md
+
 nav:
   - Home: index.md
-  - Architecture:
-      - System Architecture: 02_architecture/system_architecture.md
+  - Academic: portal/academic.md
+  - Implementation: portal/implementation.md
+  - Deliverables: portal/deliverables.md
+  - Project:
+      - Architecture: 02_architecture/system_architecture.md
       - Data Flow: 02_architecture/data_flow.md
-      - Design Evolution: 02_architecture/design_evolution.md
-  - Governance:
-      - Project Governance: 01_governance/project_governance.md
+      - Design Decisions: 02_architecture/design_evolution.md
+      - Traceability: portal/traceability.md
+      - Standards & Governance: 01_governance/project_governance.md
       - Scientific Notebook Taxonomy: 01_governance/scientific_notebook_standards.md
       - Coding Standards: 01_governance/coding_standards.md
       - Naming Conventions: 01_governance/naming_conventions.md
@@ -69,8 +84,6 @@ nav:
       - Documentation Standards: 01_governance/documentation_standards.md
       - Notebook Standards: 01_governance/notebook_standards.md
       - Comment Standards: 01_governance/comment_standards.md
-  - Publishing:
-      - MkDocs & GitHub Pages: MKDOCS_PUBLISHING.md
 
 extra:
   generator: false

@@ -33,6 +33,10 @@ This pushes the built site to the `gh-pages` branch. Enable **GitHub Pages** in 
 |------|------|
 | `mkdocs.yml` | Site configuration and navigation (repository root) |
 | `requirements-mkdocs.txt` | MkDocs dependencies only |
-| `06_documentation/index.md` | Site home and authoritative link matrix |
+| `06_documentation/index.md` | Reviewer home page |
+| `06_documentation/portal/` | Academic / implementation / deliverables indexes |
+| `06_documentation/includes/repo_links.md` | GitHub link targets (`repository_owner` placeholder) |
 
-The site links to repository sources (README, notebooks, dataset README) instead of duplicating their content.
+Before deploy, replace `repository_owner` in `includes/repo_links.md` with your GitHub username or organisation, and set `repo_url` in this file’s parent `mkdocs.yml`.
+
+The site indexes repository artefacts; it does not duplicate notebook or PDF content.

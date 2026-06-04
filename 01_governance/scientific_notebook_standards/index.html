@@ -1,0 +1,2050 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Academic project portal — fetal vein segmentation (IPCA).">
+      
+      
+        <meta name="author" content="IPCA — Biomedical Imaging">
+      
+      
+      
+        <link rel="prev" href="../project_governance/">
+      
+      
+        <link rel="next" href="../coding_standards/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Scientific Notebook Taxonomy - Fetal Vein Segmentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scientific-notebook-standards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fetal Vein Segmentation" class="md-header__button md-logo" aria-label="Fetal Vein Segmentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fetal Vein Segmentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scientific Notebook Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/academic/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Academic
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Implementation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/deliverables/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Deliverables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../02_architecture/system_architecture/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fetal Vein Segmentation" class="md-nav__button md-logo" aria-label="Fetal Vein Segmentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fetal Vein Segmentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/deliverables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deliverables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/data_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/design_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Decisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/traceability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traceability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards & Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Notebook Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Notebook Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#category-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-a-library-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category A — Library notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category A — Library notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure-markdown-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure (markdown ## sections)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forbidden content
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-discipline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import discipline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-b-execution-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category B — Execution notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category B — Execution notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-c-orchestration-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category C — Orchestration notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category C — Orchestration notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden-content_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forbidden content
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-d-research-notebook-reserved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category D — Research notebook (reserved)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category D — Research notebook (reserved)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure-when-introduced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure (when introduced)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-assignment-table-current-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category assignment table (current repository)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-and-refactor-implications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audit and refactor implications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming_conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naming Conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic_naming_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantic Naming Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecturer_identifier_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecturer Identifier Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comment_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#category-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-a-library-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category A — Library notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category A — Library notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure-markdown-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure (markdown ## sections)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forbidden content
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-discipline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import discipline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-b-execution-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category B — Execution notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category B — Execution notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-c-orchestration-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category C — Orchestration notebook
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category C — Orchestration notebook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden-content_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forbidden content
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-requirement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-d-research-notebook-reserved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category D — Research notebook (reserved)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category D — Research notebook (reserved)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-structure-when-introduced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required structure (when introduced)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-assignment-table-current-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category assignment table (current repository)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-and-refactor-implications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audit and refactor implications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scientific-notebook-standards">Scientific notebook standards<a class="headerlink" href="#scientific-notebook-standards" title="Permanent link">&para;</a></h1>
+<p><strong>Version:</strong> 6.0<br />
+<strong>Status:</strong> normative<br />
+<strong>Scope:</strong> all notebooks under <code>03_pipeline/</code></p>
+<p>The repository is <strong>notebook-centric</strong>. Each notebook belongs to exactly one <strong>category</strong>. Category rules override generic layout suggestions when they conflict.</p>
+<p>Companion: <a href="../notebook_standards/">notebook_standards.md</a> (language, tone, configuration format).</p>
+<hr />
+<h2 id="category-overview">Category overview<a class="headerlink" href="#category-overview" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Code</th>
+<th>Role</th>
+<th>Produces experiment artefacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Library</td>
+<td><strong>A</strong></td>
+<td>Reusable functions (<code>%run</code>)</td>
+<td>No (when imported)</td>
+</tr>
+<tr>
+<td>Execution</td>
+<td><strong>B</strong></td>
+<td>Complete processing stage</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Orchestration</td>
+<td><strong>C</strong></td>
+<td>Execution guide</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Research</td>
+<td><strong>D</strong></td>
+<td>Exploratory studies (reserved)</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="category-a-library-notebook">Category A — Library notebook<a class="headerlink" href="#category-a-library-notebook" title="Permanent link">&para;</a></h2>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Provide <strong>reusable functions</strong> imported by execution notebooks. Behaves as an in-notebook library, not an experiment report.</p>
+<h3 id="current-examples">Current examples<a class="headerlink" href="#current-examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01_preprocessing/00_common/00_generic.ipynb</code></td>
+<td>I/O, grayscale, project root</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/00_common/01_global_operations.ipynb</code></td>
+<td>Point operations, histogram tools</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/00_common/02_filtering.ipynb</code></td>
+<td>Spatial filters (Average, Median, Gaussian, Sobel, Laplacian)</td>
+</tr>
+<tr>
+<td><code>03_postprocessing/postprocessing_common.ipynb</code></td>
+<td>Pairing, metrics, <code>pos_process</code>, path validation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-structure-markdown-sections">Required structure (markdown <code>##</code> sections)<a class="headerlink" href="#required-structure-markdown-sections" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Section</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Purpose</strong></td>
+<td>Functions provided; which execution notebooks import this file</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Dependencies</strong></td>
+<td>Imports; <code>%run</code> prerequisites (if any)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Function definitions</strong></td>
+<td>Grouped implementations with docstrings</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Usage notes</strong></td>
+<td>How to <code>%run</code>; side effects; optional quick validation cell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forbidden-content">Forbidden content<a class="headerlink" href="#forbidden-content" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Experiment results and conclusions</li>
+<li>Dataset-wide research discussion</li>
+<li>Full architecture documentation (link to MkDocs)</li>
+<li>Training or evaluation tables as primary narrative</li>
+</ul>
+<h3 id="header-requirement">Header requirement<a class="headerlink" href="#header-requirement" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="gs">**Type:**</span> library notebook (import via <span class="sb">`%run`</span>; not an experiment entry point).
+</code></pre></div>
+<h3 id="import-discipline">Import discipline<a class="headerlink" href="#import-discipline" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Loaded with <code>%run</code> from execution notebooks.</li>
+<li>Must not write experiment outputs when imported passively.</li>
+<li>Optional validation cells must be clearly labelled and non-destructive.</li>
+</ul>
+<hr />
+<h2 id="category-b-execution-notebook">Category B — Execution notebook<a class="headerlink" href="#category-b-execution-notebook" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_1">Purpose<a class="headerlink" href="#purpose_1" title="Permanent link">&para;</a></h3>
+<p>Execute a <strong>complete processing stage</strong> and produce artefacts under <code>02_dataset/</code> or <code>04_pipeline_results/</code>.</p>
+<h3 id="current-examples_1">Current examples<a class="headerlink" href="#current-examples_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01_preprocessing/01_preprocessing_pipeline.ipynb</code></td>
+<td>Preprocessing PP1</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/02_preprocessing_pipeline.ipynb</code></td>
+<td>Preprocessing PP2</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/03_preprocessing_pipeline.ipynb</code></td>
+<td>Preprocessing PP3</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/04_preprocessing_pipeline.ipynb</code></td>
+<td>Preprocessing PP4</td>
+</tr>
+<tr>
+<td><code>01_preprocessing/05_preprocessing_pipeline.ipynb</code></td>
+<td>Preprocessing PP5</td>
+</tr>
+<tr>
+<td><code>02_segmentation/fetal_vein_segmentation.ipynb</code></td>
+<td>UNet training and inference</td>
+</tr>
+<tr>
+<td><code>04_evaluation/evaluation.ipynb</code></td>
+<td>Metrics and comparison table</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-structure">Required structure<a class="headerlink" href="#required-structure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Section</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Purpose</strong></td>
+<td>Scientific goal, inputs, outputs, limitations</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Imports</strong></td>
+<td>Packages and <code>%run</code> library loads</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Configuration</strong></td>
+<td><code>EXPERIMENT CONFIGURATION</code> cell; constants</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Processing logic</strong></td>
+<td>Core stage implementation</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Validation</strong></td>
+<td>Paths, pairing, sanity checks</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Outputs</strong></td>
+<td>Files, tables, figures produced</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Conclusions</strong></td>
+<td>Summary and next step for the operator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="header-requirement_1">Header requirement<a class="headerlink" href="#header-requirement_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="gs">**Type:**</span> execution notebook.
+</code></pre></div>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Helper functions should be minimal; prefer Category A libraries.</li>
+<li>Segmentation notebook may combine validation with data preparation until Phase 3 reorganisation; target structure remains §7 sections.</li>
+</ul>
+<hr />
+<h2 id="category-c-orchestration-notebook">Category C — Orchestration notebook<a class="headerlink" href="#category-c-orchestration-notebook" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_2">Purpose<a class="headerlink" href="#purpose_2" title="Permanent link">&para;</a></h3>
+<p>Guide <strong>execution order</strong> and configuration matrix. No scientific implementation.</p>
+<h3 id="current-example">Current example<a class="headerlink" href="#current-example" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>03_pipeline/entrypoint.ipynb</code></td>
+<td>First-time runner guide</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-structure_1">Required structure<a class="headerlink" href="#required-structure_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Section</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Repository context</strong></td>
+<td>Workflow diagram; Colab setup; pointer to governance/architecture</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Execution order</strong></td>
+<td>Ordered list of notebooks to run</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Configuration matrix</strong></td>
+<td>Segmentation <code>DATASET_FOLDER</code> / <code>RESULTS_FOLDER</code> table</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Expected outputs</strong></td>
+<td>Where artefacts appear (<code>02_dataset/</code>, <code>04_pipeline_results/</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forbidden-content_1">Forbidden content<a class="headerlink" href="#forbidden-content_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Implementation code cells (setup example in markdown fence is allowed; no training/preprocessing algorithms)</li>
+<li>Filter or UNet definitions</li>
+<li>Metric implementations</li>
+</ul>
+<h3 id="header-requirement_2">Header requirement<a class="headerlink" href="#header-requirement_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Orchestration notebook — execution guide (markdown only).
+</code></pre></div>
+<hr />
+<h2 id="category-d-research-notebook-reserved">Category D — Research notebook (reserved)<a class="headerlink" href="#category-d-research-notebook-reserved" title="Permanent link">&para;</a></h2>
+<h3 id="purpose_3">Purpose<a class="headerlink" href="#purpose_3" title="Permanent link">&para;</a></h3>
+<p>Future <strong>exploratory</strong> work (hypothesis-driven experiments not part of the graded pipeline).</p>
+<h3 id="required-structure-when-introduced">Required structure (when introduced)<a class="headerlink" href="#required-structure-when-introduced" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hypothesis</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Methodology</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Experiment</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Results</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Discussion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current-status">Current status<a class="headerlink" href="#current-status" title="Permanent link">&para;</a></h3>
+<p>No Category D notebooks are required in the delivered pipeline. Do not convert Category B notebooks into research notebooks without academic approval.</p>
+<hr />
+<h2 id="category-assignment-table-current-repository">Category assignment table (current repository)<a class="headerlink" href="#category-assignment-table-current-repository" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>03_pipeline/entrypoint.ipynb</code></td>
+<td><strong>C</strong></td>
+</tr>
+<tr>
+<td><code>03_pipeline/01_preprocessing/00_common/*.ipynb</code></td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td><code>03_pipeline/01_preprocessing/0N_preprocessing_pipeline.ipynb</code></td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td><code>03_pipeline/02_segmentation/fetal_vein_segmentation.ipynb</code></td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td><code>03_pipeline/03_postprocessing/postprocessing_common.ipynb</code></td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td><code>03_pipeline/04_evaluation/evaluation.ipynb</code></td>
+<td><strong>B</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="audit-and-refactor-implications">Audit and refactor implications<a class="headerlink" href="#audit-and-refactor-implications" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Finding type</th>
+<th>Governed by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing Purpose / Conclusions</td>
+<td>Category B §Required structure</td>
+</tr>
+<tr>
+<td>Library notebook with experiment narrative</td>
+<td>Category A §Forbidden</td>
+</tr>
+<tr>
+<td>Implementation code in entrypoint</td>
+<td>Category C §Forbidden</td>
+</tr>
+<tr>
+<td>Section naming mismatch</td>
+<td>Phase 3 may rename headings to match this document</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related-documents">Related documents<a class="headerlink" href="#related-documents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../notebook_standards/">notebook_standards.md</a></li>
+<li><a href="../documentation_standards/">documentation_standards.md</a></li>
+<li><a href="../lecturer_identifier_policy/">lecturer_identifier_policy.md</a></li>
+<li><a href="../../portal/implementation/">../portal/implementation.md</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

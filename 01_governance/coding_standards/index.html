@@ -1,0 +1,1550 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Academic project portal — fetal vein segmentation (IPCA).">
+      
+      
+        <meta name="author" content="IPCA — Biomedical Imaging">
+      
+      
+      
+        <link rel="prev" href="../scientific_notebook_standards/">
+      
+      
+        <link rel="next" href="../naming_conventions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Coding Standards - Fetal Vein Segmentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#coding-standards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fetal Vein Segmentation" class="md-header__button md-logo" aria-label="Fetal Vein Segmentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fetal Vein Segmentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coding Standards
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/academic/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Academic
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/implementation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Implementation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../portal/deliverables/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Deliverables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../02_architecture/system_architecture/" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fetal Vein Segmentation" class="md-nav__button md-logo" aria-label="Fetal Vein Segmentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fetal Vein Segmentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/deliverables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deliverables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/data_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_architecture/design_evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Decisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/traceability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traceability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards & Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scientific_notebook_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Notebook Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-repository-language-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Repository language policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-python-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Python style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notebook-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Notebook types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notebook types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-point-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comment-and-documentation-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comment and documentation style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-readability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Readability requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-paths-and-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Paths and runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Data integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-imagelabel-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Image–label pairing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-scientific-constraints-non-negotiable-without-academic-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Scientific constraints (non-negotiable without academic approval)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming_conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naming Conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic_naming_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantic Naming Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecturer_identifier_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecturer Identifier Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comment_standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-repository-language-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Repository language policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-python-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Python style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notebook-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Notebook types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notebook types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#library-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-point-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry point notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comment-and-documentation-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comment and documentation style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-readability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Readability requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-paths-and-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Paths and runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Data integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-imagelabel-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Image–label pairing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-scientific-constraints-non-negotiable-without-academic-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Scientific constraints (non-negotiable without academic approval)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-related-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Related documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="coding-standards">Coding standards<a class="headerlink" href="#coding-standards" title="Permanent link">&para;</a></h1>
+<p><strong>Version:</strong> 5.0<br />
+<strong>Status:</strong> normative<br />
+<strong>Scope:</strong> <code>03_pipeline/</code>, root configuration, and any future project Python outside protected directories</p>
+<p>Authoritative companions: <a href="../naming_conventions/">naming_conventions.md</a>, <a href="../comment_standards/">comment_standards.md</a>, <a href="../notebook_standards/">notebook_standards.md</a>.</p>
+<hr />
+<h2 id="1-repository-language-policy">1. Repository language policy<a class="headerlink" href="#1-repository-language-policy" title="Permanent link">&para;</a></h2>
+<p><strong>English only</strong> in all project-authored content outside <code>01_academic/</code> and <code>02_dataset/</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Must be English</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>Function bodies, assignments</td>
+</tr>
+<tr>
+<td>Identifiers</td>
+<td>Functions, variables, parameters (see naming doc)</td>
+</tr>
+<tr>
+<td>Comments</td>
+<td>Inline and block comments</td>
+</tr>
+<tr>
+<td>Docstrings</td>
+<td>All library functions</td>
+</tr>
+<tr>
+<td>Notebook markdown</td>
+<td>Headers, explanations, assumptions</td>
+</tr>
+<tr>
+<td>Print / log output</td>
+<td>User-facing messages</td>
+</tr>
+<tr>
+<td>Exceptions</td>
+<td><code>raise</code> and error strings</td>
+</tr>
+<tr>
+<td>Project markdown</td>
+<td><code>06_documentation/</code>, <code>99_system/</code>, root <code>README.md</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions:</strong> <code>01_academic/</code>, <code>02_dataset/</code> remain untouched (may contain Portuguese or lecturer naming).</p>
+<hr />
+<h2 id="2-python-style">2. Python style<a class="headerlink" href="#2-python-style" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Style guide</td>
+<td><a href="https://peps.python.org/pep-0008/">PEP 8</a> where applicable</td>
+</tr>
+<tr>
+<td>Indentation</td>
+<td>4 spaces</td>
+</tr>
+<tr>
+<td>Line length</td>
+<td>Prefer ≤ 100 characters; break long MONAI chains readably</td>
+</tr>
+<tr>
+<td>Imports</td>
+<td>Standard library → third party → project; no unused imports</td>
+</tr>
+<tr>
+<td>Types</td>
+<td>Type hints on new or refactored library functions (<code>Path</code>, <code>np.ndarray</code>, etc.)</td>
+</tr>
+<tr>
+<td>Framework APIs</td>
+<td>Do not rename MONAI, PyTorch, NumPy, Pandas, Matplotlib symbols</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-notebook-types">3. Notebook types<a class="headerlink" href="#3-notebook-types" title="Permanent link">&para;</a></h2>
+<h3 id="library-notebooks">Library notebooks<a class="headerlink" href="#library-notebooks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Locations:</strong> <code>03_pipeline/01_preprocessing/00_common/</code>, <code>03_pipeline/03_postprocessing/postprocessing_common.ipynb</code></li>
+<li><strong>Import:</strong> <code>%run</code> from execution notebooks only</li>
+<li><strong>Must not:</strong> act as experiment entry points; write experiment artefacts when imported passively</li>
+<li><strong>Header:</strong> <code>**Type:** library notebook (import via %run; not an experiment entry point).</code></li>
+</ul>
+<h3 id="execution-notebooks">Execution notebooks<a class="headerlink" href="#execution-notebooks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Locations:</strong> preprocessing <code>0N_preprocessing_pipeline.ipynb</code>, <code>fetal_vein_segmentation.ipynb</code>, <code>evaluation.ipynb</code></li>
+<li><strong>Must:</strong> declare <code>**Type:** execution notebook</code> in the first markdown cell</li>
+<li><strong>Must:</strong> follow <a href="../notebook_standards/">notebook_standards.md</a> section order where applicable</li>
+<li><strong>Orchestration:</strong> <code>entrypoint.ipynb</code> is markdown-only guidance (no scientific implementation)</li>
+</ul>
+<h3 id="entry-point-notebook">Entry point notebook<a class="headerlink" href="#entry-point-notebook" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>03_pipeline/entrypoint.ipynb</code> — workflow and pointers only; no algorithm implementation</li>
+</ul>
+<hr />
+<h2 id="4-comment-and-documentation-style">4. Comment and documentation style<a class="headerlink" href="#4-comment-and-documentation-style" title="Permanent link">&para;</a></h2>
+<p>See <a href="../comment_standards/">comment_standards.md</a>.</p>
+<ul>
+<li>Comments explain <strong>intent</strong> and <strong>why</strong>, not redundant labels.</li>
+<li>Docstrings: purpose, arguments, returns, raises (library functions).</li>
+<li>No Portuguese in comments or docstrings (policy §1).</li>
+</ul>
+<hr />
+<h2 id="5-readability-requirements">5. Readability requirements<a class="headerlink" href="#5-readability-requirements" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuration</td>
+<td>Top-of-notebook cell labelled <code>EXPERIMENT CONFIGURATION</code> or stage equivalent</td>
+</tr>
+<tr>
+<td>Section headers</td>
+<td>Markdown <code>##</code> hierarchy; match <a href="../notebook_standards/">notebook_standards.md</a></td>
+</tr>
+<tr>
+<td>Magic numbers</td>
+<td>Named constants in configuration or module-level <code>UPPER_CASE</code></td>
+</tr>
+<tr>
+<td>Dead code</td>
+<td>Remove commented-out experiment blocks unless marked <code>ARCHIVE</code> with reason</td>
+</tr>
+<tr>
+<td>Duplication</td>
+<td>Shared logic in library notebooks, not copy-pasted across execution notebooks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-paths-and-runtime">6. Paths and runtime<a class="headerlink" href="#6-paths-and-runtime" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root resolution</td>
+<td><code>find_project_root()</code> — walk up until <code>02_dataset/</code> exists</td>
+</tr>
+<tr>
+<td>Paths</td>
+<td><code>pathlib.Path</code>; repository-relative segments</td>
+</tr>
+<tr>
+<td>Forbidden</td>
+<td>Hard-coded <code>/content/drive/...</code>, local machine paths, Docker/bootstrap entry points as active workflow</td>
+</tr>
+<tr>
+<td>Official runtime</td>
+<td>Google Colab after clone from GitHub</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-data-integrity">7. Data integrity<a class="headerlink" href="#7-data-integrity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read-only</td>
+<td><code>02_dataset/images/</code>, <code>02_dataset/labels/</code></td>
+</tr>
+<tr>
+<td>Preprocessing output</td>
+<td><code>02_dataset/images_pp_{1..5}/</code> only</td>
+</tr>
+<tr>
+<td>Predictions</td>
+<td><code>02_dataset/results_*</code> only</td>
+</tr>
+<tr>
+<td>Models</td>
+<td><code>02_dataset/Save_Models/*.pth</code> only</td>
+</tr>
+<tr>
+<td>Aggregated metrics</td>
+<td><code>04_pipeline_results/</code> (evaluation notebook)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-imagelabel-pairing">8. Image–label pairing<a class="headerlink" href="#8-imagelabel-pairing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pair by <strong>original identifier</strong> (<code>P080_IMG1</code>), never by sorted list index alone.</li>
+<li>Use <code>resolve_label_path()</code> from <code>postprocessing_common.ipynb</code>.</li>
+<li>Strip <code>_PP_PL_N</code> suffix before resolving labels.</li>
+</ul>
+<hr />
+<h2 id="9-scientific-constraints-non-negotiable-without-academic-approval">9. Scientific constraints (non-negotiable without academic approval)<a class="headerlink" href="#9-scientific-constraints-non-negotiable-without-academic-approval" title="Permanent link">&para;</a></h2>
+<p>Do not alter:</p>
+<ul>
+<li>Preprocessing filter mathematics (convolution, morphology in preprocessing stage)</li>
+<li>UNet architecture and MONAI transform pipeline core</li>
+<li>Dice loss, training loop structure, checkpoint selection logic</li>
+<li><code>pos_process()</code> morphology (opening + largest connected component)</li>
+<li><code>calculate_metrics()</code> definitions (Dice, accuracy, precision, recall)</li>
+<li>Train/validation/test split sizes where tied to lecturer reference</li>
+</ul>
+<p>Refactoring may rename identifiers and improve prose <strong>only</strong> if behaviour remains identical.</p>
+<hr />
+<h2 id="10-related-documents">10. Related documents<a class="headerlink" href="#10-related-documents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../naming_conventions/">naming_conventions.md</a></li>
+<li><a href="../documentation_standards/">documentation_standards.md</a></li>
+<li><a href="../notebook_standards/">notebook_standards.md</a></li>
+<li><a href="../../portal/implementation/">../portal/implementation.md</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

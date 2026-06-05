@@ -83,8 +83,9 @@ Notebooks **must not:**
 | Purpose | Reviewer portal: Home, Academic, Implementation, Deliverables, Project |
 | Build | `mkdocs build` from repository root |
 | Deploy | `mkdocs gh-deploy` after `site_url` / `repo_url` configured |
-| Links | Use site-relative paths within `docs_dir`; link to repo READMEs and notebooks from `portal/implementation.md` |
-| Snippets | `includes/repo_links.md` for GitHub URLs (not a published page) |
+| Links | Direct Markdown links (`[label](path)`); prefer `../repo_files/…` for PDFs, notebooks, CSV, and figures (mirrored at build time) |
+| Snippets | Include external READMEs and academic markdown via `pymdownx.snippets`; do not use reference-style links (`[text][ref]`) |
+| Repo mirror | `hooks/copy_repo_assets.py` copies repository artefacts into `06_documentation/repo_files/` on `mkdocs build` (not `assets/` — reserved by the theme) |
 
 ---
 

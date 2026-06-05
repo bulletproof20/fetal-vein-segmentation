@@ -1,7 +1,5 @@
 # Final Report
 
---8<-- "includes/repo_links.md"
-
 Written deliverable synthesising methodology, experimental results, and conclusions.
 
 ---
@@ -10,7 +8,7 @@ Written deliverable synthesising methodology, experimental results, and conclusi
 
 | Item | Description | Open |
 |------|-------------|------|
-| **Final PDF** | Submitted report (authors 22588, 22604) | [a22588_a22604.pdf][report-pdf] |
+| **Final PDF** | Submitted report (authors 22588, 22604) | [a22588_a22604.pdf](../repo_files/05_report/a22588_a22604.pdf) |
 | **Location** | `05_report/a22588_a22604.pdf` | |
 
 ---
@@ -19,9 +17,10 @@ Written deliverable synthesising methodology, experimental results, and conclusi
 
 | Item | Role | Open |
 |------|------|------|
-| Results narrative | Training curves, morphology analysis, comparative tables | [results.md](results.md) · [GitHub][results-md] |
-| Report template | Structure reference (Word) | [template.docx][report-template] |
-| Evaluation CSV tables | Quantitative metrics per morphology run | [04_pipeline_results/][results-dir] |
+| Results summary | Training curves, morphology analysis, comparative tables | [Results](results.md) |
+| Results narrative | Extended discussion and figure captions | [Results — full narrative](report_results.md) |
+| Report template | Structure reference (Word) | [template.docx](../repo_files/05_report/template.docx) |
+| Evaluation CSV tables | Quantitative metrics per morphology run | [Results](results.md) |
 
 The report draws on segmentation experiments (Original + PP1–PP5), morphological post-processing evaluation, and the analysis documented in [Results](results.md). The [State of the Art](state_of_the_art.md) chapter provides literature context.
 

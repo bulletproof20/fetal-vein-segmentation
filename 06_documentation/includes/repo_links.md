@@ -1,44 +1,18 @@
-<!-- Replace repository_owner in each URL with your GitHub username or organisation before deploy. -->
-[repo]: https://github.com/repository_owner/fetal_vein_segmentation
-[readme]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/README.md
-[requirements]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/requirements.txt
-[assignment]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/01_assignment/Assigment_TP.pdf
-[lit-articles-index]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/02_literature/Articles.md
-[lit-state-of-art]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/02_literature/state_of_the_art.md
-[lit-article-ptg]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/02_literature/PTG_Cord_Umb_UPorto.pdf
-[dataset-licence]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/03_dataset_documentation/LICENSE.md
-[ref-fetal]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/03_code_exemple/FetalVeinSegmentationUS.ipynb
-[ref-metrics]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/03_code_exemple/Pos_Metrics.ipynb
-[ref-instructions]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/03_code_exemple/instru%C3%A7%C3%B5es.pdf
-[ref-readsave]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/03_code_exemple/ReadSaveImages.ipynb
-[ref-code-dir]: https://github.com/repository_owner/fetal_vein_segmentation/tree/main/01_academic/04_reference_materials/03_code_exemple
-[ref-materials-dir]: https://github.com/repository_owner/fetal_vein_segmentation/tree/main/01_academic/04_reference_materials
-[course-mod2]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/2%20-%20Medical%20Imaging%20Modalities.pdf
-[course-mod3]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/3%20-%20Concepts%20of%20Image%20Processing.pdf
-[course-mod4]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/4%20-%20Python%20Review.pdf
-[course-mod5]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/5%20-%20Point-to-point%20Transformations.pdf
-[course-mod6]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/6%20-%20Filtering%20in%20the%20spatial%20domain.pdf
-[course-mod7]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/7%20-%20Mathematical%20morphology.pdf
-[course-mod8]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/8%20-%20Segmentation.pdf
-[course-mod10]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/01_academic/04_reference_materials/02_course_material/10%20-%20Deep%20Learning%20and%20Segmentation.pdf
-[course-dir]: https://github.com/repository_owner/fetal_vein_segmentation/tree/main/01_academic/04_reference_materials/02_course_material
-[worksheets-dir]: https://github.com/repository_owner/fetal_vein_segmentation/tree/main/01_academic/04_reference_materials/01_worksheets
-[dataset-readme]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/02_dataset/README.md
-[pipeline-readme]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/README.md
-[nb-preprocessing]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/01_preprocessing.ipynb
-[nb-segmentation]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/02_segmentation.ipynb
-[nb-evaluation]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/03_evaluation.ipynb
-[results-dir]: https://github.com/repository_owner/fetal_vein_segmentation/tree/main/04_pipeline_results
-[results-md]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/05_report/results.md
-[results-csv-opening]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_opening.csv
-[results-csv-closing]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_closing.csv
-[results-csv-erosion]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_erosion.csv
-[results-csv-dilation]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_dilation.csv
-[report-pdf]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/05_report/a22588_a22604.pdf
-[report-template]: https://github.com/repository_owner/fetal_vein_segmentation/blob/main/05_report/template.docx
-[img-train-original]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/original.png
-[img-train-pp1]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test1.png
-[img-train-pp2]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test2.png
-[img-train-pp3]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test3.png
-[img-train-pp4]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test4.png
-[img-train-pp5]: https://github.com/repository_owner/fetal_vein_segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test5.png
+# Repository link map (maintainer reference)
+
+**Not included in the MkDocs site.** Portal pages use direct links to `../repo_files/…` paths (see `hooks/copy_repo_assets.py`).
+
+This file is retained as a quick map of repository paths when adding new portal links.
+
+| Label | Repository path |
+|-------|-----------------|
+| Assignment PDF | `01_academic/01_assignment/Assigment_TP.pdf` |
+| Articles | `01_academic/02_literature/Articles.md` → portal `articles.md` |
+| State of the Art | `01_academic/02_literature/state_of_the_art.md` → portal `state_of_the_art.md` |
+| UPorto reference | `01_academic/02_literature/PTG_Cord_Umb_UPorto.pdf` |
+| Dataset licence | `01_academic/03_dataset_documentation/LICENSE.md` → portal `licence.md` |
+| Pipeline notebooks | `03_pipeline/01_preprocessing.ipynb` … `03_evaluation.ipynb` |
+| Results CSV | `04_pipeline_results/tabela_avaliacao_experiencias_*.csv` |
+| Training figures | `04_pipeline_results/Segmentation_training_results/*.png` |
+| Final report | `05_report/a22588_a22604.pdf` |
+| Results narrative | `05_report/results.md` → portal `report_results.md` |

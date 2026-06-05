@@ -41,6 +41,9 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+hooks:
+  - 06_documentation/hooks/copy_repo_assets.py
+
 plugins:
   - search
 
@@ -60,6 +63,7 @@ markdown_extensions:
 exclude_docs: |
   04_migration/*
   includes/*
+  repo_files/**/*.md
   **/experiment_standards.md
   MKDOCS_PUBLISHING.md
 
@@ -69,10 +73,15 @@ nav:
   - Assignment: portal/assignment.md
   - Literature:
       - Bibliography: portal/literature.md
+      - Articles: portal/articles.md
       - State of the Art: portal/state_of_the_art.md
-  - Dataset: portal/dataset.md
+  - Dataset:
+      - Overview: portal/dataset.md
+      - Licence: portal/licence.md
   - Scientific Pipeline: portal/pipeline.md
-  - Results: portal/results.md
+  - Results:
+      - Overview: portal/results.md
+      - Full narrative: portal/report_results.md
   - Final Report: portal/final_report.md
   - Documentation:
       - Implementation Index: portal/implementation.md

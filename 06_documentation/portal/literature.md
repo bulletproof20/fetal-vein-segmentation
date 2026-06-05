@@ -1,7 +1,5 @@
 # Literature
 
---8<-- "includes/repo_links.md"
-
 Scientific sources supporting the fetal vein segmentation study. The bibliography and formal review are maintained in the academic tree; this page provides navigation.
 
 ---
@@ -10,15 +8,15 @@ Scientific sources supporting the fetal vein segmentation study. The bibliograph
 
 | Resource | Description | Open |
 |----------|-------------|------|
-| **Articles index** | Bibliography and annotation notes | [Articles.md][lit-articles-index] |
-| **State of the Art** | Formal literature review chapter (MkDocs + repository) | [state_of_the_art.md][lit-state-of-art] · [on this site](state_of_the_art.md) |
-| **UPorto anatomical reference** | Umbilical cord / vein background | [PTG_Cord_Umb_UPorto.pdf][lit-article-ptg] |
+| **Articles index** | Bibliography and annotation notes | [Articles](articles.md) |
+| **State of the Art** | Formal literature review chapter | [Read on this site](state_of_the_art.md) |
+| **UPorto anatomical reference** | Umbilical cord / vein background | [PTG_Cord_Umb_UPorto.pdf](../repo_files/01_academic/02_literature/PTG_Cord_Umb_UPorto.pdf) |
 
 ---
 
 ## Indexed references (summary)
 
-The [Articles.md][lit-articles-index] file documents:
+The [Articles](articles.md) page documents:
 
 - **Kivilevitch *et al.* (2009)** — *In-utero evaluation of the fetal umbilical-portal venous system* (Ultrasound in Obstetrics & Gynecology).
 - **Mavrides *et al.* (2001)** — *Anatomy of the umbilical, portal and hepatic venous systems* at 14–19 weeks (Ultrasound in Obstetrics & Gynecology).

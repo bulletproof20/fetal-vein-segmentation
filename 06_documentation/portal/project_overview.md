@@ -1,7 +1,5 @@
 # Project Overview
 
---8<-- "includes/repo_links.md"
-
 ## Fetal Vein Segmentation Using Deep Learning and Image Processing Techniques
 
 Academic project developed in the scope of **Processamento de Imagem Biomédica (EIM)**, IPCA.

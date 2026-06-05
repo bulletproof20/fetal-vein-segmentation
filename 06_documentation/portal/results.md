@@ -1,17 +1,15 @@
 # Results
 
---8<-- "includes/repo_links.md"
-
-Quantitative and qualitative outcomes of model training, segmentation evaluation, and morphological post-processing. Full narrative with repository-relative figures: [05_report/results.md][results-md].
+Quantitative and qualitative outcomes of model training, segmentation evaluation, and morphological post-processing. Full narrative: [Results — full narrative](report_results.md).
 
 Evaluation tables (one CSV per morphology method):
 
 | Method | CSV |
 |--------|-----|
-| Opening | [tabela_avaliacao_experiencias_opening.csv][results-csv-opening] |
-| Closing | [tabela_avaliacao_experiencias_closing.csv][results-csv-closing] |
-| Erosion | [tabela_avaliacao_experiencias_erosion.csv][results-csv-erosion] |
-| Dilation | [tabela_avaliacao_experiencias_dilation.csv][results-csv-dilation] |
+| Opening | [tabela_avaliacao_experiencias_opening.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_opening.csv) |
+| Closing | [tabela_avaliacao_experiencias_closing.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_closing.csv) |
+| Erosion | [tabela_avaliacao_experiencias_erosion.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_erosion.csv) |
+| Dilation | [tabela_avaliacao_experiencias_dilation.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_dilation.csv) |
 
 ---
 
@@ -21,27 +19,27 @@ Training and validation loss curves for each preprocessing configuration:
 
 ### Original dataset
 
-![Original training curves][img-train-original]
+![Original training curves](../repo_files/04_pipeline_results/Segmentation_training_results/original.png)
 
 ### PP1 — Average filter
 
-![PP1 training curves][img-train-pp1]
+![PP1 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test1.png)
 
 ### PP2 — Median filter
 
-![PP2 training curves][img-train-pp2]
+![PP2 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test2.png)
 
 ### PP3 — Gaussian filter
 
-![PP3 training curves][img-train-pp3]
+![PP3 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test3.png)
 
 ### PP4 — Sobel filter
 
-![PP4 training curves][img-train-pp4]
+![PP4 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test4.png)
 
 ### PP5 — Laplacian filter
 
-![PP5 training curves][img-train-pp5]
+![PP5 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test5.png)
 
 All experiments converged without severe optimisation instability. Gaussian preprocessing (PP3) yielded the most favourable validation behaviour and segmentation metrics.
 
@@ -82,4 +80,4 @@ Gaussian filtering provided the strongest preprocessing input. **Opening** achie
 
 **Recommended pipeline:** Gaussian preprocessing → UNet segmentation → opening post-processing.
 
-Extended discussion, future work, and figure captions: [05_report/results.md][results-md] · [Final Report](final_report.md)
+Extended discussion, future work, and figure captions: [Results — full narrative](report_results.md) · [Final Report](final_report.md)

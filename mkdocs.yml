@@ -61,7 +61,6 @@ exclude_docs: |
   **/experiment_standards.md
   MKDOCS_PUBLISHING.md
   portal/additional.md
-  assets/**
   repo_files/**
   includes/**
 

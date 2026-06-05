@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#related-documentation" class="md-skip">
+        <a href="#dataset-layout-02_dataset" class="md-skip">
           Skip to content
         </a>
       
@@ -645,6 +645,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -687,6 +689,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -695,10 +699,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-documentation" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related documentation
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-within-the-experimental-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose within the experimental workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-and-imagelabel-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming and image–label pairing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-model-files-save_models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected model files (Save_Models/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-integrity-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data integrity rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-preprocessed-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Populating preprocessed folders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -1515,6 +1596,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1523,10 +1606,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-documentation" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related documentation
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-within-the-experimental-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose within the experimental workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-and-imagelabel-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming and image–label pairing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-model-files-save_models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected model files (Save_Models/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-integrity-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data integrity rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-preprocessed-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Populating preprocessed folders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -1553,40 +1713,162 @@
   
 
 
-  <h1>Overview</h1>
-
+<h1 id="dataset-layout-02_dataset">Dataset layout (<code>02_dataset/</code>)<a class="headerlink" href="#dataset-layout-02_dataset" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The <code>02_dataset/</code> directory is the <strong>central data layer</strong> of the fetal vein segmentation study. It holds original ultrasound acquisitions, ground-truth annotations, preprocessed image variants produced for controlled comparison, trained model weights, and predicted masks generated during segmentation experiments.</p>
+<p>This layout was designed so that each experimental stage — preprocessing, training, inference and evaluation — reads and writes predictable locations without altering source images or labels. The structure therefore supports reproducibility, traceability to the literature review, and direct linkage to the three-stage pipeline documented under <code>03_pipeline/</code>.</p>
 <hr />
-<h2 id="related-documentation">Related documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<h2 id="purpose-within-the-experimental-workflow">Purpose within the experimental workflow<a class="headerlink" href="#purpose-within-the-experimental-workflow" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Section</th>
-<th>Description</th>
+<th>Phase</th>
+<th>Role of <code>02_dataset/</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../dataset_licence/">Dataset licence</a></td>
-<td>Attribution, DOI and terms of use</td>
+<td><strong>Baseline input</strong></td>
+<td><code>images/</code> and <code>labels/</code> supply the common reference for all experiments</td>
 </tr>
 <tr>
-<td><a href="../state_of_the_art/">State of the Art</a></td>
-<td>Literature review and clinical context</td>
+<td><strong>Preprocessing comparison</strong></td>
+<td><code>images_pp_1/</code> … <code>images_pp_5/</code> hold parallel datasets (PP1–PP5) derived from the same patients</td>
 </tr>
 <tr>
-<td><a href="../pipeline/">Scientific Pipeline</a></td>
-<td>Preprocessing, segmentation and evaluation</td>
+<td><strong>Segmentation</strong></td>
+<td><code>Save_Models/</code> and <code>results_*</code> store checkpoints and predicted masks per configuration</td>
 </tr>
 <tr>
-<td><a href="../results/">Results</a></td>
-<td>Quantitative outcomes and training analysis</td>
-</tr>
-<tr>
-<td><a href="../final_report/">Final Report</a></td>
-<td>Written synthesis of the study</td>
+<td><strong>Evaluation</strong></td>
+<td>Predictions are compared against <code>labels/</code>; aggregated metrics are published under <code>04_pipeline_results/</code></td>
 </tr>
 </tbody>
 </table>
+<p>Paths are resolved relative to the repository root (see <code>find_project_root()</code> in <code>03_pipeline/*.ipynb</code>).</p>
+<hr />
+<h2 id="directory-reference">Directory reference<a class="headerlink" href="#directory-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Purpose</th>
+<th>Produced by</th>
+<th>Consumed by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>images/</code></td>
+<td>Original ultrasound images (read-only input)</td>
+<td>External dataset / course distribution</td>
+<td><code>01_preprocessing.ipynb</code>; segmentation when <code>DATASET_FOLDER = "images"</code></td>
+</tr>
+<tr>
+<td><code>labels/</code></td>
+<td>Ground-truth segmentation masks (read-only)</td>
+<td>External dataset / course distribution</td>
+<td><code>02_segmentation.ipynb</code>; <code>03_evaluation.ipynb</code></td>
+</tr>
+<tr>
+<td><code>images_pp_1/</code></td>
+<td>Preprocessed images — Average filter (<code>_PP_PL_1</code>)</td>
+<td><code>01_preprocessing.ipynb</code> (PP1)</td>
+<td><code>02_segmentation.ipynb</code> (<code>DATASET_FOLDER = "images_pp_1"</code>)</td>
+</tr>
+<tr>
+<td><code>images_pp_2/</code></td>
+<td>Preprocessed images — Median filter (<code>_PP_PL_2</code>)</td>
+<td><code>01_preprocessing.ipynb</code> (PP2)</td>
+<td><code>02_segmentation.ipynb</code> (<code>images_pp_2</code>)</td>
+</tr>
+<tr>
+<td><code>images_pp_3/</code></td>
+<td>Preprocessed images — Gaussian filter (<code>_PP_PL_3</code>)</td>
+<td><code>01_preprocessing.ipynb</code> (PP3)</td>
+<td><code>02_segmentation.ipynb</code> (<code>images_pp_3</code>)</td>
+</tr>
+<tr>
+<td><code>images_pp_4/</code></td>
+<td>Preprocessed images — Sobel filter (<code>_PP_PL_4</code>)</td>
+<td><code>01_preprocessing.ipynb</code> (PP4)</td>
+<td><code>02_segmentation.ipynb</code> (<code>images_pp_4</code>)</td>
+</tr>
+<tr>
+<td><code>images_pp_5/</code></td>
+<td>Preprocessed images — Laplacian filter (<code>_PP_PL_5</code>)</td>
+<td><code>01_preprocessing.ipynb</code> (PP5)</td>
+<td><code>02_segmentation.ipynb</code> (<code>images_pp_5</code>)</td>
+</tr>
+<tr>
+<td><code>results_original/</code></td>
+<td>Predicted masks — original images experiment</td>
+<td><code>02_segmentation.ipynb</code> (<code>RESULTS_FOLDER = "results_original"</code>)</td>
+<td><code>03_evaluation.ipynb</code></td>
+</tr>
+<tr>
+<td><code>results_pp_1/</code> … <code>results_pp_5/</code></td>
+<td>Predicted masks per preprocessing experiment</td>
+<td><code>02_segmentation.ipynb</code> (one run per <code>images_pp_X</code>)</td>
+<td><code>03_evaluation.ipynb</code></td>
+</tr>
+<tr>
+<td><code>Save_Models/</code></td>
+<td>Best checkpoint per experiment (<code>.pth</code>)</td>
+<td><code>02_segmentation.ipynb</code></td>
+<td>Same notebook (inference / resume)</td>
+</tr>
+</tbody>
+</table>
+<p>Aggregated metrics tables are written under <code>04_pipeline_results/</code> at the repository root (not inside <code>02_dataset/</code>).</p>
+<hr />
+<h2 id="naming-and-imagelabel-pairing">Naming and image–label pairing<a class="headerlink" href="#naming-and-imagelabel-pairing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Original images:</strong> e.g. <code>P080_IMG1.png</code> in <code>images/</code>.</li>
+<li><strong>Preprocessed images:</strong> <code>{original_stem}_PP_PL_{N}.png</code>, e.g. <code>P080_IMG1_PP_PL_1.png</code> in <code>images_pp_1/</code>.</li>
+<li><strong>Labels:</strong> same stem as the original image, e.g. <code>P080_IMG1.png</code> in <code>labels/</code>.</li>
+</ul>
+<p>Pairing is performed by <strong>original identifier</strong>, not by list position:</p>
+<ol>
+<li>Remove the suffix <code>_PP_PL_&lt;N&gt;</code> when present.</li>
+<li>Resolve <code>labels/{original_id}.png</code>.</li>
+</ol>
+<p>Example: <code>P080_IMG1_PP_PL_1.png</code> → <code>P080_IMG1.png</code>.</p>
+<p>Implementation: <code>resolve_label_path()</code> in <code>03_pipeline/03_evaluation.ipynb</code> (and pairing helpers in <code>02_segmentation.ipynb</code> for training).</p>
+<hr />
+<h2 id="expected-model-files-save_models">Expected model files (<code>Save_Models/</code>)<a class="headerlink" href="#expected-model-files-save_models" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Experiment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>best_metric_model_original.pth</code></td>
+<td>Training on <code>images/</code></td>
+</tr>
+<tr>
+<td><code>best_metric_model_pp_1.pth</code> … <code>best_metric_model_pp_5.pth</code></td>
+<td>Training on <code>images_pp_1</code> … <code>images_pp_5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-integrity-rules">Data integrity rules<a class="headerlink" href="#data-integrity-rules" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Do not modify files in <code>images/</code> or <code>labels/</code>.</li>
+<li>Preprocessing writes only to <code>images_pp_*</code>.</li>
+<li>Segmentation writes predictions only to <code>results_*</code> and weights only to <code>Save_Models/</code>.</li>
+<li>Evaluation reads predictions and labels; it does not alter ground truth.</li>
+</ol>
+<hr />
+<h2 id="populating-preprocessed-folders">Populating preprocessed folders<a class="headerlink" href="#populating-preprocessed-folders" title="Permanent link">&para;</a></h2>
+<p>Run all cells in <code>03_pipeline/01_preprocessing.ipynb</code> once. Outputs are written directly to <code>02_dataset/images_pp_{1..5}/</code>.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The dataset tree separates <strong>immutable inputs</strong> (<code>images/</code>, <code>labels/</code>), <strong>experimental variants</strong> (<code>images_pp_*</code>), and <strong>model outputs</strong> (<code>Save_Models/</code>, <code>results_*</code>). Licensing and attribution requirements are documented in <code>01_academic/03_dataset_documentation/licence.md</code>. Quantitative outcomes based on these artefacts are reported under <code>04_pipeline_results/</code> and <code>05_report/</code>, following the workflow defined in <code>03_pipeline/README.md</code>.</p>
 
 
 

@@ -60,24 +60,42 @@ exclude_docs: |
   04_migration/*
   **/experiment_standards.md
   MKDOCS_PUBLISHING.md
+  portal/additional.md
+  assets/**
+  repo_files/**
+  includes/**
 
 nav:
   - Home: index.md
   - Project:
       - Overview: portal/project_overview.md
       - Assignment: portal/assignment.md
-      - State of the Art: portal/state_of_the_art.md
-      - Dataset:
-          - Overview: portal/dataset.md
-          - Licence: portal/dataset_licence.md
-      - Results: portal/results.md
-      - Final Report: portal/final_report.md
+  - State of the Art: portal/state_of_the_art.md
+  - Dataset:
+      - Overview: portal/dataset.md
+      - Licence: portal/dataset_licence.md
+  - Results: portal/results.md
+  - Final Report: portal/final_report.md
   - Technical Documentation:
       - Scientific Pipeline: portal/pipeline.md
-      - Architecture: 02_architecture/system_architecture.md
-      - Data Flow: 02_architecture/data_flow.md
-      - Governance: 01_governance/project_governance.md
-      - Additional Documentation: portal/additional.md
+      - Architecture:
+          - System Architecture: 02_architecture/system_architecture.md
+          - Data Flow: 02_architecture/data_flow.md
+          - Design Evolution: 02_architecture/design_evolution.md
+      - Governance:
+          - Project Governance: 01_governance/project_governance.md
+          - Coding Standards: 01_governance/coding_standards.md
+          - Documentation Standards: 01_governance/documentation_standards.md
+          - Naming Conventions: 01_governance/naming_conventions.md
+          - Semantic Naming Policy: 01_governance/semantic_naming_policy.md
+          - Notebook Standards: 01_governance/notebook_standards.md
+          - Scientific Notebook Standards: 01_governance/scientific_notebook_standards.md
+          - Comment Standards: 01_governance/comment_standards.md
+          - Lecturer Identifier Policy: 01_governance/lecturer_identifier_policy.md
+      - Implementation:
+          - Deliverables: portal/deliverables.md
+          - Implementation: portal/implementation.md
+          - Traceability: portal/traceability.md
 
 extra:
   generator: false

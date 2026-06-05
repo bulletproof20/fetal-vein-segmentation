@@ -73,3 +73,14 @@ Four operators were evaluated in separate notebook runs (`POSTPROCESS_METHOD`): 
 Gaussian filtering provided the strongest preprocessing input. **Opening** achieved the highest Dice score. **Recommended pipeline:** Gaussian preprocessing → UNet segmentation → opening post-processing.
 
 [Final Report](final_report.md)
+
+---
+
+## Related documentation
+
+| Section | Description |
+|---------|-------------|
+| [State of the Art](state_of_the_art.md) | Literature review and clinical context |
+| [Dataset overview](dataset.md) | Data used for training and evaluation |
+| [Scientific Pipeline](pipeline.md) | Experimental workflow |
+| [Final Report](final_report.md) | Submitted written deliverable |

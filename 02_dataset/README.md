@@ -1,6 +1,21 @@
 # Dataset layout (`02_dataset/`)
 
-This directory stores **all image data, ground-truth labels, trained models, and segmentation outputs** used by the scientific pipeline. Original data must not be overwritten by preprocessing or training notebooks.
+## Introduction
+
+The `02_dataset/` directory is the **central data layer** of the fetal vein segmentation study. It holds original ultrasound acquisitions, ground-truth annotations, preprocessed image variants produced for controlled comparison, trained model weights, and predicted masks generated during segmentation experiments.
+
+This layout was designed so that each experimental stage — preprocessing, training, inference and evaluation — reads and writes predictable locations without altering source images or labels. The structure therefore supports reproducibility, traceability to the literature review, and direct linkage to the three-stage pipeline documented under `03_pipeline/`.
+
+---
+
+## Purpose within the experimental workflow
+
+| Phase | Role of `02_dataset/` |
+|-------|------------------------|
+| **Baseline input** | `images/` and `labels/` supply the common reference for all experiments |
+| **Preprocessing comparison** | `images_pp_1/` … `images_pp_5/` hold parallel datasets (PP1–PP5) derived from the same patients |
+| **Segmentation** | `Save_Models/` and `results_*` store checkpoints and predicted masks per configuration |
+| **Evaluation** | Predictions are compared against `labels/`; aggregated metrics are published under `04_pipeline_results/` |
 
 Paths are resolved relative to the repository root (see `find_project_root()` in `03_pipeline/*.ipynb`).
 
@@ -63,3 +78,9 @@ Implementation: `resolve_label_path()` in `03_pipeline/03_evaluation.ipynb` (and
 ## Populating preprocessed folders
 
 Run all cells in `03_pipeline/01_preprocessing.ipynb` once. Outputs are written directly to `02_dataset/images_pp_{1..5}/`.
+
+---
+
+## Summary
+
+The dataset tree separates **immutable inputs** (`images/`, `labels/`), **experimental variants** (`images_pp_*`), and **model outputs** (`Save_Models/`, `results_*`). Licensing and attribution requirements are documented in `01_academic/03_dataset_documentation/licence.md`. Quantitative outcomes based on these artefacts are reported under `04_pipeline_results/` and `05_report/`, following the workflow defined in `03_pipeline/README.md`.

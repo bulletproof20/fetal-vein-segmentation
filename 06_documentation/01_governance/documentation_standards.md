@@ -16,17 +16,18 @@
 
 ## 2. Documentation hierarchy (single source of truth)
 
-Each concept has **one authoritative location**. The MkDocs site is a **reviewer portal** (Home, Academic, Implementation, Deliverables, Project). Portal pages index and link; they do not duplicate implementation detail.
+Each concept has **one authoritative location**. The MkDocs site is a **reviewer portal**; thin portal pages use snippets or GitHub links—no mirrored copies.
 
-| Concept | Authoritative location | MkDocs portal index |
-|---------|------------------------|---------------------|
-| Repository overview, Colab setup, directory map | Root `README.md` | `index.md` (Home) |
-| Academic context, deliverables map | `01_academic/` (immutable) | `portal/academic.md`, `portal/deliverables.md` |
-| Execution order and stage outputs | `03_pipeline/README.md`, three pipeline notebooks | `portal/implementation.md` |
-| Dataset folder contract | `02_dataset/README.md` | `portal/dataset.md` |
-| Lecturer ↔ pipeline traceability | Notebook identifiers + pipeline layout | `portal/traceability.md` |
-| System architecture, data flow, design rationale | `06_documentation/02_architecture/` | Project → Architecture, Data Flow, Design Decisions |
-| Governance rules | `06_documentation/01_governance/` | Project → Standards & Governance |
+| Concept | Authoritative location | MkDocs |
+|---------|------------------------|--------|
+| Repository overview | Root `README.md` | `index.md` (Home) |
+| Literature review | `01_academic/02_literature/state_of_the_art.md` | Project → State of the Art |
+| Dataset layout | `02_dataset/README.md` | Project → Dataset → Overview |
+| Dataset licence | `01_academic/03_dataset_documentation/licence.md` | Project → Dataset → Licence |
+| Pipeline workflow | `03_pipeline/README.md` | Technical Documentation → Scientific Pipeline |
+| Execution index / traceability | Repository tree | Additional Documentation |
+| Architecture, data flow | `06_documentation/02_architecture/` | Technical Documentation |
+| Governance | `06_documentation/01_governance/` | Technical Documentation → Governance |
 | Notebook structure (self-contained stages) | `scientific_notebook_standards.md`, `notebook_standards.md` | — |
 | Preprocessing methodology | `03_pipeline/01_preprocessing.ipynb` | — |
 | Segmentation | `03_pipeline/02_segmentation.ipynb` | — |
@@ -80,12 +81,11 @@ Notebooks **must not:**
 
 | Rule | Detail |
 |------|--------|
-| Purpose | Reviewer portal: Home, Academic, Implementation, Deliverables, Project |
-| Build | `mkdocs build` from repository root |
-| Deploy | `mkdocs gh-deploy` after `site_url` / `repo_url` configured |
-| Links | Direct Markdown links (`[label](path)`); prefer `../repo_files/…` for PDFs, notebooks, CSV, and figures (mirrored at build time) |
-| Snippets | Include external READMEs and academic markdown via `pymdownx.snippets`; do not use reference-style links (`[text][ref]`) |
-| Repo mirror | `hooks/copy_repo_assets.py` copies repository artefacts into `06_documentation/repo_files/` on `mkdocs build` (not `assets/` — reserved by the theme) |
+| Purpose | Reviewer portal: Project + Technical Documentation |
+| Build | `mkdocs build --strict` from repository root |
+| Deploy | `mkdocs gh-deploy` (once per release) |
+| Snippets | `pymdownx.snippets` for authoritative Markdown outside `docs_dir` |
+| Binaries | Link to GitHub (`blob` / `raw`) for PDFs, notebooks, CSV, figures |
 
 ---
 

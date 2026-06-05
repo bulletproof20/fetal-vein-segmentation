@@ -1,0 +1,1 @@
+--8<-- "../../01_academic/03_dataset_documentation/licence.md"

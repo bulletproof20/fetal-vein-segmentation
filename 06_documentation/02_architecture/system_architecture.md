@@ -9,7 +9,7 @@
 
 The repository adopts a **notebook-centric architecture** on **Google Colab** so that each stage of the assignment remains **transparent, reviewable, and aligned with course reference material**. Semantic segmentation of the fetal umbilical vein is implemented as a staged experiment: optional preprocessing variants, shared segmentation methodology, and comparative evaluation.
 
-Execution steps, notebook paths, and configuration tables are **not** documented here. See the [Implementation](../portal/implementation.md) index and [03_pipeline/README.md](../portal/implementation.md#start-here).
+Execution steps, notebook paths, and configuration tables are **not** documented here. See [Scientific Pipeline](../portal/pipeline.md) (`03_pipeline/README.md`) and [Implementation index](../portal/implementation.md).
 
 ---
 

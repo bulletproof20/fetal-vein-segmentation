@@ -1,47 +1,49 @@
 # Results
 
-Quantitative and qualitative outcomes of model training, segmentation evaluation, and morphological post-processing. Full narrative: [Results — full narrative](report_results.md).
+Quantitative and qualitative outcomes of model training, segmentation evaluation, and morphological post-processing.
 
-Evaluation tables (one CSV per morphology method):
+Extended narrative (repository): [05_report/results.md](https://github.com/bulletproof20/fetal-vein-segmentation/blob/main/05_report/results.md)
+
+Evaluation tables (`04_pipeline_results/`, one CSV per morphology method):
 
 | Method | CSV |
 |--------|-----|
-| Opening | [tabela_avaliacao_experiencias_opening.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_opening.csv) |
-| Closing | [tabela_avaliacao_experiencias_closing.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_closing.csv) |
-| Erosion | [tabela_avaliacao_experiencias_erosion.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_erosion.csv) |
-| Dilation | [tabela_avaliacao_experiencias_dilation.csv](../repo_files/04_pipeline_results/tabela_avaliacao_experiencias_dilation.csv) |
+| Opening | [tabela_avaliacao_experiencias_opening.csv](https://github.com/bulletproof20/fetal-vein-segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_opening.csv) |
+| Closing | [tabela_avaliacao_experiencias_closing.csv](https://github.com/bulletproof20/fetal-vein-segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_closing.csv) |
+| Erosion | [tabela_avaliacao_experiencias_erosion.csv](https://github.com/bulletproof20/fetal-vein-segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_erosion.csv) |
+| Dilation | [tabela_avaliacao_experiencias_dilation.csv](https://github.com/bulletproof20/fetal-vein-segmentation/blob/main/04_pipeline_results/tabela_avaliacao_experiencias_dilation.csv) |
 
 ---
 
 ## Training analysis
 
-Training and validation loss curves for each preprocessing configuration:
+Training and validation loss curves (`04_pipeline_results/Segmentation_training_results/`):
 
 ### Original dataset
 
-![Original training curves](../repo_files/04_pipeline_results/Segmentation_training_results/original.png)
+![Original training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/original.png)
 
 ### PP1 — Average filter
 
-![PP1 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test1.png)
+![PP1 training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test1.png)
 
 ### PP2 — Median filter
 
-![PP2 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test2.png)
+![PP2 training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test2.png)
 
 ### PP3 — Gaussian filter
 
-![PP3 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test3.png)
+![PP3 training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test3.png)
 
 ### PP4 — Sobel filter
 
-![PP4 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test4.png)
+![PP4 training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test4.png)
 
 ### PP5 — Laplacian filter
 
-![PP5 training curves](../repo_files/04_pipeline_results/Segmentation_training_results/test5.png)
+![PP5 training curves](https://github.com/bulletproof20/fetal-vein-segmentation/raw/main/04_pipeline_results/Segmentation_training_results/test5.png)
 
-All experiments converged without severe optimisation instability. Gaussian preprocessing (PP3) yielded the most favourable validation behaviour and segmentation metrics.
+Gaussian preprocessing (PP3) yielded the most favourable validation behaviour and segmentation metrics.
 
 ---
 
@@ -64,20 +66,10 @@ Four operators were evaluated in separate notebook runs (`POSTPROCESS_METHOD`): 
 | PP4 (Sobel) | Opening | 0.3426 |
 | PP5 (Laplacian) | Dilation | 0.1135 |
 
-### Top configurations
-
-| Rank | Configuration | Dice |
-|------|---------------|------|
-| 1 | PP3 + Opening | **0.5015** |
-| 2 | PP3 + Closing | 0.4998 |
-| 3 | PP3 (no morphology) | 0.4998 |
-
 ---
 
 ## Conclusions
 
-Gaussian filtering provided the strongest preprocessing input. **Opening** achieved the highest Dice score, offering a balanced precision–recall trade-off. Gradient-emphasising filters (Sobel, Laplacian) degraded performance relative to intensity-preserving smoothing.
+Gaussian filtering provided the strongest preprocessing input. **Opening** achieved the highest Dice score. **Recommended pipeline:** Gaussian preprocessing → UNet segmentation → opening post-processing.
 
-**Recommended pipeline:** Gaussian preprocessing → UNet segmentation → opening post-processing.
-
-Extended discussion, future work, and figure captions: [Results — full narrative](report_results.md) · [Final Report](final_report.md)
+[Final Report](final_report.md)

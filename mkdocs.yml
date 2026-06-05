@@ -5,12 +5,11 @@ site_name: Fetal Vein Segmentation
 site_description: Academic project portal — fetal vein segmentation (IPCA, EIM).
 site_author: Ivo Sá · Diogo Sousa
 
-# Set after first deploy, e.g. https://<user>.github.io/fetal_vein_segmentation/
-# site_url: https://<user>.github.io/fetal_vein_segmentation/
+site_url: https://bulletproof20.github.io/fetal-vein-segmentation/
 
-repo_name: fetal_vein_segmentation
-# repo_url: https://github.com/<user>/fetal_vein_segmentation
-# edit_uri: edit/main/06_documentation/
+repo_name: fetal-vein-segmentation
+repo_url: https://github.com/bulletproof20/fetal-vein-segmentation
+edit_uri: edit/main/06_documentation/
 
 docs_dir: 06_documentation
 site_dir: site
@@ -41,9 +40,6 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-hooks:
-  - 06_documentation/hooks/copy_repo_assets.py
-
 plugins:
   - search
 
@@ -62,44 +58,26 @@ markdown_extensions:
 
 exclude_docs: |
   04_migration/*
-  includes/*
-  repo_files/**/*.md
   **/experiment_standards.md
   MKDOCS_PUBLISHING.md
 
 nav:
   - Home: index.md
-  - Project Overview: portal/project_overview.md
-  - Assignment: portal/assignment.md
-  - Literature:
-      - Bibliography: portal/literature.md
-      - Articles: portal/articles.md
+  - Project:
+      - Overview: portal/project_overview.md
+      - Assignment: portal/assignment.md
       - State of the Art: portal/state_of_the_art.md
-  - Dataset:
-      - Overview: portal/dataset.md
-      - Licence: portal/licence.md
-  - Scientific Pipeline: portal/pipeline.md
-  - Results:
-      - Overview: portal/results.md
-      - Full narrative: portal/report_results.md
-  - Final Report: portal/final_report.md
-  - Documentation:
-      - Implementation Index: portal/implementation.md
-      - Academic Index: portal/academic.md
-      - Deliverables Index: portal/deliverables.md
-      - Traceability: portal/traceability.md
+      - Dataset:
+          - Overview: portal/dataset.md
+          - Licence: portal/dataset_licence.md
+      - Results: portal/results.md
+      - Final Report: portal/final_report.md
+  - Technical Documentation:
+      - Scientific Pipeline: portal/pipeline.md
       - Architecture: 02_architecture/system_architecture.md
       - Data Flow: 02_architecture/data_flow.md
-      - Design Decisions: 02_architecture/design_evolution.md
       - Governance: 01_governance/project_governance.md
-      - Notebook Structure: 01_governance/scientific_notebook_standards.md
-      - Coding Standards: 01_governance/coding_standards.md
-      - Naming Conventions: 01_governance/naming_conventions.md
-      - Semantic Naming Policy: 01_governance/semantic_naming_policy.md
-      - Lecturer Identifier Policy: 01_governance/lecturer_identifier_policy.md
-      - Documentation Standards: 01_governance/documentation_standards.md
-      - Notebook Standards: 01_governance/notebook_standards.md
-      - Comment Standards: 01_governance/comment_standards.md
+      - Additional Documentation: portal/additional.md
 
 extra:
   generator: false

@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estado-da-arte" class="md-skip">
+        <a href="#state-of-the-art" class="md-skip">
           Skip to content
         </a>
       
@@ -615,10 +615,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contexto-clinico-e-imagiologico" class="md-nav__link">
+  <a href="#clinical-and-imaging-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contexto clínico e imagiológico
+        Clinical and Imaging Context
       
     </span>
   </a>
@@ -626,10 +626,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#literatura-anatomica-e-ecografica" class="md-nav__link">
+  <a href="#anatomical-and-ultrasound-literature" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Literatura anatómica e ecográfica
+        Anatomical and Ultrasound Literature
       
     </span>
   </a>
@@ -637,10 +637,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desafios-da-segmentacao-e-motivacao-computacional" class="md-nav__link">
+  <a href="#segmentation-challenges-and-computational-motivation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Desafios da segmentação e motivação computacional
+        Segmentation Challenges and Computational Motivation
       
     </span>
   </a>
@@ -648,10 +648,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sintese-e-ligacao-ao-estudo-experimental" class="md-nav__link">
+  <a href="#summary-and-relation-to-the-experimental-study" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Síntese e ligação ao estudo experimental
+        Summary and Relation to the Experimental Study
       
     </span>
   </a>
@@ -659,10 +659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Referências
+        References
       
     </span>
   </a>
@@ -1570,10 +1570,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contexto-clinico-e-imagiologico" class="md-nav__link">
+  <a href="#clinical-and-imaging-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contexto clínico e imagiológico
+        Clinical and Imaging Context
       
     </span>
   </a>
@@ -1581,10 +1581,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#literatura-anatomica-e-ecografica" class="md-nav__link">
+  <a href="#anatomical-and-ultrasound-literature" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Literatura anatómica e ecográfica
+        Anatomical and Ultrasound Literature
       
     </span>
   </a>
@@ -1592,10 +1592,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desafios-da-segmentacao-e-motivacao-computacional" class="md-nav__link">
+  <a href="#segmentation-challenges-and-computational-motivation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Desafios da segmentação e motivação computacional
+        Segmentation Challenges and Computational Motivation
       
     </span>
   </a>
@@ -1603,10 +1603,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sintese-e-ligacao-ao-estudo-experimental" class="md-nav__link">
+  <a href="#summary-and-relation-to-the-experimental-study" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Síntese e ligação ao estudo experimental
+        Summary and Relation to the Experimental Study
       
     </span>
   </a>
@@ -1614,10 +1614,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Referências
+        References
       
     </span>
   </a>
@@ -1644,28 +1644,29 @@
   
 
 
-<h1 id="estado-da-arte">Estado da Arte<a class="headerlink" href="#estado-da-arte" title="Permanent link">&para;</a></h1>
-<p>Este capítulo enquadra o problema da segmentação da veia umbilical fetal no contexto da imagiologia obstétrica e da literatura científica que sustenta o trabalho experimental desenvolvido no repositório. O objetivo é situar as escolhas metodológicas — pré-processamento, segmentação por aprendizagem profunda e pós-processamento morfológico — face ao conhecimento clínico e à evidência publicada, sem antecipar os resultados quantitativos obtidos.</p>
+<h1 id="state-of-the-art">State of the Art<a class="headerlink" href="#state-of-the-art" title="Permanent link">&para;</a></h1>
+<p>This chapter contextualises the problem of fetal umbilical vein segmentation within the fields of obstetric imaging and the scientific literature that supports the experimental work developed in this repository. Its purpose is to justify the methodological choices adopted throughout the project—including preprocessing, deep learning-based segmentation, and morphological post-processing—based on clinical knowledge and published evidence, without anticipating the quantitative results obtained.</p>
 <hr />
-<h2 id="contexto-clinico-e-imagiologico">Contexto clínico e imagiológico<a class="headerlink" href="#contexto-clinico-e-imagiologico" title="Permanent link">&para;</a></h2>
-<p>A veia umbilical desempenha um papel fundamental na circulação fetal, sendo responsável pelo transporte de sangue oxigenado e nutrientes da placenta para o feto. Qualquer alteração na sua estrutura ou funcionamento pode comprometer o desenvolvimento fetal e estar associada a complicações obstétricas, restrição do crescimento intrauterino e aumento da morbilidade perinatal.</p>
-<p>A ultrassonografia constitui atualmente a principal técnica de avaliação pré-natal do sistema vascular fetal, permitindo a observação não invasiva do cordão umbilical e dos seus vasos. De acordo com Campos (2017), o estudo ecográfico do cordão umbilical é essencial para a deteção precoce de anomalias vasculares e para a monitorização do bem-estar fetal. A identificação atempada destas alterações pode contribuir para uma intervenção clínica mais eficaz e para a redução de resultados adversos na gravidez.</p>
+<h2 id="clinical-and-imaging-context">Clinical and Imaging Context<a class="headerlink" href="#clinical-and-imaging-context" title="Permanent link">&para;</a></h2>
+<p>The umbilical vein plays a fundamental role in fetal circulation, being responsible for transporting oxygenated blood and nutrients from the placenta to the fetus. Any alteration in its structure or function may compromise fetal development and be associated with obstetric complications, intrauterine growth restriction, and increased perinatal morbidity.</p>
+<p>Ultrasound imaging is currently the primary technique used for prenatal assessment of the fetal vascular system, enabling non-invasive visualisation of the umbilical cord and its vessels. According to Campos (2017), ultrasound examination of the umbilical cord is essential for the early detection of vascular abnormalities and the monitoring of fetal well-being. The timely identification of such alterations may contribute to more effective clinical intervention and improved pregnancy outcomes.</p>
 <hr />
-<h2 id="literatura-anatomica-e-ecografica">Literatura anatómica e ecográfica<a class="headerlink" href="#literatura-anatomica-e-ecografica" title="Permanent link">&para;</a></h2>
-<p>O sistema venoso umbilical e portal fetal tem sido amplamente estudado na literatura. Mavrides et al. (2001) descreveram detalhadamente a anatomia dos sistemas venoso umbilical, portal e hepático em fetos entre as 14 e as 19 semanas de gestação, estabelecendo referências anatómicas importantes para a interpretação de exames ecográficos. Posteriormente, Kivilevitch et al. (2009) demonstraram que a utilização de ecografia bidimensional e tridimensional permite uma avaliação mais detalhada destas estruturas vasculares, facilitando a sua visualização e caracterização.</p>
-<p>Estes trabalhos fundamentam a relevância clínica de delimitar com precisão a veia umbilical em imagens ecográficas e justificam o recurso a bases de dados anotadas e a métodos automáticos de análise.</p>
+<h2 id="anatomical-and-ultrasound-literature">Anatomical and Ultrasound Literature<a class="headerlink" href="#anatomical-and-ultrasound-literature" title="Permanent link">&para;</a></h2>
+<p>The fetal umbilical and portal venous systems have been extensively studied in the literature. Mavrides et al. (2001) provided a detailed description of the anatomy of the umbilical, portal, and hepatic venous systems in fetuses between 14 and 19 weeks of gestation, establishing important anatomical references for the interpretation of ultrasound examinations. Subsequently, Kivilevitch et al. (2009) demonstrated that the use of two-dimensional and three-dimensional ultrasound enables a more detailed evaluation of these vascular structures, facilitating their visualisation and characterisation.</p>
+<p>These studies reinforce the clinical importance of accurately delineating the umbilical vein in ultrasound images and justify the use of annotated datasets and automated image analysis methods.</p>
 <hr />
-<h2 id="desafios-da-segmentacao-e-motivacao-computacional">Desafios da segmentação e motivação computacional<a class="headerlink" href="#desafios-da-segmentacao-e-motivacao-computacional" title="Permanent link">&para;</a></h2>
-<p>Apesar dos avanços tecnológicos na imagiologia fetal, a identificação e delimitação da veia umbilical em imagens ecográficas continua a ser uma tarefa desafiante devido à presença de ruído, artefactos e elevada variabilidade anatómica. Neste contexto, o desenvolvimento de métodos automáticos de segmentação assume particular relevância, permitindo melhorar a consistência da análise, reduzir a dependência do operador e apoiar futuras aplicações de diagnóstico assistido por computador.</p>
-<p>Assim, a segmentação da veia umbilical constitui um problema de interesse clínico e científico, contribuindo para uma avaliação mais rigorosa da circulação fetal e para o desenvolvimento de ferramentas computacionais de apoio à medicina pré-natal.</p>
+<h2 id="segmentation-challenges-and-computational-motivation">Segmentation Challenges and Computational Motivation<a class="headerlink" href="#segmentation-challenges-and-computational-motivation" title="Permanent link">&para;</a></h2>
+<p>Despite technological advances in fetal imaging, the identification and delineation of the umbilical vein in ultrasound images remain challenging tasks due to the presence of noise, imaging artefacts, and substantial anatomical variability. In this context, the development of automated segmentation methods becomes particularly relevant, offering the potential to improve analysis consistency, reduce operator dependency, and support future computer-aided diagnostic applications.</p>
+<p>Consequently, fetal umbilical vein segmentation represents a clinically and scientifically significant problem, contributing both to a more accurate assessment of fetal circulation and to the development of computational tools for prenatal medicine.</p>
 <hr />
-<h2 id="sintese-e-ligacao-ao-estudo-experimental">Síntese e ligação ao estudo experimental<a class="headerlink" href="#sintese-e-ligacao-ao-estudo-experimental" title="Permanent link">&para;</a></h2>
-<p>A revisão da literatura converge para três eixos alinhados com o presente projeto: (1) importância clínica da circulação umbilical-portal fetal; (2) papel da ecografia na sua caracterização; (3) necessidade de métodos robustos de segmentação perante ruído e variabilidade morfológica. O estudo experimental que se segue no repositório avalia, de forma controlada, o impacto de estratégias de pré-processamento e de operadores morfológicos sobre a qualidade da segmentação obtida por um modelo de aprendizagem profunda, utilizando o conjunto de dados e o protocolo descritos na documentação do projeto (<code>02_dataset/</code>, <code>03_pipeline/</code>, <code>04_pipeline_results/</code>, <code>05_report/</code>).</p>
+<h2 id="summary-and-relation-to-the-experimental-study">Summary and Relation to the Experimental Study<a class="headerlink" href="#summary-and-relation-to-the-experimental-study" title="Permanent link">&para;</a></h2>
+<p>The reviewed literature converges around three key themes that directly support the present project: (1) the clinical importance of the fetal umbilical–portal circulation; (2) the central role of ultrasound imaging in its evaluation; and (3) the need for robust segmentation methods capable of handling image noise and morphological variability.</p>
+<p>The experimental study presented in this repository investigates, under controlled conditions, the impact of different preprocessing strategies and morphological operators on the segmentation quality achieved by a deep learning model. This evaluation is conducted using the dataset and experimental protocol described throughout the project documentation (<code>02_dataset/</code>, <code>03_pipeline/</code>, <code>04_pipeline_results/</code>, and <code>05_report/</code>).</p>
 <hr />
-<h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Campos, C. P. C. (2017). <em>Patologia do Cordão Umbilical</em>. Instituto de Ciências Biomédicas Abel Salazar, Universidade do Porto.</li>
-<li>Kivilevitch, Z., Gindes, L., Deutsch, H., &amp; Achiron, R. (2009). <em>In-utero evaluation of the fetal umbilical-portal venous system: two- and three-dimensional ultrasonic study</em>. Ultrasound in Obstetrics &amp; Gynecology.</li>
+<li>Campos, C. P. C. (2017). <em>Patologia do Cordão Umbilical</em>. Instituto de Ciências Biomédicas Abel Salazar, University of Porto.</li>
+<li>Kivilevitch, Z., Gindes, L., Deutsch, H., &amp; Achiron, R. (2009). <em>In-utero evaluation of the fetal umbilical–portal venous system: two- and three-dimensional ultrasonic study</em>. Ultrasound in Obstetrics &amp; Gynecology.</li>
 <li>Mavrides, E., Moscoso, G., Carvalho, J. S., Campbell, S., &amp; Thilaganathan, B. (2001). <em>The anatomy of the umbilical, portal and hepatic venous systems in the human fetus at 14–19 weeks of gestation</em>. Ultrasound in Obstetrics &amp; Gynecology.</li>
 </ul>
 

@@ -1,0 +1,621 @@
+{
+  "timestamp_utc": "2026-06-04T20:12:53.827346+00:00",
+  "dataset_root": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset",
+  "pil_available": true,
+  "pre_apply": true,
+  "reference_images": {
+    "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images",
+    "file_count": 152,
+    "color_counts": {
+      "grayscale": 152
+    },
+    "unique_dimensions": [
+      [
+        512,
+        512
+      ]
+    ]
+  },
+  "pp_folders_before": [
+    {
+      "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images_pp_1",
+      "file_count": 152,
+      "color_counts": {
+        "RGBA": 152
+      },
+      "unique_dimensions": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images_pp_2",
+      "file_count": 152,
+      "color_counts": {
+        "RGBA": 152
+      },
+      "unique_dimensions": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images_pp_3",
+      "file_count": 152,
+      "color_counts": {
+        "RGBA": 152
+      },
+      "unique_dimensions": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images_pp_4",
+      "file_count": 152,
+      "color_counts": {
+        "RGBA": 152
+      },
+      "unique_dimensions": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "path": "C:\\AA_trabalho\\fetal_vein_segmentation\\02_dataset\\images_pp_5",
+      "file_count": 152,
+      "color_counts": {
+        "RGBA": 152
+      },
+      "unique_dimensions": [
+        [
+          512,
+          512
+        ]
+      ]
+    }
+  ],
+  "pp1_sample_consistency": {
+    "samples_checked": 10,
+    "max_rgb_channel_diff": 0,
+    "max_convert_L_vs_R_channel": 0,
+    "samples": [
+      {
+        "file": "P0100_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0101_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0102_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0103_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0104_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0105_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0106_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0107_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0108_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0109_IMG1_PP_PL_1.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      }
+    ]
+  },
+  "pp2_sample_consistency": {
+    "samples_checked": 10,
+    "max_rgb_channel_diff": 0,
+    "max_convert_L_vs_R_channel": 0,
+    "samples": [
+      {
+        "file": "P0100_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0101_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0102_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0103_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0104_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0105_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0106_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0107_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0108_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0109_IMG1_PP_PL_2.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      }
+    ]
+  },
+  "pp3_sample_consistency": {
+    "samples_checked": 10,
+    "max_rgb_channel_diff": 0,
+    "max_convert_L_vs_R_channel": 0,
+    "samples": [
+      {
+        "file": "P0100_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0101_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0102_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0103_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0104_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0105_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0106_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0107_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0108_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0109_IMG1_PP_PL_3.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      }
+    ]
+  },
+  "pp4_sample_consistency": {
+    "samples_checked": 10,
+    "max_rgb_channel_diff": 0,
+    "max_convert_L_vs_R_channel": 0,
+    "samples": [
+      {
+        "file": "P0100_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0101_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0102_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0103_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0104_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0105_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0106_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0107_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0108_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0109_IMG1_PP_PL_4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      }
+    ]
+  },
+  "pp5_sample_consistency": {
+    "samples_checked": 10,
+    "max_rgb_channel_diff": 0,
+    "max_convert_L_vs_R_channel": 0,
+    "samples": [
+      {
+        "file": "P0100_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0101_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0102_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0103_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0104_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0105_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0106_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0107_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0108_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      },
+      {
+        "file": "P0109_IMG1_PP_PL_5.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "max_rgb_channel_diff": 0,
+        "max_convert_L_vs_R": 0
+      }
+    ]
+  }
+}

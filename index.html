@@ -6,15 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Academic project portal — fetal vein segmentation (IPCA).">
+        <meta name="description" content="Academic project portal — fetal vein segmentation (IPCA, EIM).">
       
       
-        <meta name="author" content="IPCA — Biomedical Imaging">
+        <meta name="author" content="Ivo Sá · Diogo Sousa">
       
       
       
       
-        <link rel="next" href="portal/academic/">
+        <link rel="next" href="portal/project_overview/">
       
       
         
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fetal-vein-segmentation" class="md-skip">
+        <a href="#fetal-vein-segmentation-using-deep-learning-and-image-processing-techniques" class="md-skip">
           Skip to content
         </a>
       
@@ -133,9 +133,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -232,13 +232,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="portal/academic/" class="md-tabs__link">
+      <a href="portal/project_overview/" class="md-tabs__link">
         
   
   
     
   
-  Academic
+  Project Overview
 
       </a>
     </li>
@@ -251,32 +251,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="portal/implementation/" class="md-tabs__link">
+      <a href="portal/assignment/" class="md-tabs__link">
         
   
   
     
   
-  Implementation
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="portal/deliverables/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Deliverables
+  Assignment
 
       </a>
     </li>
@@ -291,11 +272,107 @@
     
     
       <li class="md-tabs__item">
-        <a href="02_architecture/system_architecture/" class="md-tabs__link">
+        <a href="portal/literature/" class="md-tabs__link">
           
   
   
-  Project
+  Literature
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="portal/dataset/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dataset
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="portal/pipeline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Scientific Pipeline
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="portal/results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Results
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="portal/final_report/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Final Report
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="portal/implementation/" class="md-tabs__link">
+          
+  
+  
+  Documentation
 
         </a>
       </li>
@@ -403,10 +480,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-here" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Start here
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick navigation
       
     </span>
   </a>
@@ -425,32 +524,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-this-website-is" class="md-nav__link">
+  <a href="#about-this-site" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What this website is
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Open repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick links
+        About this site
       
     </span>
   </a>
@@ -472,14 +549,14 @@
   
   
     <li class="md-nav__item">
-      <a href="portal/academic/" class="md-nav__link">
+      <a href="portal/project_overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Academic
+    Project Overview
   
 
     
@@ -499,41 +576,14 @@
   
   
     <li class="md-nav__item">
-      <a href="portal/implementation/" class="md-nav__link">
+      <a href="portal/assignment/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Implementation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="portal/deliverables/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deliverables
+    Assignment
   
 
     
@@ -568,17 +618,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Project
+    Literature
   
 
     
@@ -589,16 +639,353 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project
+    Literature
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/literature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bibliography
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/state_of_the_art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    State of the Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/final_report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/deliverables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deliverables Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="portal/traceability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traceability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -691,34 +1078,6 @@
   
   
     <li class="md-nav__item">
-      <a href="portal/traceability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Traceability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="01_governance/project_governance/" class="md-nav__link">
         
   
@@ -726,7 +1085,7 @@
   <span class="md-ellipsis">
     
   
-    Standards & Governance
+    Governance
   
 
     
@@ -998,10 +1357,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-here" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Start here
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick navigation
       
     </span>
   </a>
@@ -1020,32 +1401,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-this-website-is" class="md-nav__link">
+  <a href="#about-this-site" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What this website is
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Open repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick links
+        About this site
       
     </span>
   </a>
@@ -1069,11 +1428,8 @@
 
 
 
-<h1 id="fetal-vein-segmentation">Fetal Vein Segmentation<a class="headerlink" href="#fetal-vein-segmentation" title="Permanent link">&para;</a></h1>
-<p><strong>IPCA — Biomedical Imaging</strong> · Academic project portal</p>
-<p>Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocessing variants (PP1–PP5), UNet/MONAI training, morphological post-processing, and comparative evaluation against ground-truth labels.</p>
-<hr />
-<h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
+<h1 id="fetal-vein-segmentation-using-deep-learning-and-image-processing-techniques">Fetal Vein Segmentation Using Deep Learning and Image Processing Techniques<a class="headerlink" href="#fetal-vein-segmentation-using-deep-learning-and-image-processing-techniques" title="Permanent link">&para;</a></h1>
+<p><strong>Processamento de Imagem Biomédica (EIM)</strong> · IPCA</p>
 <table>
 <thead>
 <tr>
@@ -1083,28 +1439,78 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="portal/academic/#assignment">Assignment specification</a></strong></td>
-<td>What the project had to deliver</td>
+<td><strong>Lecturer</strong></td>
+<td>Helena Torres</td>
 </tr>
 <tr>
-<td><strong><a href="portal/implementation/#start-here">Run the project</a></strong></td>
-<td><code>03_pipeline/README.md</code> and the three stage notebooks</td>
-</tr>
-<tr>
-<td><strong><a href="portal/academic/">Academic materials</a></strong></td>
-<td>Literature, licence, lecturer references</td>
-</tr>
-<tr>
-<td><strong><a href="portal/deliverables/">Deliverables</a></strong></td>
-<td>Report template and evaluation outputs</td>
-</tr>
-<tr>
-<td><strong><a href="portal/academic/#lecturer-reference-implementation">Reference implementation</a></strong></td>
-<td>Lecturer UNet/metrics notebooks</td>
+<td><strong>Authors</strong></td>
+<td><strong>Ivo Sá</strong> — Student No. 22604 · <strong>Diogo Sousa</strong> — Student No. 22588</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Design rationale:</strong> <a href="02_architecture/system_architecture/">Project → Architecture</a></p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This project addresses <strong>semantic segmentation of the fetal umbilical vein</strong> in ultrasound images. A controlled experimental pipeline compares five classical preprocessing strategies (PP1–PP5) against an original-image baseline, trains a <strong>UNet</strong> model (MONAI/PyTorch) under identical conditions, and evaluates whether <strong>mathematical morphology</strong> refines predicted masks. Results are reported through metric tables, training analysis, and a formal written report.</p>
+<hr />
+<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Construct reproducible preprocessed datasets from the same acquisitions (PP1–PP5).</li>
+<li>Train and evaluate segmentation models per preprocessing variant with consistent protocol.</li>
+<li>Quantify the impact of erosion, dilation, opening, and closing on segmentation metrics.</li>
+<li>Document methodology, governance, and traceability for academic review.</li>
+</ul>
+<hr />
+<h2 id="quick-navigation">Quick navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="portal/project_overview/">Project Overview</a></td>
+<td>Workflow, experimental design, deliverables</td>
+</tr>
+<tr>
+<td><a href="portal/assignment/">Assignment</a></td>
+<td>Official project brief (PDF)</td>
+</tr>
+<tr>
+<td><a href="portal/literature/">Literature</a></td>
+<td>Bibliography and sources</td>
+</tr>
+<tr>
+<td><a href="portal/state_of_the_art/">State of the Art</a></td>
+<td>Formal literature review</td>
+</tr>
+<tr>
+<td><a href="portal/dataset/">Dataset</a></td>
+<td>Data layout, pairing, licence</td>
+</tr>
+<tr>
+<td><a href="portal/pipeline/">Scientific Pipeline</a></td>
+<td>Three-stage notebook workflow</td>
+</tr>
+<tr>
+<td><a href="portal/results/">Results</a></td>
+<td>Training curves, metrics, conclusions</td>
+</tr>
+<tr>
+<td><a href="portal/final_report/">Final Report</a></td>
+<td>Submitted PDF report</td>
+</tr>
+<tr>
+<td><a href="portal/implementation/">Implementation</a></td>
+<td>Notebook and execution index</td>
+</tr>
+<tr>
+<td><a href="02_architecture/system_architecture/">Documentation</a></td>
+<td>Architecture and governance</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="repository-map">Repository map<a class="headerlink" href="#repository-map" title="Permanent link">&para;</a></h2>
 <table>
@@ -1117,7 +1523,7 @@
 <tbody>
 <tr>
 <td><code>01_academic/</code></td>
-<td>Assignment, literature, dataset licence, course references</td>
+<td>Assignment, literature, dataset licence, lecturer references</td>
 </tr>
 <tr>
 <td><code>02_dataset/</code></td>
@@ -1125,61 +1531,27 @@
 </tr>
 <tr>
 <td><code>03_pipeline/</code></td>
-<td>Three self-contained Colab notebooks + pipeline README</td>
+<td>Preprocessing · segmentation · evaluation notebooks</td>
 </tr>
 <tr>
 <td><code>04_pipeline_results/</code></td>
-<td>Aggregated evaluation tables</td>
+<td>Evaluation CSV tables and training figures</td>
 </tr>
 <tr>
 <td><code>05_report/</code></td>
-<td>Written report template</td>
+<td>Results narrative and final PDF</td>
 </tr>
 <tr>
 <td><code>06_documentation/</code></td>
-<td>This website (index + architecture + standards)</td>
+<td>This website</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Run the project:</strong> <a href="portal/pipeline/">Scientific Pipeline</a> → <a href="https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/README.md">03_pipeline/README.md</a> (replace <code>repository_owner</code> before deploy).</p>
 <hr />
-<h2 id="what-this-website-is">What this website is<a class="headerlink" href="#what-this-website-is" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>On this site</th>
-<th>In the repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Academic artefact index</td>
-<td>PDF, DOCX, notebook <strong>content</strong></td>
-</tr>
-<tr>
-<td>Pipeline &amp; notebook links</td>
-<td>Algorithms and parameters</td>
-</tr>
-<tr>
-<td>Architectural <strong>why</strong></td>
-<td>Step-by-step <strong>how</strong> (<a href="portal/implementation/">Implementation</a>)</td>
-</tr>
-<tr>
-<td>Standards index</td>
-<td>Governance policy text</td>
-</tr>
-</tbody>
-</table>
-<p>This site is a <strong>concierge desk</strong>, not a second copy of the repository.</p>
-<hr />
-<h2 id="open-repository">Open repository<a class="headerlink" href="#open-repository" title="Permanent link">&para;</a></h2>
-<p>Browse the full project on GitHub: configure <code>repository_owner</code> in <code>includes/repo_links.md</code> (used by portal pages), set <code>repo_url</code> in <code>mkdocs.yml</code>, then deploy.</p>
-<p>Authors: see <code>06_documentation/MKDOCS_PUBLISHING.md</code> in the repository.</p>
-<hr />
-<h2 id="quick-links">Quick links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="portal/academic/">Academic</a> · <a href="portal/implementation/">Implementation</a> · <a href="portal/deliverables/">Deliverables</a></li>
-<li><a href="02_architecture/system_architecture/">Project</a> · <a href="01_governance/project_governance/">Standards</a></li>
-</ul>
+<h2 id="about-this-site">About this site<a class="headerlink" href="#about-this-site" title="Permanent link">&para;</a></h2>
+<p>This MkDocs site is a <strong>navigation layer</strong> over the repository: it indexes academic artefacts, links to PDFs and notebooks, and documents architecture and standards. Algorithms and parameters remain in the pipeline notebooks; governance policies remain in <code>06_documentation/01_governance/</code>.</p>
+<p>Deploy instructions: <code>06_documentation/MKDOCS_PUBLISHING.md</code> (excluded from navigation; open in the repository).</p>
 
 
 
@@ -1199,6 +1571,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1224,7 +1602,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>

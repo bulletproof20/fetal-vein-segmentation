@@ -2,40 +2,42 @@
 
 --8<-- "includes/repo_links.md"
 
-Index of **execution artefacts** under `03_pipeline/`. All algorithms live in the three primary scientific notebooks.
+Index of **execution artefacts** under `03_pipeline/`. Full pipeline description: [Scientific Pipeline](pipeline.md).
 
 ---
 
 ## Start here
 
-| Item | Role | Open |
-|------|------|------|
-| Pipeline README | Official execution order and outputs | [03_pipeline/README.md][pipeline-readme] |
-| Dataset contract | Folder layout | [02_dataset/README.md][dataset-readme] |
+| Item | Open |
+|------|------|
+| Pipeline README | [03_pipeline/README.md][pipeline-readme] |
+| Dataset contract | [02_dataset/README.md][dataset-readme] |
 
 ---
 
 ## Primary scientific notebooks
 
-| Stage | Notebook | Open |
-|-------|----------|------|
-| Pre-processing | `01_preprocessing.ipynb` | [Open][nb-preprocessing] |
-| Segmentation | `02_segmentation.ipynb` | [Open][nb-segmentation] |
-| Post-processing + evaluation | `03_evaluation.ipynb` | [Open][nb-evaluation] |
+| Stage | Notebook |
+|-------|----------|
+| Pre-processing | [01_preprocessing.ipynb][nb-preprocessing] |
+| Segmentation | [02_segmentation.ipynb][nb-segmentation] |
+| Evaluation | [03_evaluation.ipynb][nb-evaluation] |
 
-No `%run` between these notebooks. Each file includes a **Dependencies** cell and stage sections preserved from the consolidated pipeline. Evaluation implements `pos_process()` and `calculate_metrics()` as in [Pos_Metrics.ipynb][ref-metrics].
+Each notebook is self-contained (no `%run` between files). Evaluation applies configurable morphological post-processing (`POSTPROCESS_METHOD`) and exports method-specific CSV files to `04_pipeline_results/`.
 
 ---
 
-## Dataset overview
+## Lecturer alignment
 
-Folder names, pairing rules, and artefact locations are defined in [02_dataset/README.md][dataset-readme].
+| Lecturer reference | Project notebook |
+|--------------------|------------------|
+| [FetalVeinSegmentationUS.ipynb][ref-fetal] | [02_segmentation.ipynb][nb-segmentation] |
+| [Pos_Metrics.ipynb][ref-metrics] | Metric naming; `pos_process` retained as reference in evaluation |
+
+Details: [Traceability](traceability.md) · [Lecturer Identifier Policy](../01_governance/lecturer_identifier_policy.md).
 
 ---
 
 ## Related
 
-- [Home](../index.md)
-- [Academic materials](academic.md)
-- [Deliverables](deliverables.md)
-- [Traceability](traceability.md)
+- [Home](../index.md) · [Scientific Pipeline](pipeline.md) · [Deliverables](deliverables.md)

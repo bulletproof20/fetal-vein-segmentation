@@ -23,7 +23,7 @@ Each concept has **one authoritative location**. The MkDocs site is a **reviewer
 | Repository overview, Colab setup, directory map | Root `README.md` | `index.md` (Home) |
 | Academic context, deliverables map | `01_academic/` (immutable) | `portal/academic.md`, `portal/deliverables.md` |
 | Execution order and stage outputs | `03_pipeline/README.md`, three pipeline notebooks | `portal/implementation.md` |
-| Dataset folder contract | `02_dataset/README.md` | `portal/implementation.md` (#dataset-overview) |
+| Dataset folder contract | `02_dataset/README.md` | `portal/dataset.md` |
 | Lecturer ↔ pipeline traceability | Notebook identifiers + pipeline layout | `portal/traceability.md` |
 | System architecture, data flow, design rationale | `06_documentation/02_architecture/` | Project → Architecture, Data Flow, Design Decisions |
 | Governance rules | `06_documentation/01_governance/` | Project → Standards & Governance |

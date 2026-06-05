@@ -3,7 +3,7 @@
 **Version:** 5.0  
 **Scope:** artefact movement and integrity (not algorithms)
 
-Folder names, pairing steps, and per-stage I/O are defined in the [dataset README](../portal/implementation.md#dataset-overview) and [pipeline README](../portal/implementation.md#start-here). This page states **what moves where** and **which invariants the architecture enforces**.
+Folder names, pairing steps, and per-stage I/O are defined in the [dataset README](../portal/dataset.md) and [pipeline README](../portal/pipeline.md). This page states **what moves where** and **which invariants the architecture enforces**.
 
 ---
 
@@ -42,4 +42,4 @@ Violations of pairing or path layout are detected in `03_pipeline/03_evaluation.
 
 - [System architecture](system_architecture.md)
 - [Design evolution](design_evolution.md)
-- [Dataset contract](../portal/implementation.md#dataset-overview)
+- [Dataset contract](../portal/dataset.md)

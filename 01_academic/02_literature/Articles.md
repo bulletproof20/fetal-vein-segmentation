@@ -19,3 +19,5 @@ Documento de apoio disponibilizado na literatura do projeto:
 * `01_academic/02_literature/PTG_Cord_Umb_UPorto.pdf`
 
 Este documento complementa os artigos científicos acima referidos, fornecendo informação adicional sobre a anatomia, identificação e interpretação das estruturas vasculares fetais relevantes para o desenvolvimento e validação da pipeline de segmentação.
+
+Formal literature review chapter: [state_of_the_art.md](state_of_the_art.md)

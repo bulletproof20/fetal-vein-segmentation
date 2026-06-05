@@ -2,8 +2,8 @@
 # Documentation source: 06_documentation/
 
 site_name: Fetal Vein Segmentation
-site_description: Academic project portal — fetal vein segmentation (IPCA).
-site_author: IPCA — Biomedical Imaging
+site_description: Academic project portal — fetal vein segmentation (IPCA, EIM).
+site_author: Ivo Sá · Diogo Sousa
 
 # Set after first deploy, e.g. https://<user>.github.io/fetal_vein_segmentation/
 # site_url: https://<user>.github.io/fetal_vein_segmentation/
@@ -22,6 +22,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -38,7 +39,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to dark mode
+        name: Switch to light mode
 
 plugins:
   - search
@@ -51,6 +52,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - .
+        - ..
   - tables
   - toc:
       permalink: true
@@ -63,15 +65,24 @@ exclude_docs: |
 
 nav:
   - Home: index.md
-  - Academic: portal/academic.md
-  - Implementation: portal/implementation.md
-  - Deliverables: portal/deliverables.md
-  - Project:
+  - Project Overview: portal/project_overview.md
+  - Assignment: portal/assignment.md
+  - Literature:
+      - Bibliography: portal/literature.md
+      - State of the Art: portal/state_of_the_art.md
+  - Dataset: portal/dataset.md
+  - Scientific Pipeline: portal/pipeline.md
+  - Results: portal/results.md
+  - Final Report: portal/final_report.md
+  - Documentation:
+      - Implementation Index: portal/implementation.md
+      - Academic Index: portal/academic.md
+      - Deliverables Index: portal/deliverables.md
+      - Traceability: portal/traceability.md
       - Architecture: 02_architecture/system_architecture.md
       - Data Flow: 02_architecture/data_flow.md
       - Design Decisions: 02_architecture/design_evolution.md
-      - Traceability: portal/traceability.md
-      - Standards & Governance: 01_governance/project_governance.md
+      - Governance: 01_governance/project_governance.md
       - Notebook Structure: 01_governance/scientific_notebook_standards.md
       - Coding Standards: 01_governance/coding_standards.md
       - Naming Conventions: 01_governance/naming_conventions.md

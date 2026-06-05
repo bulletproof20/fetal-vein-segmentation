@@ -2,63 +2,61 @@
 
 --8<-- "includes/repo_links.md"
 
-Index of **academic artefacts** in `01_academic/`. This page does not host PDF, DOCX, or notebook content — open each link in the repository.
+Index of **academic artefacts** in `01_academic/`. Primary navigation: [Assignment](assignment.md) · [Literature](literature.md) · [State of the Art](state_of_the_art.md) · [Dataset licence](dataset.md).
 
 ---
 
 ## Assignment
 
-| Item | Role | Open |
-|------|------|------|
-| Assignment specification | Official project brief | [Assigment_TP.pdf][assignment] |
+| Item | Open |
+|------|------|
+| Assignment specification (PDF) | [Assigment_TP.pdf][assignment] |
+
+See [Assignment](assignment.md).
 
 ---
 
-## Literature review
+## Literature
 
-| Item | Role | Open |
-|------|------|------|
-| Submitted literature review | Student deliverable | [01_study.docx][lit-review] |
-| Review template | Format reference | [template.docx][lit-template] |
+| Item | Open |
+|------|------|
+| Articles index | [Articles.md][lit-articles-index] |
+| State of the Art chapter | [state_of_the_art.md][lit-state-of-art] |
+| UPorto anatomical reference | [PTG_Cord_Umb_UPorto.pdf][lit-article-ptg] |
 
----
-
-## Literature sources
-
-| Item | Role | Open |
-|------|------|------|
-| Article (UPorto) | Background reference | [PTG_Cord_Umb_UPorto.pdf][lit-article-ptg] |
-| Articles index | Bibliography notes | [Articles.md][lit-articles-index] |
+See [Literature](literature.md) and [State of the Art](state_of_the_art.md).
 
 ---
 
 ## Dataset licence
 
-| Item | Role | Open |
-|------|------|------|
-| Dataset licence & attribution | Mendeley data terms (CC BY 4.0) | [LICENSE][dataset-licence] |
+| Item | Open |
+|------|------|
+| Licence & attribution (CC BY 4.0) | [LICENSE.md][dataset-licence] |
 
-The scientific data contract for folders under `02_dataset/` is in the [dataset README][dataset-readme] (implementation tree).
+Data layout: [Dataset](dataset.md).
 
 ---
 
 ## Lecturer reference implementation
 
+Reference notebooks and supporting code under `04_reference_materials/03_code_exemple/`. These materials informed the project implementation; they are **not** duplicated on this site.
+
 | Item | Role | Open |
 |------|------|------|
-| Fetal vein segmentation (UNet / MONAI) | Primary course reference notebook | [FetalVeinSegmentationUS.ipynb][ref-fetal] |
-| Post-processing & metrics | Morphology and metric functions | [Pos_Metrics.ipynb][ref-metrics] |
+| Fetal vein segmentation (UNet / MONAI) | Primary training reference | [FetalVeinSegmentationUS.ipynb][ref-fetal] |
+| Post-processing & metrics | Morphology and metric naming | [Pos_Metrics.ipynb][ref-metrics] |
 | Instructions (PDF) | Lecturer guidance | [instruções.pdf][ref-instructions] |
-| Read/save images example | Supporting example | [ReadSaveImages.ipynb][ref-readsave] |
-| Full folder | All reference code | [03_code_exemple/][ref-code-dir] |
+| Read/save images | I/O example | [ReadSaveImages.ipynb][ref-readsave] |
+| Reference folder | All example code | [03_code_exemple/][ref-code-dir] |
 
-See also [Traceability](../portal/traceability.md) under **Project**.
+Implementation mapping: [Traceability](traceability.md).
 
 ---
 
 ## Course materials
 
-Lecture slides (PDF) — supporting theory, not the project implementation.
+Lecture slides (PDF) — supporting theory.
 
 | Material | Open |
 |----------|------|
@@ -70,17 +68,15 @@ Lecture slides (PDF) — supporting theory, not the project implementation.
 | 7 — Mathematical morphology | [PDF][course-mod7] |
 | 8 — Segmentation | [PDF][course-mod8] |
 | 10 — Deep Learning and Segmentation | [PDF][course-mod10] |
-| All course PDFs | [02_course_material/][course-dir] |
+| Full folder | [02_course_material/][course-dir] |
 
 ??? note "Worksheets (optional)"
 
-    Course worksheets and assets: [01_worksheets/][worksheets-dir]  
-    Useful for pedagogy context; not required to evaluate the final pipeline deliverable.
+    Pedagogical exercises: [01_worksheets/][worksheets-dir]. Not required to evaluate the final pipeline deliverable.
 
 ---
 
 ## Related
 
-- [Home](../index.md)
-- [Implementation](implementation.md)
-- [Traceability](traceability.md)
+- [Home](../index.md) · [Project Overview](project_overview.md)
+- [Implementation](implementation.md) · [Deliverables](deliverables.md)

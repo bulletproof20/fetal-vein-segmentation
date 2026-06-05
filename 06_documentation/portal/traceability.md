@@ -31,7 +31,7 @@ Lecturer reference (01_academic/04_reference_materials/03_code_exemple/)
 | Preprocessing concepts | Course slides & worksheets (see [Academic](academic.md)) | [01_preprocessing.ipynb][nb-preprocessing] (PP1–PP5) | `02_dataset/images_pp_1` … `images_pp_5` |
 | Assignment scope | [Assigment_TP.pdf][assignment] | [03_pipeline/README.md][pipeline-readme] workflow | All stages |
 | Dataset terms | [LICENSE][dataset-licence] | [02_dataset/README.md][dataset-readme] | `02_dataset/` |
-| Comparative evaluation | Lecturer metric naming (`pos_process`, `calculate_metrics`) | [03_evaluation.ipynb][nb-evaluation] | [04_pipeline_results/][results-dir] |
+| Comparative evaluation | Lecturer metric naming; morphology CSV per `POSTPROCESS_METHOD` | [03_evaluation.ipynb][nb-evaluation] | [04_pipeline_results/][results-dir] |
 
 Preserved lecturer identifiers are defined in [Lecturer identifier policy](../01_governance/lecturer_identifier_policy.md) (governance).
 

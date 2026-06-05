@@ -1,0 +1,1 @@
+--8<-- "../../01_academic/02_literature/state_of_the_art.md"

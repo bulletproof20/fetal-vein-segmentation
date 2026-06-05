@@ -1,22 +1,43 @@
-# Fetal Vein Segmentation
+# Fetal Vein Segmentation Using Deep Learning and Image Processing Techniques
 
-**IPCA — Biomedical Imaging** · Academic project portal
-
-Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocessing variants (PP1–PP5), UNet/MONAI training, morphological post-processing, and comparative evaluation against ground-truth labels.
-
----
-
-## Start here
+**Processamento de Imagem Biomédica (EIM)** · IPCA
 
 | | |
 |---|---|
-| **[Assignment specification](portal/academic.md#assignment)** | What the project had to deliver |
-| **[Run the project](portal/implementation.md#start-here)** | `03_pipeline/README.md` and the three stage notebooks |
-| **[Academic materials](portal/academic.md)** | Literature, licence, lecturer references |
-| **[Deliverables](portal/deliverables.md)** | Report template and evaluation outputs |
-| **[Reference implementation](portal/academic.md#lecturer-reference-implementation)** | Lecturer UNet/metrics notebooks |
+| **Lecturer** | Helena Torres |
+| **Authors** | **Ivo Sá** — Student No. 22604 · **Diogo Sousa** — Student No. 22588 |
 
-**Design rationale:** [Project → Architecture](02_architecture/system_architecture.md)
+---
+
+## Summary
+
+This project addresses **semantic segmentation of the fetal umbilical vein** in ultrasound images. A controlled experimental pipeline compares five classical preprocessing strategies (PP1–PP5) against an original-image baseline, trains a **UNet** model (MONAI/PyTorch) under identical conditions, and evaluates whether **mathematical morphology** refines predicted masks. Results are reported through metric tables, training analysis, and a formal written report.
+
+---
+
+## Objectives
+
+- Construct reproducible preprocessed datasets from the same acquisitions (PP1–PP5).
+- Train and evaluate segmentation models per preprocessing variant with consistent protocol.
+- Quantify the impact of erosion, dilation, opening, and closing on segmentation metrics.
+- Document methodology, governance, and traceability for academic review.
+
+---
+
+## Quick navigation
+
+| Section | Description |
+|---------|-------------|
+| [Project Overview](portal/project_overview.md) | Workflow, experimental design, deliverables |
+| [Assignment](portal/assignment.md) | Official project brief (PDF) |
+| [Literature](portal/literature.md) | Bibliography and sources |
+| [State of the Art](portal/state_of_the_art.md) | Formal literature review |
+| [Dataset](portal/dataset.md) | Data layout, pairing, licence |
+| [Scientific Pipeline](portal/pipeline.md) | Three-stage notebook workflow |
+| [Results](portal/results.md) | Training curves, metrics, conclusions |
+| [Final Report](portal/final_report.md) | Submitted PDF report |
+| [Implementation](portal/implementation.md) | Notebook and execution index |
+| [Documentation](02_architecture/system_architecture.md) | Architecture and governance |
 
 ---
 
@@ -24,37 +45,19 @@ Semantic segmentation of the fetal umbilical vein in ultrasound: five preprocess
 
 | Path | Role |
 |------|------|
-| `01_academic/` | Assignment, literature, dataset licence, course references |
+| `01_academic/` | Assignment, literature, dataset licence, lecturer references |
 | `02_dataset/` | Images, labels, preprocessed data, models, masks |
-| `03_pipeline/` | Three self-contained Colab notebooks + pipeline README |
-| `04_pipeline_results/` | Aggregated evaluation tables |
-| `05_report/` | Written report template |
-| `06_documentation/` | This website (index + architecture + standards) |
+| `03_pipeline/` | Preprocessing · segmentation · evaluation notebooks |
+| `04_pipeline_results/` | Evaluation CSV tables and training figures |
+| `05_report/` | Results narrative and final PDF |
+| `06_documentation/` | This website |
+
+**Run the project:** [Scientific Pipeline](portal/pipeline.md) → [03_pipeline/README.md](https://github.com/repository_owner/fetal_vein_segmentation/blob/main/03_pipeline/README.md) (replace `repository_owner` before deploy).
 
 ---
 
-## What this website is
+## About this site
 
-| On this site | In the repository |
-|--------------|-------------------|
-| Academic artefact index | PDF, DOCX, notebook **content** |
-| Pipeline & notebook links | Algorithms and parameters |
-| Architectural **why** | Step-by-step **how** ([Implementation](portal/implementation.md)) |
-| Standards index | Governance policy text |
+This MkDocs site is a **navigation layer** over the repository: it indexes academic artefacts, links to PDFs and notebooks, and documents architecture and standards. Algorithms and parameters remain in the pipeline notebooks; governance policies remain in `06_documentation/01_governance/`.
 
-This site is a **concierge desk**, not a second copy of the repository.
-
----
-
-## Open repository
-
-Browse the full project on GitHub: configure `repository_owner` in `includes/repo_links.md` (used by portal pages), set `repo_url` in `mkdocs.yml`, then deploy.
-
-Authors: see `06_documentation/MKDOCS_PUBLISHING.md` in the repository.
-
----
-
-## Quick links
-
-- [Academic](portal/academic.md) · [Implementation](portal/implementation.md) · [Deliverables](portal/deliverables.md)
-- [Project](02_architecture/system_architecture.md) · [Standards](01_governance/project_governance.md)
+Deploy instructions: `06_documentation/MKDOCS_PUBLISHING.md` (excluded from navigation; open in the repository).

@@ -1,41 +1,43 @@
-# Estado da Arte
+# State of the Art
 
-Este capítulo enquadra o problema da segmentação da veia umbilical fetal no contexto da imagiologia obstétrica e da literatura científica que sustenta o trabalho experimental desenvolvido no repositório. O objetivo é situar as escolhas metodológicas — pré-processamento, segmentação por aprendizagem profunda e pós-processamento morfológico — face ao conhecimento clínico e à evidência publicada, sem antecipar os resultados quantitativos obtidos.
-
----
-
-## Contexto clínico e imagiológico
-
-A veia umbilical desempenha um papel fundamental na circulação fetal, sendo responsável pelo transporte de sangue oxigenado e nutrientes da placenta para o feto. Qualquer alteração na sua estrutura ou funcionamento pode comprometer o desenvolvimento fetal e estar associada a complicações obstétricas, restrição do crescimento intrauterino e aumento da morbilidade perinatal.
-
-A ultrassonografia constitui atualmente a principal técnica de avaliação pré-natal do sistema vascular fetal, permitindo a observação não invasiva do cordão umbilical e dos seus vasos. De acordo com Campos (2017), o estudo ecográfico do cordão umbilical é essencial para a deteção precoce de anomalias vasculares e para a monitorização do bem-estar fetal. A identificação atempada destas alterações pode contribuir para uma intervenção clínica mais eficaz e para a redução de resultados adversos na gravidez.
+This chapter contextualises the problem of fetal umbilical vein segmentation within the fields of obstetric imaging and the scientific literature that supports the experimental work developed in this repository. Its purpose is to justify the methodological choices adopted throughout the project—including preprocessing, deep learning-based segmentation, and morphological post-processing—based on clinical knowledge and published evidence, without anticipating the quantitative results obtained.
 
 ---
 
-## Literatura anatómica e ecográfica
+## Clinical and Imaging Context
 
-O sistema venoso umbilical e portal fetal tem sido amplamente estudado na literatura. Mavrides et al. (2001) descreveram detalhadamente a anatomia dos sistemas venoso umbilical, portal e hepático em fetos entre as 14 e as 19 semanas de gestação, estabelecendo referências anatómicas importantes para a interpretação de exames ecográficos. Posteriormente, Kivilevitch et al. (2009) demonstraram que a utilização de ecografia bidimensional e tridimensional permite uma avaliação mais detalhada destas estruturas vasculares, facilitando a sua visualização e caracterização.
+The umbilical vein plays a fundamental role in fetal circulation, being responsible for transporting oxygenated blood and nutrients from the placenta to the fetus. Any alteration in its structure or function may compromise fetal development and be associated with obstetric complications, intrauterine growth restriction, and increased perinatal morbidity.
 
-Estes trabalhos fundamentam a relevância clínica de delimitar com precisão a veia umbilical em imagens ecográficas e justificam o recurso a bases de dados anotadas e a métodos automáticos de análise.
-
----
-
-## Desafios da segmentação e motivação computacional
-
-Apesar dos avanços tecnológicos na imagiologia fetal, a identificação e delimitação da veia umbilical em imagens ecográficas continua a ser uma tarefa desafiante devido à presença de ruído, artefactos e elevada variabilidade anatómica. Neste contexto, o desenvolvimento de métodos automáticos de segmentação assume particular relevância, permitindo melhorar a consistência da análise, reduzir a dependência do operador e apoiar futuras aplicações de diagnóstico assistido por computador.
-
-Assim, a segmentação da veia umbilical constitui um problema de interesse clínico e científico, contribuindo para uma avaliação mais rigorosa da circulação fetal e para o desenvolvimento de ferramentas computacionais de apoio à medicina pré-natal.
+Ultrasound imaging is currently the primary technique used for prenatal assessment of the fetal vascular system, enabling non-invasive visualisation of the umbilical cord and its vessels. According to Campos (2017), ultrasound examination of the umbilical cord is essential for the early detection of vascular abnormalities and the monitoring of fetal well-being. The timely identification of such alterations may contribute to more effective clinical intervention and improved pregnancy outcomes.
 
 ---
 
-## Síntese e ligação ao estudo experimental
+## Anatomical and Ultrasound Literature
 
-A revisão da literatura converge para três eixos alinhados com o presente projeto: (1) importância clínica da circulação umbilical-portal fetal; (2) papel da ecografia na sua caracterização; (3) necessidade de métodos robustos de segmentação perante ruído e variabilidade morfológica. O estudo experimental que se segue no repositório avalia, de forma controlada, o impacto de estratégias de pré-processamento e de operadores morfológicos sobre a qualidade da segmentação obtida por um modelo de aprendizagem profunda, utilizando o conjunto de dados e o protocolo descritos na documentação do projeto (`02_dataset/`, `03_pipeline/`, `04_pipeline_results/`, `05_report/`).
+The fetal umbilical and portal venous systems have been extensively studied in the literature. Mavrides et al. (2001) provided a detailed description of the anatomy of the umbilical, portal, and hepatic venous systems in fetuses between 14 and 19 weeks of gestation, establishing important anatomical references for the interpretation of ultrasound examinations. Subsequently, Kivilevitch et al. (2009) demonstrated that the use of two-dimensional and three-dimensional ultrasound enables a more detailed evaluation of these vascular structures, facilitating their visualisation and characterisation.
+
+These studies reinforce the clinical importance of accurately delineating the umbilical vein in ultrasound images and justify the use of annotated datasets and automated image analysis methods.
 
 ---
 
-## Referências
+## Segmentation Challenges and Computational Motivation
 
-* Campos, C. P. C. (2017). *Patologia do Cordão Umbilical*. Instituto de Ciências Biomédicas Abel Salazar, Universidade do Porto.
-* Kivilevitch, Z., Gindes, L., Deutsch, H., & Achiron, R. (2009). *In-utero evaluation of the fetal umbilical-portal venous system: two- and three-dimensional ultrasonic study*. Ultrasound in Obstetrics & Gynecology.
+Despite technological advances in fetal imaging, the identification and delineation of the umbilical vein in ultrasound images remain challenging tasks due to the presence of noise, imaging artefacts, and substantial anatomical variability. In this context, the development of automated segmentation methods becomes particularly relevant, offering the potential to improve analysis consistency, reduce operator dependency, and support future computer-aided diagnostic applications.
+
+Consequently, fetal umbilical vein segmentation represents a clinically and scientifically significant problem, contributing both to a more accurate assessment of fetal circulation and to the development of computational tools for prenatal medicine.
+
+---
+
+## Summary and Relation to the Experimental Study
+
+The reviewed literature converges around three key themes that directly support the present project: (1) the clinical importance of the fetal umbilical–portal circulation; (2) the central role of ultrasound imaging in its evaluation; and (3) the need for robust segmentation methods capable of handling image noise and morphological variability.
+
+The experimental study presented in this repository investigates, under controlled conditions, the impact of different preprocessing strategies and morphological operators on the segmentation quality achieved by a deep learning model. This evaluation is conducted using the dataset and experimental protocol described throughout the project documentation (`02_dataset/`, `03_pipeline/`, `04_pipeline_results/`, and `05_report/`).
+
+---
+
+## References
+
+* Campos, C. P. C. (2017). *Patologia do Cordão Umbilical*. Instituto de Ciências Biomédicas Abel Salazar, University of Porto.
+* Kivilevitch, Z., Gindes, L., Deutsch, H., & Achiron, R. (2009). *In-utero evaluation of the fetal umbilical–portal venous system: two- and three-dimensional ultrasonic study*. Ultrasound in Obstetrics & Gynecology.
 * Mavrides, E., Moscoso, G., Carvalho, J. S., Campbell, S., & Thilaganathan, B. (2001). *The anatomy of the umbilical, portal and hepatic venous systems in the human fetus at 14–19 weeks of gestation*. Ultrasound in Obstetrics & Gynecology.
